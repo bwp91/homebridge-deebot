@@ -8,6 +8,4 @@ module.exports = {
   STOP_COMMAND,
   CHARGING,
   CLEANING,
-  PARKED,
 };
-

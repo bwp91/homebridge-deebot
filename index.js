@@ -1,13 +1,13 @@
 var Service, Characteristic;
 var DeebotEcovacsAPI = require('./deebotEcovacsAPI.js').DeebotEcovacsAPI;
-const DeebotEcovacConst = require('./deebotEcovacConst');
-const DeebotEcovacTools = require('./deebotEcovacTools.js');
+const DeebotEcovacsConst = require('./deebotEcovacsConst');
+const DeebotEcovacsTools = require('./deebotEcovacsTools.js');
 
 function myDeebotEcovacslatform(log, config, api) {
   this.log = log;
   this.login = config['email'];
   this.password = config['password'];
-  this.refreshTimer = DeebotEcovacTools.checkTimer(config['refreshTimer']);
+  this.refreshTimer = DeebotEcovacsTools.checkTimer(config['refreshTimer']);
 
   this.foundAccessories = [];
   this.deebotEcovacsAPI = new DeebotEcovacsAPI(log, this);
@@ -64,7 +64,7 @@ myDeebotEcovacslatform.prototype = {
               fanService.controlService.id = result[s].id;
               services.push(fanService);
 
-              let myDeebotEcovacsAccessory = new DeebotEcovacTools.DeebotEcovacsAccessory(
+              let myDeebotEcovacsAccessory = new DeebotEcovacsTools.DeebotEcovacsAccessory(
                 services
               );
               myDeebotEcovacsAccessory.getServices = function() {
@@ -97,7 +97,6 @@ myDeebotEcovacslatform.prototype = {
     var percent = 0;
     if (result && result instanceof Array && result.length > 0) {
       for (let s = 0; s < result.length; s++) {
-        this.deebotEcovacsAPI.logResult(result[s]);
         if (result[s].id === homebridgeAccessory.deebotID) {
           percent = result[s].status.batteryPercent;
           break;
@@ -126,14 +125,13 @@ myDeebotEcovacslatform.prototype = {
     var charging = 0;
     if (result && result instanceof Array && result.length > 0) {
       for (let s = 0; s < result.length; s++) {
-        this.deebotEcovacsAPI.logResult(result[s]);
         if (
           result[s].id === homebridgeAccessory.deebotID &&
           result[s].status &&
           result[s].status.connected &&
           (result[s].batteryPercent < 100 ||
             result[s].status.deebotStatus.activity.startsWith(
-              DeebotEcovacConst.CHARGING
+              DeebotEcovacsConst.CHARGING
             ))
         ) {
           charging = 1;
@@ -163,7 +161,6 @@ myDeebotEcovacslatform.prototype = {
     var lowww = 0;
     if (result && result instanceof Array && result.length > 0) {
       for (let s = 0; s < result.length; s++) {
-        this.deebotEcovacsAPI.logResult(result[s]);
         if (
           result[s].id === homebridgeAccessory.deebotID &&
           result[s].status &&
@@ -195,12 +192,11 @@ myDeebotEcovacslatform.prototype = {
     var cleaning = 0;
     if (result && result instanceof Array && result.length > 0) {
       for (let s = 0; s < result.length; s++) {
-        this.deebotEcovacsAPI.logResult(result[s]);
         if (
           result[s].id === homebridgeAccessory.deebotID &&
           result[s].status &&
           result[s].status.deebotStatus.activity.startsWith(
-            DeebotEcovacConst.CLEANING
+            DeebotEcovacsConst.CLEANING
           )
         ) {
           cleaning = 1;
@@ -235,7 +231,9 @@ myDeebotEcovacslatform.prototype = {
     this.log.debug('setDeebotEcovacsOnCharacteristic -' + value);
     this.deebotEcovacsAPI.sendCommand(
       homebridgeAccessory,
-      value ? DeebotEcovacConst.START_COMMAND : DeebotEcovacConst.STOP_COMMAND,
+      value
+        ? DeebotEcovacsConst.START_COMMAND
+        : DeebotEcovacsConst.STOP_COMMAND,
       characteristic,
       callback
     );
@@ -358,7 +356,6 @@ myDeebotEcovacslatform.prototype = {
           .getCharacteristic(Characteristic.On)
           .updateValue(this.isCleaning(myDeebotEcovacsAccessory, result));
       }
-
     }
   },
 
