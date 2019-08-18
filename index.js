@@ -7,6 +7,7 @@ function myDeebotEcovacslatform(log, config, api) {
   this.log = log;
   this.login = config['email'];
   this.password = config['password'];
+  this.countryCode = config['countryCode'];
   this.refreshTimer = DeebotEcovacsTools.checkTimer(config['refreshTimer']);
 
   this.foundAccessories = [];
@@ -86,7 +87,7 @@ myDeebotEcovacslatform.prototype = {
           } else {
             //prevent homebridge from starting since we don't want to loose our deebots.
             this.log.debug('ERROR - gettingDeebots - ' + error);
-            callback(undefined);
+            callback({});
           }
         });
       }

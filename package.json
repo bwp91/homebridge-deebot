@@ -26,7 +26,8 @@
   ],
   "dependencies": {
     "locks": "^0.2.2",
-    "request": "^2.65.0"
+    "node-machine-id": "^1.1.12",
+    "sucks": "0.0.6"
   },
   "bugs": {
     "url": "https://github.com/nicoduj/homebridge-deebotEcovacs/issues"
