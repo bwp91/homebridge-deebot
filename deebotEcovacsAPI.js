@@ -3,14 +3,17 @@ const sucks = require('sucks'),
   countries = sucks.countries,
   EcoVacsAPI = sucks.EcoVacsAPI,
   VacBot = sucks.VacBot;
-var locks = require('locks');
-var mutex = locks.createMutex();
+
+var EventEmitter = require('events');
+var inherits = require('util').inherits;
 
 module.exports = {
   DeebotEcovacsAPI: DeebotEcovacsAPI,
 };
 
 function DeebotEcovacsAPI(log, platform) {
+  EventEmitter.call(this);
+
   this.log = log;
   this.platform = platform;
   this.login = platform.login;
@@ -25,63 +28,45 @@ function DeebotEcovacsAPI(log, platform) {
 }
 
 DeebotEcovacsAPI.prototype = {
-  authenticate: function(callback) {
+  authenticate: function (callback) {
     callback();
   },
 
-  getDeebots: function(callback) {
-    var deebots = [];
+  getDeebots: function () {
     this.api
       .connect(this.login, this.password_hash)
       .then(() => {
         this.log.debug('INFO - connected :');
-        this.api.devices().then(devices => {
+        this.api.devices().then((devices) => {
           this.log.debug('INFO - getDeebots :', JSON.stringify(devices));
 
-          let vacuum = devices[0]; // Selects the first vacuum from your account
-          let vacbot = new VacBot(
-            this.api.uid,
-            EcoVacsAPI.REALM,
-            this.api.resource,
-            this.api.user_access_token,
-            vacuum,
-            this.continent
-          );
-          vacbot.on('ready', event => {
-            this.log.debug('INFO - Vacbot ready ');
-
-            let deebot = {};
-            deebot.name = 'TEST DEEBOT';
-            deebot.model = 'VADOR';
-            deebot.id = '123';
-            deebot.status = {};
-            deebot.status.batteryPercent = '100';
-            deebot.status.deebotStatus = {};
-            deebot.status.deebotStatus.activity = 'CLEANING';
-            deebot.status.connected = true;
-
-            deebots.push(deebot);
-
-            callback(deebots);
-          });
+          let vacbots = [];
+          for (let s = 0; s < devices.length; s++) {
+            let vacuum = devices[s]; // Selects the first vacuum from your account
+            let vacbot = new VacBot(
+              this.api.uid,
+              EcoVacsAPI.REALM,
+              this.api.resource,
+              this.api.user_access_token,
+              vacuum,
+              this.continent
+            );
+            vacbots.push(vacbot);
+          }
+          this.emit('deebotsDiscovered', vacbots);
         });
       })
-      .catch(e => {
+      .catch((e) => {
         // The Ecovacs API endpoint is not very stable, so
         // connecting fails randomly from time to time
-        this.log(
-          'ERROR - Failure in connecting to ecovacs to retrieve your deebots!'
-        );
+        this.log('ERROR - Failure in connecting to ecovacs to retrieve your deebots!');
         callback(undefined);
       });
   },
 
-  sendCommand: function(
-    homebridgeAccessory,
-    command,
-    characteristic,
-    callback
-  ) {
+  sendCommand: function (homebridgeAccessory, command, characteristic, callback) {
     callback();
   },
 };
+
+inherits(DeebotEcovacsAPI, EventEmitter);

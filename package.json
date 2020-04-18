@@ -13,8 +13,8 @@
     "url": "git+https://github.com/nicoduj/homebridge-deebotEcovacs.git"
   },
   "engines": {
-    "homebridge": ">=0.4.21",
-    "node": ">=6.0.0"
+    "homebridge": ">=0.4.50",
+    "node": ">=10.20.0"
   },
   "keywords": [
     "homebridge-plugin",
@@ -25,23 +25,23 @@
     "homekit"
   ],
   "dependencies": {
-    "locks": "^0.2.2",
     "node-machine-id": "^1.1.12",
-    "sucks": "0.0.6"
+    "sucks": "git+https://github.com/nicoduj/sucks.js.git"
   },
   "bugs": {
     "url": "https://github.com/nicoduj/homebridge-deebotEcovacs/issues"
   },
   "homepage": "https://github.com/nicoduj/homebridge-deebotEcovacs#readme",
   "devDependencies": {
-    "husky": "^3.0.3",
-    "prettier": "1.18.2",
+    "husky": "^3.1.0",
+    "prettier": "2.0.0",
     "pretty-quick": "^2.0.0"
   },
   "prettier": {
     "bracketSpacing": false,
     "singleQuote": true,
-    "trailingComma": "es5"
+    "trailingComma": "es5",
+    "printWidth": 100
   },
   "husky": {
     "hooks": {
