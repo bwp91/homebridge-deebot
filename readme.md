@@ -9,7 +9,7 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/nicoduj/homebridge-deebotEcovacs/badge)](https://www.codefactor.io/repository/github/nicoduj/homebridge-deebotEcovacs)
 [![Build Status](https://travis-ci.com/nicoduj/homebridge-deebotEcovacs.svg?branch=master)](https://travis-ci.com/nicoduj/homebridge-deebotEcovacs)
 [![Known Vulnerabilities](https://snyk.io/test/github/nicoduj/homebridge-deebotEcovacs/badge.svg?targetFile=package.json)](https://snyk.io/test/github/nicoduj/homebridge-deebotEcovacs?targetFile=package.json)
-[![Greenkeeper badge](https://badges.greenkeeper.io/nicoduj/homebridge-deebotEcovacs.svg)](https://greenkeeper.io/)
+
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 Plugin for controlling your [deebot Ecovacs](https://www.ecovacs.com/global/deebot-robotic-vacuum-cleaner) from [Ecovacs](https://www.ecovacs.com/global/support/) through [HomeBridge](https://github.com/nfarina/homebridge) .
