@@ -27,7 +27,7 @@ Config as below:
 "platforms": [
   {
     "platform": "HomebridgeDeebotEcovacs",
-	  "email": "toto@titi.com",
+    "email": "toto@titi.com",
     "password": "toto",
     "countryCode" : "FR"
   }
@@ -66,7 +66,7 @@ Support this project and [others by nicoduj][nicoduj-projects] via [PayPal][payp
 
 [nicoduj-projects]: https://github.com/nicoduj/
 [paypal-button]: https://img.shields.io/badge/Donate-PayPal-green.svg
-[paypal-nicoduj]: https://www.paypal.me/nicoduj/2.50
+[paypal-nicoduj]: https://www.paypal.me/nicoduj/
 
 ## License
 

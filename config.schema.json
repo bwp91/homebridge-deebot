@@ -1,0 +1,137 @@
+{
+  "pluginAlias": "DeebotEcovacs",
+  "pluginType": "platform",
+  "singular": false,
+  "headerDisplay": "This plugin is provided by [nicoduj](https://github.com/nicoduj/)",
+  "footerDisplay": "Support via [paypal](https://www.paypal.me/nicoduj/).",
+  "schema": {
+    "type": "object",
+    "required": ["email", "password", "countryCode"],
+    "properties": {
+      "email": {
+        "title": "Ecovacs account login",
+        "type": "string"
+      },
+      "password": {
+        "title": "Ecovacs account password",
+        "type": "string"
+      },
+      "countryCode": {
+        "title": "2 letters countryCode from where you are (based on your public IP)",
+        "type": "string",
+        "oneOf": [
+          {
+            "title": "CH",
+            "enum": ["CH"]
+          },
+          {
+            "title": "TW",
+            "enum": ["TW"]
+          },
+          {
+            "title": "MY",
+            "enum": ["MY"]
+          },
+          {
+            "title": "JP",
+            "enum": ["JP"]
+          },
+          {
+            "title": "SG",
+            "enum": ["SG"]
+          },
+          {
+            "title": "TH",
+            "enum": ["TH"]
+          },
+          {
+            "title": "HK",
+            "enum": ["HK"]
+          },
+          {
+            "title": "IN",
+            "enum": ["IN"]
+          },
+          {
+            "title": "KR",
+            "enum": ["KR"]
+          },
+          {
+            "title": "US",
+            "enum": ["US"]
+          },
+          {
+            "title": "FR",
+            "enum": ["FR"]
+          },
+          {
+            "title": "ES",
+            "enum": ["ES"]
+          },
+          {
+            "title": "UK",
+            "enum": ["UK"]
+          },
+          {
+            "title": "NO",
+            "enum": ["NO"]
+          },
+          {
+            "title": "MX",
+            "enum": ["MX"]
+          },
+          {
+            "title": "DE",
+            "enum": ["DE"]
+          },
+          {
+            "title": "PT",
+            "enum": ["PT"]
+          },
+          {
+            "title": "CH",
+            "enum": ["CH"]
+          },
+          {
+            "title": "AU",
+            "enum": ["AU"]
+          },
+          {
+            "title": "IT",
+            "enum": ["IT"]
+          },
+          {
+            "title": "NL",
+            "enum": ["NL"]
+          },
+          {
+            "title": "SE",
+            "enum": ["SE"]
+          },
+          {
+            "title": "BE",
+            "enum": ["BE"]
+          },
+          {
+            "title": "DK",
+            "enum": ["DK"]
+          },
+          {
+            "title": "OTHER",
+            "enum": ["OTHER"]
+          }
+        ]
+      },
+      "refreshTimer": {
+        "title": "Refresh timer",
+        "type": "integer",
+        "default": 0,
+        "minimum": 30,
+        "maximum": 600,
+        "description": "Enable refresh of deebots state every X seconds, for automation purpose if you need to activate something else based on a state change of a deebot by another means than homekit. Be aware it might make you deebot smokes since the plugin will ask its status very often :)"
+      }
+    }
+  },
+  "form": null,
+  "display": null
+}
