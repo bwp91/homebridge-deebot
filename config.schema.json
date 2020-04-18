@@ -1,5 +1,5 @@
 {
-  "pluginAlias": "DeebotEcovacs",
+  "pluginAlias": "HomebridgeDeebotEcovacs",
   "pluginType": "platform",
   "singular": true,
   "headerDisplay": "This plugin is provided by [nicoduj](https://github.com/nicoduj/)",
