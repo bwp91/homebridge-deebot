@@ -1,14 +1,14 @@
 #WORK IN PROGRESS
 
-# homebridge-deebotEcovacs
+# homebridge-deebotecovacs
 
-[![npm](https://img.shields.io/npm/v/homebridge-deebotEcovacs.svg)](https://www.npmjs.com/package/homebridge-deebotEcovacs)
-[![npm](https://img.shields.io/npm/dw/homebridge-deebotEcovacs.svg)](https://www.npmjs.com/package/homebridge-deebotEcovacs)
-[![npm](https://img.shields.io/npm/dt/homebridge-deebotEcovacs.svg)](https://www.npmjs.com/package/homebridge-deebotEcovacs)
+[![npm](https://img.shields.io/npm/v/homebridge-deebotecovacs.svg)](https://www.npmjs.com/package/homebridge-deebotecovacs)
+[![npm](https://img.shields.io/npm/dw/homebridge-deebotecovacs.svg)](https://www.npmjs.com/package/homebridge-deebotecovacs)
+[![npm](https://img.shields.io/npm/dt/homebridge-deebotecovacs.svg)](https://www.npmjs.com/package/homebridge-deebotecovacs)
 
-[![CodeFactor](https://www.codefactor.io/repository/github/nicoduj/homebridge-deebotEcovacs/badge)](https://www.codefactor.io/repository/github/nicoduj/homebridge-deebotEcovacs)
-[![Build Status](https://travis-ci.com/nicoduj/homebridge-deebotEcovacs.svg?branch=master)](https://travis-ci.com/nicoduj/homebridge-deebotEcovacs)
-[![Known Vulnerabilities](https://snyk.io/test/github/nicoduj/homebridge-deebotEcovacs/badge.svg?targetFile=package.json)](https://snyk.io/test/github/nicoduj/homebridge-deebotEcovacs?targetFile=package.json)
+[![CodeFactor](https://www.codefactor.io/repository/github/nicoduj/homebridge-deebotecovacs/badge)](https://www.codefactor.io/repository/github/nicoduj/homebridge-deebotecovacs)
+[![Build Status](https://travis-ci.com/nicoduj/homebridge-deebotecovacs.svg?branch=master)](https://travis-ci.com/nicoduj/homebridge-deebotecovacs)
+[![Known Vulnerabilities](https://snyk.io/test/github/nicoduj/homebridge-deebotecovacs/badge.svg?targetFile=package.json)](https://snyk.io/test/github/nicoduj/homebridge-deebotecovacs?targetFile=package.json)
 
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
@@ -17,7 +17,7 @@ Plugin for controlling your [deebot Ecovacs](https://www.ecovacs.com/global/deeb
 Each Deebot is shown through one fan that will handle Start / Go to Charge function and spin when your deebot is cleaning.
 The battery percentage / charging status is shown in the detail pane .
 
-`npm install -g homebridge-deebotEcovacs`
+`npm install -g homebridge-deebotecovacs`
 
 ## Homebridge configuration
 

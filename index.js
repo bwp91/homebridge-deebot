@@ -9,7 +9,7 @@ checkTimer = function (timer) {
 
 function myDeebotEcovacslatform(log, config, api) {
   if (!config) {
-    log('No configuration found for homebridge-deebotEcovacs');
+    log('No configuration found for homebridge-deebotecovacs');
     return;
   }
 
@@ -39,7 +39,7 @@ function myDeebotEcovacslatform(log, config, api) {
         if (this.cleanCache) {
           this.log('WARNING - Removing Accessories');
           platform.api.unregisterPlatformAccessories(
-            'homebridge-deebotEcovacs',
+            'homebridge-deebotecovacs',
             'HomebridgeDeebotEcovacs',
             this.foundAccessories
           );
@@ -57,7 +57,7 @@ module.exports = function (homebridge) {
   UUIDGen = homebridge.hap.uuid;
   HomebridgeAPI = homebridge;
   homebridge.registerPlatform(
-    'homebridge-deebotEcovacs',
+    'homebridge-deebotecovacs',
     'HomebridgeDeebotEcovacs',
     myDeebotEcovacslatform,
     true
@@ -136,7 +136,7 @@ myDeebotEcovacslatform.prototype = {
             .setCharacteristic(Characteristic.Model, myDeebotEcovacsAccessory.model)
             .setCharacteristic(Characteristic.SerialNumber, myDeebotEcovacsAccessory.serialNumber);
           this.api.registerPlatformAccessories(
-            'homebridge-deebotEcovacs',
+            'homebridge-deebotecovacs',
             'HomebridgeDeebotEcovacs',
             [myDeebotEcovacsAccessory]
           );
