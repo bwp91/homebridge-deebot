@@ -1,3 +1,5 @@
+#WORK IN PROGRESS
+
 # homebridge-deebotEcovacs
 
 [![npm](https://img.shields.io/npm/v/homebridge-deebotEcovacs.svg)](https://www.npmjs.com/package/homebridge-deebotEcovacs)
@@ -10,12 +12,10 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/nicoduj/homebridge-deebotEcovacs.svg)](https://greenkeeper.io/)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-
 Plugin for controlling your [deebot Ecovacs](https://www.ecovacs.com/global/deebot-robotic-vacuum-cleaner) from [Ecovacs](https://www.ecovacs.com/global/support/) through [HomeBridge](https://github.com/nfarina/homebridge) .
 
 Each Deebot is shown through one fan that will handle Start / Go to Charge function and spin when your deebot is cleaning.
 The battery percentage / charging status is shown in the detail pane .
-
 
 `npm install -g homebridge-deebotEcovacs`
 
