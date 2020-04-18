@@ -36,7 +36,7 @@ DeebotEcovacsAPI.prototype = {
     this.api
       .connect(this.login, this.password_hash)
       .then(() => {
-        this.log.debug('INFO - connected :');
+        this.log.debug('INFO - connected');
         this.api.devices().then((devices) => {
           this.log.debug('INFO - getDeebots :', JSON.stringify(devices));
 
