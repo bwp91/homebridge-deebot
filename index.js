@@ -105,7 +105,10 @@ myDeebotEcovacslatform.prototype = {
           this.discoverInProgress = false;
           this.log(
             'INFO - stopping deebots discovery, number of deebots found : ' +
-              this.knownDeebotsArray.length
+              this.knownDeebotsArray ==
+              undefined
+              ? '0'
+              : this.knownDeebotsArray.length
           );
           this.loadDeebots();
         }, 10000);
@@ -219,7 +222,7 @@ myDeebotEcovacslatform.prototype = {
           let currentOnValue = HKFanService.getCharacteristic(Characteristic.On).value;
 
           if (currentOnValue !== cleaning) {
-            HKFanService.setCharacteristic(Characteristic.On, cleaning);
+            HKFanService.getCharacteristic(Characteristic.On).updateValue(cleaning);
           }
         });
       }

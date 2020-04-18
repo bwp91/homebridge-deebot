@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.0.4
+
+-[FIX] fixing update of cleaning status
+
 ## 0.0.3
 
 -[FIX] fixing platform name
