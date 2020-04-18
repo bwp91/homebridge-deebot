@@ -7,7 +7,7 @@ checkTimer = function (timer) {
   else return timer;
 };
 
-function myDeebotEcovacslatform(log, config, api) {
+function myDeebotEcovacsPlatform(log, config, api) {
   if (!config) {
     log('No configuration found for homebridge-deebotecovacs');
     return;
@@ -59,12 +59,12 @@ module.exports = function (homebridge) {
   homebridge.registerPlatform(
     'homebridge-deebotecovacs',
     'HomebridgeDeebotEcovacs',
-    myDeebotEcovacslatform,
+    myDeebotEcovacsPlatform,
     true
   );
 };
 
-myDeebotEcovacslatform.prototype = {
+myDeebotEcovacsPlatform.prototype = {
   configureAccessory: function (accessory) {
     this.log.debug(
       accessory.displayName,
@@ -90,30 +90,17 @@ myDeebotEcovacslatform.prototype = {
       this.knownDeebotsArray = deebots;
     });
 
-    this.deebotEcovacsAPI.authenticate((error) => {
-      if (error) {
-        this.log.debug('ERROR - authenticating - ' + error);
-        callback(undefined);
-      } else {
-        this.log('INFO - starting deebots discovery');
+    this.discoverInProgress = true;
+    this.knownDeebotsArray = undefined;
+    this.deebotEcovacsAPI.getDeebots();
 
-        this.discoverInProgress = true;
-        this.knownDeebotsArray = undefined;
-        this.deebotEcovacsAPI.getDeebots();
-
-        setTimeout(() => {
-          this.discoverInProgress = false;
-          this.log(
-            'INFO - stopping deebots discovery, number of deebots found : ' +
-              this.knownDeebotsArray ==
-              undefined
-              ? '0'
-              : this.knownDeebotsArray.length
-          );
-          this.loadDeebots();
-        }, 10000);
-      }
-    });
+    setTimeout(() => {
+      this.discoverInProgress = false;
+      let nbDeebots = 0;
+      if (this.knownDeebotsArray) nbDeebots = this.knownDeebotsArray.length;
+      this.log('INFO - stopping deebots discovery, number of deebots found : ' + nbDeebots);
+      this.loadDeebots();
+    }, 10000);
   },
 
   loadDeebots: function () {
@@ -189,7 +176,8 @@ myDeebotEcovacslatform.prototype = {
           vacBot.run('batterystate');
           vacBot.run('chargestate');
 
-          if (vacBot.orderToSend && vacBot.orderToSend !== '') {
+          if (vacBot.orderToSend && vacBot.orderToSend !== undefined) {
+            this.log('INFO - sendingCommand ' + acBot.orderToSend);
             vacBot.run(vacBot.orderToSend);
             vacBot.orderToSend = undefined;
           }

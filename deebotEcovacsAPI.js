@@ -28,10 +28,6 @@ function DeebotEcovacsAPI(log, platform) {
 }
 
 DeebotEcovacsAPI.prototype = {
-  authenticate: function (callback) {
-    callback();
-  },
-
   getDeebots: function () {
     this.api
       .connect(this.login, this.password_hash)
@@ -62,10 +58,6 @@ DeebotEcovacsAPI.prototype = {
         this.log('ERROR - Failure in connecting to ecovacs to retrieve your deebots! - ' + e);
         callback(undefined);
       });
-  },
-
-  sendCommand: function (homebridgeAccessory, command, characteristic, callback) {
-    callback();
   },
 };
 
