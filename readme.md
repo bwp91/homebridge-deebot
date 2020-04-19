@@ -53,10 +53,11 @@ See [CHANGELOG][].
 Many thanks to :
 
 - [wpietri] for sucks python api and protocol
+- [mrbungle64] for nice js port and revamp of sucks.js package
 - every tester / contributor that test, and give feedback in any way !
 
 [wpietri]: https://github.com/wpietri/sucks
-[chrisz]: https://github.com/chrisz/pyhusmow
+[mrbungle64]: https://github.com/mrbungle64/ecovacs-deebot.js
 
 ## Donating
 

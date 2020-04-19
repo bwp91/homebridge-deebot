@@ -66,10 +66,7 @@ module.exports = function (homebridge) {
 
 myDeebotEcovacsPlatform.prototype = {
   configureAccessory: function (accessory) {
-    this.log.debug(
-      accessory.displayName,
-      'Got cached Accessory ' + accessory.UUID + ' for ' + this.name
-    );
+    this.log.debug(accessory.displayName, 'Got cached Accessory ' + accessory.UUID);
 
     this.foundAccessories.push(accessory);
   },
