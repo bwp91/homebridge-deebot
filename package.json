@@ -25,7 +25,7 @@
     "homekit"
   ],
   "dependencies": {
-    "ecovacs-deebot": "git+https://github.com/nicoduj/ecovacs-deebot.js.git",
+    "ecovacs-deebot": "^0.4.5",
     "node-machine-id": "^1.1.12"
   },
   "bugs": {

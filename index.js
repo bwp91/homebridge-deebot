@@ -85,12 +85,26 @@ myDeebotEcovacsPlatform.prototype = {
     //deebot discovered
     this.deebotEcovacsAPI.on('deebotsDiscovered', () => {
       let nbDeebots = 0;
-
       if (this.deebotEcovacsAPI.vacbots) nbDeebots = this.deebotEcovacsAPI.vacbots.length;
-
       this.log('INFO - stopping deebots discovery, number of deebots found : ' + nbDeebots);
-      this.loadDeebots();
+
+      if (nbDeebots > 0) this.loadDeebots();
+      else {
+        this.log('INFO - no deebot found, will retry discovery in 1 minute');
+        setTimeout(() => {
+          this.deebotEcovacsAPI.getDeebots();
+        }, 60000);
+      }
     });
+
+    this.deebotEcovacsAPI.on('errorDiscoveringDeebots', () => {
+      this.log('ERROR - ERROR while getting deebots, will retry discovery in 1 minute');
+
+      setTimeout(() => {
+        this.deebotEcovacsAPI.getDeebots();
+      }, 60000);
+    });
+
     this.deebotEcovacsAPI.getDeebots();
   },
 

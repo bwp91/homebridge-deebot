@@ -57,6 +57,7 @@ DeebotEcovacsAPI.prototype = {
         // The Ecovacs API endpoint is not very stable, so
         // connecting fails randomly from time to time
         this.log('ERROR - Failure in connecting to ecovacs to retrieve your deebots! - ' + e);
+        this.emit('errorDiscoveringDeebots');
       });
   },
 };

@@ -1,7 +1,7 @@
 {
   "pluginAlias": "HomebridgeDeebotEcovacs",
   "pluginType": "platform",
-  "singular": true,
+  "singular": false,
   "headerDisplay": "This plugin is provided by [nicoduj](https://github.com/nicoduj/)",
   "footerDisplay": "Support via [paypal](https://www.paypal.me/nicoduj/).",
   "schema": {

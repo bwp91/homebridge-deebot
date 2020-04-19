@@ -1,5 +1,3 @@
-#WORK IN PROGRESS
-
 # homebridge-deebotecovacs
 
 [![npm](https://img.shields.io/npm/v/homebridge-deebotecovacs.svg)](https://www.npmjs.com/package/homebridge-deebotecovacs)
