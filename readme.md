@@ -21,9 +21,9 @@ The battery percentage / charging status is shown in the detail pane .
 `npm install -g homebridge-deebotecovacs`
 
 **IMPORTANT**
-If you encounter any issue while installing, you might have to install packages in order to get since the main dependency of it depends on canvas library
+If you encounter any issue while installing, you might have to install additionnal packages on your environment since the main dependency of it depends on canvas library which is not available for all configurations.
 
-For OZNU ALpine base Image, you will have to add the following packages (by using PACKAGES env variable - https://github.com/oznu/docker-homebridge#optional-settings)
+For OZNU ALpine based image, you will have to add the following packages (by using PACKAGES env variable - https://github.com/oznu/docker-homebridge#optional-settings)
 
 ```
 -e PACKAGES=build-base,cairo-dev,jpeg-dev,pango-dev,giflib-dev,librsvg-dev

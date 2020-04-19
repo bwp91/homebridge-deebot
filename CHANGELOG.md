@@ -1,6 +1,6 @@
 # Changelog
 
-**IF you encounter issue installing, you may have to add some dependencies to buidl canvas.**
+**IF you encounter issue installing, you may have to add some dependencies to build canvas.**
 
 **SEE https://github.com/Automattic/node-canvas#compiling . On OZNU homebridge Alpine image, use -e PACKAGES=build-base,cairo-dev,jpeg-dev,pango-dev,giflib-dev,librsvg-dev**
 
