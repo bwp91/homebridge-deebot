@@ -1,8 +1,7 @@
-const sucks = require('sucks'),
+const ecovacsDeebot = require('ecovacs-deebot'),
   nodeMachineId = require('node-machine-id'),
-  countries = sucks.countries,
-  EcoVacsAPI = sucks.EcoVacsAPI,
-  VacBot = sucks.VacBot;
+  countries = ecovacsDeebot.countries,
+  EcoVacsAPI = ecovacsDeebot.EcoVacsAPI;
 
 var EventEmitter = require('events');
 var inherits = require('util').inherits;
@@ -25,6 +24,8 @@ function DeebotEcovacsAPI(log, platform) {
   this.log('INFO - API :' + this.continent + '/' + this.countryCode);
 
   this.api = new EcoVacsAPI(this.device_id, this.countryCode, this.continent);
+
+  this.vacbots = [];
 }
 
 DeebotEcovacsAPI.prototype = {
@@ -36,10 +37,10 @@ DeebotEcovacsAPI.prototype = {
         this.api.devices().then((devices) => {
           this.log.debug('INFO - getDeebots :', JSON.stringify(devices));
 
-          let vacbots = [];
           for (let s = 0; s < devices.length; s++) {
             let vacuum = devices[s]; // Selects the first vacuum from your account
-            let vacbot = new VacBot(
+
+            let vacbot = this.api.getVacBot(
               this.api.uid,
               EcoVacsAPI.REALM,
               this.api.resource,
@@ -47,16 +48,15 @@ DeebotEcovacsAPI.prototype = {
               vacuum,
               this.continent
             );
-            vacbots.push(vacbot);
+            this.vacbots.push(vacbot);
           }
-          this.emit('deebotsDiscovered', vacbots);
+          this.emit('deebotsDiscovered');
         });
       })
       .catch((e) => {
         // The Ecovacs API endpoint is not very stable, so
         // connecting fails randomly from time to time
         this.log('ERROR - Failure in connecting to ecovacs to retrieve your deebots! - ' + e);
-        callback(undefined);
       });
   },
 };

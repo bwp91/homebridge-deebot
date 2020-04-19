@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.0.6
+
+-[FIX] library change for better support -[FIX] nick is not always there #7
+
 ## 0.0.5
 
 -[FIX] some early fixes

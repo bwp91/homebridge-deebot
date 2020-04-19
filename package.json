@@ -1,6 +1,6 @@
 {
   "name": "homebridge-deebotecovacs",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "Nicolas Dujardin",
   "description": "Publish your deebot ecovacs as an homekit accessory",
   "main": "index.js",
@@ -25,8 +25,8 @@
     "homekit"
   ],
   "dependencies": {
-    "node-machine-id": "^1.1.12",
-    "sucks": "git+https://github.com/nicoduj/sucks.js.git"
+    "ecovacs-deebot": "git+https://github.com/nicoduj/ecovacs-deebot.js.git",
+    "node-machine-id": "^1.1.12"
   },
   "bugs": {
     "url": "https://github.com/nicoduj/homebridge-deebotecovacs/issues"
