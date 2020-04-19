@@ -12,10 +12,22 @@
 
 Plugin for controlling your [deebot Ecovacs](https://www.ecovacs.com/global/deebot-robotic-vacuum-cleaner) from [Ecovacs](https://www.ecovacs.com/global/support/) through [HomeBridge](https://github.com/nfarina/homebridge) .
 
-Each Deebot is shown through one fan that will handle Start / Go to Charge function and spin when your deebot is cleaning.
+Each Deebot is shown through one fan. Fan speed will determine the deebot speed.
+Direction will handle auto / edge mode.
+Switching off will make the deebot return to charge.
+
 The battery percentage / charging status is shown in the detail pane .
 
 `npm install -g homebridge-deebotecovacs`
+
+**IMPORTANT**
+If you encounter any issue while installing, you might have to install packages in order to get since the main dependency of it depends on canvas library
+
+For OZNU ALpine base Image, you will have to add the following packages (by using PACKAGES env variable - https://github.com/oznu/docker-homebridge#optional-settings)
+
+```
+-e PACKAGES=build-base,cairo-dev,jpeg-dev,pango-dev,giflib-dev,librsvg-dev
+```
 
 ## Homebridge configuration
 
