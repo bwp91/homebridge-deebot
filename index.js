@@ -328,16 +328,16 @@ myDeebotEcovacsPlatform.prototype = {
     callback();
 
     if (value != currentState) {
-      let orderToSend = ['charge'];
+      let orderToSend = ['Charge'];
 
       this.log.debug('INFO - ' + service.subtype);
 
-      if (service.type == 'fan') orderToSend = ['pause'];
+      if (service.type == 'fan') orderToSend = ['Stop'];
 
       if (value == 1) {
         let currentDirectionValue = service.getCharacteristic(Characteristic.RotationDirection)
           .value;
-        orderToSend = currentDirectionValue == 1 ? ['clean', 'edge'] : ['clean', 'auto'];
+        orderToSend = currentDirectionValue == 1 ? ['Clean', 'edge'] : ['Clean', 'auto'];
       }
 
       this.log.debug(
@@ -370,6 +370,7 @@ myDeebotEcovacsPlatform.prototype = {
 
   setDeebotEcovacsModeCharacteristic: function (homebridgeAccessory, service, value, callback) {
     let currentDirectionValue = service.getCharacteristic(Characteristic.RotationDirection).value;
+
     let isOn = service.getCharacteristic(Characteristic.On).value;
     callback();
 
@@ -383,7 +384,7 @@ myDeebotEcovacsPlatform.prototype = {
     );
 
     if (currentDirectionValue !== value && isOn) {
-      let orderToSend = value == 1 ? ['clean', 'edge'] : ['clean', 'auto'];
+      let orderToSend = value == 1 ? ['Clean', 'edge'] : ['Clean', 'auto'];
 
       if (homebridgeAccessory.vacBot && homebridgeAccessory.vacBot.is_ready) {
         homebridgeAccessory.vacBot.run.apply(homebridgeAccessory.vacBot, orderToSend);
