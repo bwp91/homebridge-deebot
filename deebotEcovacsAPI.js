@@ -131,7 +131,7 @@ DeebotEcovacsAPI.prototype = {
       }
 
       let currentMainOnValue = HKSwitchOnService.getCharacteristic(Characteristic.On).value;
-      if (currentMainOnValue !== pausedOrStopped) {
+      if (currentMainOnValue == pausedOrStopped) {
         HKSwitchOnService.getCharacteristic(Characteristic.On).updateValue(!pausedOrStopped);
       }
 

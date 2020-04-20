@@ -17,6 +17,10 @@ You can also use the [PACKAGES](https://github.com/oznu/docker-homebridge#option
 
 All notable changes to this project will be documented in this file.
 
+## 0.1.1
+
+- [FIX] fixing some bugs, but a lot remains :)
+
 ## 0.1.0
 
 - [NEW] add motion sensor for notifications #12
