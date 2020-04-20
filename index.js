@@ -210,12 +210,12 @@ myDeebotEcovacsPlatform.prototype = {
           HKSwitchBipService.subtype = 'SwitchBipService' + deebotName;
           myDeebotEcovacsAccessory.addService(HKSwitchBipService);
         }
+        this.bindSwitchBipCharacteristic(myDeebotEcovacsAccessory, HKSwitchBipService);
 
         let HKMotionService = myDeebotEcovacsAccessory.getServiceByUUIDAndSubType(
           deebotName + ' needs attention',
           'MotionService' + deebotName
         );
-        this.bindSwitchBipCharacteristic(myDeebotEcovacsAccessory, HKSwitchBipService);
 
         if (!HKMotionService) {
           this.log('INFO - Creating Motion Service ' + deebotName);
