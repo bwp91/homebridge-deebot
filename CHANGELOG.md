@@ -17,9 +17,14 @@ You can also use the [PACKAGES](https://github.com/oznu/docker-homebridge#option
 
 All notable changes to this project will be documented in this file.
 
-## 0.0.6
+## 0.1.0
 
-**DirectionChange for mode still not working, speed might cause problems**
+- [NEW] add motion sensor for notifications #12
+- [NEW] add a stateless switch for beep function #11
+- [NEW] Add a switch service to handle charge / start #10 . fans top now pause the deebot
+- [NEW] Implement rotation direction for edge / auto mode
+
+## 0.0.6
 
 - [FIX] library change for better support
 - [FIX] nick is not always there #7
