@@ -267,9 +267,9 @@ myDeebotEcovacsPlatform.prototype = {
   getCleanSpeed(value) {
     let speed = 2;
 
-    if (value < 25) speed = 1;
-    else if (value > 50 && value < 75) speed = 3;
-    else if (value >= 75) speed = 4;
+    if (value <= 25) speed = 1;
+    else if (value > 50 && value <= 75) speed = 3;
+    else if (value > 75) speed = 4;
 
     return speed;
   },
@@ -277,9 +277,9 @@ myDeebotEcovacsPlatform.prototype = {
   getFanSpeed(value) {
     let speed = 50;
 
-    if (value == 1) speed = 24;
-    else if (value == 2) speed = 49;
-    else if (value == 3) speed = 74;
+    if (value == 1) speed = 25;
+    else if (value == 2) speed = 50;
+    else if (value == 3) speed = 75;
     else if (value == 4) speed = 100;
 
     return speed;
