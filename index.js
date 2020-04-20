@@ -78,7 +78,14 @@ myDeebotEcovacsPlatform.prototype = {
       this.timerID = undefined;
     }
 
-    //TODO logout / clear listeners ...
+    // disconnecting
+    for (let a = 0; a < this.foundAccessories.length; a++) {
+      this.log.debug('INFO - shutting down - ' + this.foundAccessories[a].displayName);
+
+      if (this.foundAccessories[a].vacBot && this.foundAccessories[a].vacBot.is_ready) {
+        this.foundAccessories[a].vacBot.disconnect;
+      }
+    }
   },
 
   discoverDeebots: function () {
@@ -172,82 +179,7 @@ myDeebotEcovacsPlatform.prototype = {
         this.bindRotationDirectionCharacteristic(myDeebotEcovacsAccessory, HKFanService);
         this.bindRotationSpeedCharacteristic(myDeebotEcovacsAccessory, HKFanService);
 
-        //initial refresh.
-        vacBot.on('ready', (event) => {
-          this.log.debug('INFO - Vacbot ready: ' + JSON.stringify(event));
-
-          vacBot.run('GetBatteryState');
-          vacBot.run('GetChargeState');
-          vacBot.run('GetCleanState');
-          vacBot.run('GetCleanSpeed');
-
-          if (vacBot.orderToSend && vacBot.orderToSend !== undefined) {
-            this.log('INFO - sendingCommand ' + vacBot.orderToSend);
-
-            if (vacBot.orderToSend instanceof Array) {
-              vacBot.run.apply(vacBot, orderToSend);
-            } else {
-              vacBot.run(vacBot.orderToSend);
-            }
-
-            vacBot.orderToSend = undefined;
-          }
-        });
-
-        vacBot.on('BatteryInfo', (battery) => {
-          this.log.debug('INFO - Battery level: %d%', battery);
-          let batteryLevel = this.getBatteryLevel(battery);
-
-          let currentValue = HKBatteryService.getCharacteristic(Characteristic.BatteryLevel).value;
-
-          if (currentValue !== batteryLevel) {
-            HKBatteryService.setCharacteristic(Characteristic.BatteryLevel, batteryLevel);
-            if (batteryLevel < 20)
-              HKBatteryService.setCharacteristic(Characteristic.StatusLowBattery, 1);
-            else HKBatteryService.setCharacteristic(Characteristic.StatusLowBattery, 0);
-          }
-        });
-
-        vacBot.on('ChargeState', (charge_status) => {
-          this.log.debug('INFO - Charge status: %s', charge_status);
-          let charging = charge_status == 'charging';
-          let currentValue = HKBatteryService.getCharacteristic(Characteristic.ChargingState).value;
-
-          if (currentValue !== charging) {
-            HKBatteryService.setCharacteristic(Characteristic.ChargingState, charging);
-          }
-
-          let currentOnValue = HKFanService.getCharacteristic(Characteristic.On).value;
-          if (charging && currentOnValue) {
-            HKFanService.getCharacteristic(Characteristic.On).updateValue(false);
-          }
-        });
-
-        vacBot.on('CleanReport', (clean_status) => {
-          this.log.debug('INFO - Clean status: %s', clean_status);
-
-          let cleaning = clean_status != 'stop' && clean_status != 'pause';
-          let currentOnValue = HKFanService.getCharacteristic(Characteristic.On).value;
-
-          if (currentOnValue !== cleaning) {
-            HKFanService.getCharacteristic(Characteristic.On).updateValue(cleaning);
-          }
-        });
-
-        vacBot.on('CleanSpeed', (clean_speed) => {
-          let currentSpeedValue = HKFanService.getCharacteristic(Characteristic.RotationSpeed)
-            .value;
-          let deebotSpeed = this.getCleanSpeed(currentSpeedValue);
-
-          this.log.debug('INFO - Clean speed : %s - %s', clean_speed, deebotSpeed);
-
-          if (deebotSpeed !== clean_speed) {
-            let newSpeed = this.getFanSpeed(clean_speed);
-            HKFanService.getCharacteristic(Characteristic.RotationSpeed).updateValue(newSpeed);
-          }
-        });
-
-        if (!vacBot.is_ready) vacBot.connect_and_wait_until_ready();
+        this.deebotEcovacsAPI.configureEvents(vacBot, HKBatteryService, HKFanService);
       }
 
       //timer for background refresh
@@ -343,18 +275,28 @@ myDeebotEcovacsPlatform.prototype = {
 
     callback(undefined, cleaning);
   },
-  setDeebotEcovacsOnCharacteristic: function (homebridgeAccessory, value, callback) {
+  setDeebotEcovacsOnCharacteristic: function (homebridgeAccessory, service, value, callback) {
     this.log.debug('INFO - setDeebotEcovacsOnCharacteristic -' + value);
-    callback();
 
-    let orderToSend = value ? 'Clean' : 'Charge';
+    let currentState = service.getCharacteristic(Characteristic.On).value;
 
-    if (homebridgeAccessory.vacBot && homebridgeAccessory.vacBot.is_ready) {
-      homebridgeAccessory.vacBot.run(orderToSend);
-    } else {
-      homebridgeAccessory.vacBot.orderToSend = orderToSend;
-      homebridgeAccessory.vacBot.connect_and_wait_until_ready();
+    if (value != currentState) {
+      let orderToSend = ['Charge'];
+
+      if (value == 1) {
+        let currentDirectionValue = service.getCharacteristic(Characteristic.RotationDirection)
+          .value;
+        orderToSend = currentDirectionValue == 0 ? ['clean', 'edge'] : ['clean', 'auto'];
+      }
+
+      if (homebridgeAccessory.vacBot && homebridgeAccessory.vacBot.is_ready) {
+        homebridgeAccessory.vacBot.run.apply(homebridgeAccessory.vacBot, orderToSend);
+      } else {
+        homebridgeAccessory.vacBot.orderToSend = orderToSend;
+        homebridgeAccessory.vacBot.connect_and_wait_until_ready();
+      }
     }
+    callback();
   },
 
   getDeebotEcovacsModeCharacteristic: function (homebridgeAccessory, service, callback) {
@@ -366,18 +308,29 @@ myDeebotEcovacsPlatform.prototype = {
       homebridgeAccessory.vacBot.connect_and_wait_until_ready();
     }
 
-    //TODO : check vacbot and if ok return else return current
     var mode = service.getCharacteristic(Characteristic.RotationDirection).value;
 
     callback(undefined, mode);
   },
 
-  setDeebotEcovacsModeCharacteristic: function (homebridgeAccessory, value, callback) {
+  setDeebotEcovacsModeCharacteristic: function (homebridgeAccessory, service, value, callback) {
     this.log.debug('INFO - setDeebotEcovacsModeCharacteristic -' + value);
-    callback();
 
-    // TODO check if it is cleaning. If yes, stop, then change mode.
-    // else start with correct mode.
+    let currentDirectionValue = service.getCharacteristic(Characteristic.RotationDirection).value;
+    let isOn = service.getCharacteristic(Characteristic.On).value;
+
+    if (currentDirectionValue !== value && isOn) {
+      let orderToSend = value == 0 ? ['clean', 'edge'] : ['clean', 'auto'];
+
+      if (homebridgeAccessory.vacBot && homebridgeAccessory.vacBot.is_ready) {
+        homebridgeAccessory.vacBot.run.apply(homebridgeAccessory.vacBot, orderToSend);
+      } else {
+        homebridgeAccessory.vacBot.orderToSend = orderToSend;
+        homebridgeAccessory.vacBot.connect_and_wait_until_ready();
+      }
+    }
+
+    callback();
   },
 
   getDeebotEcovacsSpeedCharacteristic: function (homebridgeAccessory, service, callback) {
@@ -454,7 +407,7 @@ myDeebotEcovacsPlatform.prototype = {
       .on(
         'set',
         function (value, callback) {
-          this.setDeebotEcovacsOnCharacteristic(homebridgeAccessory, value, callback);
+          this.setDeebotEcovacsOnCharacteristic(homebridgeAccessory, service, value, callback);
         }.bind(this)
       );
   },
@@ -471,7 +424,7 @@ myDeebotEcovacsPlatform.prototype = {
       .on(
         'set',
         function (value, callback) {
-          this.setDeebotEcovacsModeCharacteristic(homebridgeAccessory, value, callback);
+          this.setDeebotEcovacsModeCharacteristic(homebridgeAccessory, service, value, callback);
         }.bind(this)
       );
   },
@@ -505,7 +458,7 @@ myDeebotEcovacsPlatform.prototype = {
 
   refreshAllDeebots: function () {
     for (let a = 0; a < this.foundAccessories.length; a++) {
-      this.log.debug('INFO - refreshing - ' + this.foundAccessories[a].vacBot.vacuum.nick);
+      this.log.debug('INFO - refreshing - ' + this.foundAccessories[a].displayName);
 
       if (this.foundAccessories[a].vacBot && this.foundAccessories[a].vacBot.is_ready) {
         this.foundAccessories[a].vacBot.run('GetBatteryState');
