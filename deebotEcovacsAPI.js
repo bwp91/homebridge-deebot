@@ -107,7 +107,7 @@ DeebotEcovacsAPI.prototype = {
       let currentValue = HKBatteryService.getCharacteristic(Characteristic.ChargingState).value;
 
       if (currentValue !== charging) {
-        KBatteryService.getCharacteristic(Characteristic.ChargingState).updateValue(charging);
+        HKBatteryService.getCharacteristic(Characteristic.ChargingState).updateValue(charging);
       }
 
       let currentMainOnValue = HKSwitchOnService.getCharacteristic(Characteristic.On).value;
@@ -122,7 +122,6 @@ DeebotEcovacsAPI.prototype = {
       if (charging && currentMainOnValue) {
         HKSwitchOnService.getCharacteristic(Characteristic.On).updateValue(false);
       } else if (idle && !currentMainOnValue) {
-        this.log.debug('INFO - TOTO');
         HKSwitchOnService.getCharacteristic(Characteristic.On).updateValue(true);
       }
     });

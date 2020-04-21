@@ -343,8 +343,9 @@ myDeebotEcovacsPlatform.prototype = {
         homebridgeAccessory.vacBot.orderToSend = orderToSend;
         homebridgeAccessory.vacBot.connect_and_wait_until_ready();
       }
-      callback();
     }
+
+    callback();
   },
 
   getDeebotEcovacsModeCharacteristic: function (homebridgeAccessory, service, callback) {
