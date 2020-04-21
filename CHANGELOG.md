@@ -17,6 +17,10 @@ You can also use the [PACKAGES](https://github.com/oznu/docker-homebridge#option
 
 All notable changes to this project will be documented in this file.
 
+## 0.1.3
+
+- [FIX] fixing bugs #14 and others
+
 ## 0.1.2
 
 - [FIX] fixing bugs
