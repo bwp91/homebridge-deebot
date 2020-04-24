@@ -10,13 +10,19 @@
 
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
+<img src="https://user-images.githubusercontent.com/19813688/80209222-f3cc6680-8631-11ea-9365-5f3b044971a9.PNG" width="25%" align="right">
+<img src="https://user-images.githubusercontent.com/19813688/80209217-f202a300-8631-11ea-8c42-7e19971f9714.PNG" width="25%" align="right">
+
 Plugin for controlling your [deebot Ecovacs](https://www.ecovacs.com/global/deebot-robotic-vacuum-cleaner) from [Ecovacs](https://www.ecovacs.com/global/support/) through [HomeBridge](https://github.com/nfarina/homebridge) .
 
-Each Deebot is shown through one fan. Fan speed will determine the deebot speed.
-Direction will handle auto / edge mode.
-Switching off will make the deebot return to charge.
+Each Deebot is shown through
 
-The battery percentage / charging status is shown in the detail pane .
+- One fan. Fan speed will determine the deebot speed. Direction will handle auto / edge mode. Switching off will make the deebot stop, switching on will make it start cleaning,
+- One Switch that will allow you to start lceaning (auto / edge mode depending on Fan direction), and go back to charge when switched off,
+- One Switch that will play a sound on your Deebot,
+- One Motion sensor that will be triggered in case your deebot needs attention.
+
+The battery percentage / charging status is shown in the detail pane of each service.
 
 `npm install -g homebridge-deebotecovacs`
 
@@ -57,6 +63,7 @@ Fields:
 - `password` password of your ecovacs account (required).
 - `country code` : country code for your account , value in : CH, TW, MY, JP, SG, TH, HK, IN, KR,US,FR, ES, UK, NO, MX, DE, PT, CH, AU, IT, NL, SE, BE, DK, OTHER (required).
 - `refreshTimer` Optional - enable refresh of deebot state every X seconds, for automation purpose if you need to activate something else based on its state change (defaults : disable, accepted range : 30-600s).
+- `cleanCache` Set it to true in case you want to remove the cached accessory (only those from this plugin). You have to restart homebridge after applying the option. Remove it after restart, otherwise it will be recreated at each startup.
 
 ## Changelog
 
