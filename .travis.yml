@@ -29,4 +29,3 @@ jobs:
         on:
           tags: true
         edge: true
-        prerelease: true
