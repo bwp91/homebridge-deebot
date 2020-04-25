@@ -19,7 +19,7 @@ All notable changes to this project will be documented in this file.
 
 ## 1.0.0
 
-**platform name chnage from HomebridgeDeebotsEcovacs to DeebotEcovas**
+**platform name change from HomebridgeDeebotsEcovacs to DeebotEcovas**
 
 - [NEW] first non pre-version release, platform name change
 
