@@ -40,7 +40,7 @@ function myDeebotEcovacsPlatform(log, config, api) {
           this.log('WARNING - Removing Accessories');
           this.api.unregisterPlatformAccessories(
             'homebridge-deebotecovacs',
-            'HomebridgeDeebotEcovacs',
+            'DeebotEcovacs',
             this.foundAccessories
           );
           this.foundAccessories = [];
@@ -58,7 +58,7 @@ module.exports = function (homebridge) {
   HomebridgeAPI = homebridge;
   homebridge.registerPlatform(
     'homebridge-deebotecovacs',
-    'HomebridgeDeebotEcovacs',
+    'DeebotEcovacs',
     myDeebotEcovacsPlatform,
     true
   );
@@ -137,11 +137,9 @@ myDeebotEcovacsPlatform.prototype = {
             .setCharacteristic(Characteristic.Manufacturer, myDeebotEcovacsAccessory.manufacturer)
             .setCharacteristic(Characteristic.Model, myDeebotEcovacsAccessory.model)
             .setCharacteristic(Characteristic.SerialNumber, myDeebotEcovacsAccessory.serialNumber);
-          this.api.registerPlatformAccessories(
-            'homebridge-deebotecovacs',
-            'HomebridgeDeebotEcovacs',
-            [myDeebotEcovacsAccessory]
-          );
+          this.api.registerPlatformAccessories('homebridge-deebotecovacs', 'DeebotEcovacs', [
+            myDeebotEcovacsAccessory,
+          ]);
           this.foundAccessories.push(myDeebotEcovacsAccessory);
         }
 

@@ -48,7 +48,7 @@ Config as below:
 ```json
 "platforms": [
   {
-    "platform": "HomebridgeDeebotEcovacs",
+    "platform": "DeebotEcovacs",
     "email": "toto@titi.com",
     "password": "toto",
     "countryCode" : "FR"
