@@ -24,6 +24,9 @@ function myDeebotEcovacsPlatform(log, config, api) {
   this.foundAccessories = [];
   this.deebotEcovacsAPI = new DeebotEcovacsAPI(log, this);
 
+  this._confirmedAccessories = [];
+  this._confirmedServices = [];
+
   this.api
     .on(
       'shutdown',
@@ -88,6 +91,56 @@ myDeebotEcovacsPlatform.prototype = {
     }
   },
 
+  //Cleaning methods
+  cleanPlatform: function () {
+    this.cleanAccessories();
+    this.cleanServices();
+  },
+
+  cleanAccessories: function () {
+    //cleaning accessories
+    let accstoRemove = [];
+    for (let acc of this.foundAccessories) {
+      if (!this._confirmedAccessories.find((x) => x.UUID == acc.UUID)) {
+        accstoRemove.push(acc);
+        this.log('WARNING - Accessory will be Removed ' + acc.UUID + '/' + acc.displayName);
+      }
+    }
+
+    if (accstoRemove.length > 0)
+      this.api.unregisterPlatformAccessories(
+        'homebridge-deebotecovacs',
+        'DeebotEcovacs',
+        accstoRemove
+      );
+  },
+
+  cleanServices: function () {
+    //cleaning services
+    for (let acc of this.foundAccessories) {
+      let servicestoRemove = [];
+      for (let serv of acc.services) {
+        if (
+          serv.subtype !== undefined &&
+          !this._confirmedServices.find((x) => x.UUID == serv.UUID && x.subtype == serv.subtype)
+        ) {
+          servicestoRemove.push(serv);
+        }
+      }
+      for (let servToDel of servicestoRemove) {
+        this.log(
+          'WARNING - Service Removed' +
+            servToDel.UUID +
+            '/' +
+            servToDel.subtype +
+            '/' +
+            servToDel.displayName
+        );
+        acc.removeService(servToDel);
+      }
+    }
+  },
+
   discoverDeebots: function () {
     //deebot discovered
     this.deebotEcovacsAPI.on('deebotsDiscovered', () => {
@@ -119,9 +172,9 @@ myDeebotEcovacsPlatform.prototype = {
     if (this.deebotEcovacsAPI.vacbots) {
       for (let s = 0; s < this.deebotEcovacsAPI.vacbots.length; s++) {
         var vacBot = this.deebotEcovacsAPI.vacbots[s];
-        this.log('INFO - Setting up Deebot : ' + JSON.stringify(vacBot.vacuum.nick));
 
         let deebotName = vacBot.vacuum.nick ? vacBot.vacuum.nick : vacBot.vacuum.name;
+        this.log('INFO - Discovered Deebot : ' + deebotName);
 
         let uuid = UUIDGen.generate(deebotName);
         let myDeebotEcovacsAccessory = this.foundAccessories.find((x) => x.UUID == uuid);
@@ -233,8 +286,16 @@ myDeebotEcovacsPlatform.prototype = {
           HKSwitchOnService,
           HKMotionService
         );
+
+        this._confirmedAccessories.push(myDeebotEcovacsAccessory);
+        this._confirmedServices.push(HKBatteryService);
+        this._confirmedServices.push(HKFanService);
+        this._confirmedServices.push(HKSwitchOnService);
+        this._confirmedServices.push(HKMotionService);
+        this._confirmedServices.push(HKSwitchBipService);
       }
 
+      this.cleanPlatform();
       //timer for background refresh
       this.refreshBackground();
     } else {
