@@ -17,6 +17,10 @@ You can also use the [PACKAGES](https://github.com/oznu/docker-homebridge#option
 
 All notable changes to this project will be documented in this file.
 
+## 1.0.2
+
+- [FIX] adding wrong characteristic to service
+
 ## 1.0.1
 
 - [NEW] cleaning lost devices from cache

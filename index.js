@@ -197,6 +197,7 @@ myDeebotEcovacsPlatform.prototype = {
         }
 
         myDeebotEcovacsAccessory.vacBot = vacBot;
+        myDeebotEcovacsAccessory.name = deebotName;
 
         let HKBatteryService = myDeebotEcovacsAccessory.getServiceByUUIDAndSubType(
           deebotName,
@@ -367,8 +368,8 @@ myDeebotEcovacsPlatform.prototype = {
 
     setTimeout(() => {
       if (homebridgeAccessory.vacBot && homebridgeAccessory.vacBot.is_ready) {
-        homebridgeAccessory.vacBot.run('GetChargeState');
         homebridgeAccessory.vacBot.run('GetCleanState');
+        homebridgeAccessory.vacBot.run('GetChargeState');
       } else {
         homebridgeAccessory.vacBot.connect_and_wait_until_ready();
       }
@@ -387,8 +388,18 @@ myDeebotEcovacsPlatform.prototype = {
       if (service.type == 'fan') orderToSend = ['Stop'];
 
       if (value == 1) {
-        let currentDirectionValue = service.getCharacteristic(Characteristic.RotationDirection)
-          .value;
+        //need to find FAN Service
+        let HKFanService = service;
+        let currentDirectionValue = 0;
+        if (service.type != 'fan')
+          HKFanService = homebridgeAccessory.getServiceByUUIDAndSubType(
+            'Start/Pause ' + homebridgeAccessory.name,
+            'FanService' + homebridgeAccessory.name
+          );
+        if (HKFanService)
+          currentDirectionValue = HKFanService.getCharacteristic(Characteristic.RotationDirection)
+            .value;
+
         orderToSend = currentDirectionValue == 1 ? ['Clean', 'edge'] : ['Clean', 'auto'];
       }
 
@@ -407,7 +418,7 @@ myDeebotEcovacsPlatform.prototype = {
     callback();
   },
 
-  getDeebotEcovacsModeCharacteristic: function (homebridgeAccessory, service, callback) {
+  getDeebotEcovacsModeCharacteristic: function (service, callback) {
     this.log.debug('INFO - getDeebotEcovacsModeCharacteristic');
 
     //don't call GetCleanState since on charac update will handle all
@@ -481,14 +492,11 @@ myDeebotEcovacsPlatform.prototype = {
       homebridgeAccessory.vacBot.connect_and_wait_until_ready();
     }
 
+    callback();
     // In order to behave like a push button reset the status to off
     setTimeout(() => {
-      service.getCharacteristic(Characteristic.On).emit('get', function (error, newValue) {
-        service.getCharacteristic(Characteristic.On).updateValue(newValue);
-      });
+      service.getCharacteristic(Characteristic.On).updateValue(false);
     }, 1000);
-
-    callback();
   },
 
   bindBatteryLevelCharacteristic: function (homebridgeAccessory, service) {
@@ -541,7 +549,7 @@ myDeebotEcovacsPlatform.prototype = {
       .on(
         'get',
         function (callback) {
-          this.getDeebotEcovacsModeCharacteristic(homebridgeAccessory, service, callback);
+          this.getDeebotEcovacsModeCharacteristic(service, callback);
         }.bind(this)
       )
       .on(
