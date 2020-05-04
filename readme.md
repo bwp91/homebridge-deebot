@@ -58,7 +58,7 @@ Config as below:
 
 Fields:
 
-- `platform` must be "HomebridgeDeebotEcovacs" (required).
+- `platform` must be "DeebotEcovacs" (required).
 - `email` email used for your ecovacs account (required).
 - `password` password of your ecovacs account (required).
 - `country code` : country code for your account , value in : CH, TW, MY, JP, SG, TH, HK, IN, KR,US,FR, ES, UK, NO, MX, DE, PT, CH, AU, IT, NL, SE, BE, DK, OTHER (required).
