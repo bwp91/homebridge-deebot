@@ -17,6 +17,13 @@ You can also use the [PACKAGES](https://github.com/oznu/docker-homebridge#option
 
 All notable changes to this project will be documented in this file.
 
+## 1.1.0
+
+- [NEW] bump dep on [js lib](https://github.com/mrbungle64/ecovacs-deebot.js) that makes this plugin possible
+- [NEW] select mode for fan direction in config #28
+- [NEW] set primary switch if present #23
+- [NEW] options to set what to publish
+
 ## 1.0.2
 
 - [FIX] adding wrong characteristic to service

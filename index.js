@@ -7,6 +7,29 @@ checkTimer = function (timer) {
   else return timer;
 };
 
+checkParameter = function (parameter, def) {
+  if (parameter == undefined) {
+    return def;
+  } else {
+    if (typeof parameter === 'string') {
+      switch (parameter.toLowerCase().trim()) {
+        case 'true':
+        case 'yes':
+          return true;
+        case 'false':
+        case 'no':
+        case null:
+          return false;
+        case 'undefined':
+        default:
+          return parameter;
+      }
+    } else {
+      return parameter;
+    }
+  }
+};
+
 function myDeebotEcovacsPlatform(log, config, api) {
   if (!config) {
     log('No configuration found for homebridge-deebotecovacs');
@@ -20,6 +43,13 @@ function myDeebotEcovacsPlatform(log, config, api) {
   this.countryCode = config['countryCode'];
   this.refreshTimer = checkTimer(config['refreshTimer']);
   this.cleanCache = config['cleanCache'];
+
+  this.publishBipSwitch = checkParameter(config['publishBipSwitch'], true);
+  this.publishSwitch = checkParameter(config['publishSwitch'], true);
+  this.publishFan = checkParameter(config['publishFan'], true);
+  this.publishMotionDetector = checkParameter(config['publishMotionDetector'], true);
+  this.leftDirectionCleaningMode = checkParameter(config['leftDirectionCleaningMode'], 'edge');
+  this.rightDirectionCleaningMode = checkParameter(config['rightDirectionCleaningMode'], 'auto');
 
   this.foundAccessories = [];
   this.deebotEcovacsAPI = new DeebotEcovacsAPI(log, this);
@@ -199,7 +229,9 @@ myDeebotEcovacsPlatform.prototype = {
         myDeebotEcovacsAccessory.vacBot = vacBot;
         myDeebotEcovacsAccessory.name = deebotName;
 
-        let HKBatteryService = myDeebotEcovacsAccessory.getServiceByUUIDAndSubType(
+        var HKBatteryService, HKFanService, HKSwitchOnService, HKSwitchBipService, HKMotionService;
+
+        HKBatteryService = myDeebotEcovacsAccessory.getServiceByUUIDAndSubType(
           deebotName,
           'BatteryService' + deebotName
         );
@@ -213,87 +245,106 @@ myDeebotEcovacsPlatform.prototype = {
         this.bindBatteryLevelCharacteristic(myDeebotEcovacsAccessory, HKBatteryService);
         this.bindChargingStateCharacteristic(myDeebotEcovacsAccessory, HKBatteryService);
         this.bindStatusLowBatteryCharacteristic(myDeebotEcovacsAccessory, HKBatteryService);
+        this._confirmedServices.push(HKBatteryService);
 
-        let HKFanService = myDeebotEcovacsAccessory.getServiceByUUIDAndSubType(
-          'Start/Pause ' + deebotName,
-          'FanService' + deebotName
-        );
+        if (this.publishFan) {
+          HKFanService = myDeebotEcovacsAccessory.getServiceByUUIDAndSubType(
+            'Start/Pause ' + deebotName,
+            'FanService' + deebotName
+          );
 
-        if (!HKFanService) {
-          this.log('INFO - Creating Fan Service ' + deebotName);
-          HKFanService = new Service.Fan('Start/Pause ' + deebotName, 'FanService' + deebotName);
-          HKFanService.subtype = 'FanService' + deebotName;
-          myDeebotEcovacsAccessory.addService(HKFanService);
+          if (!HKFanService) {
+            this.log('INFO - Creating Fan Service ' + deebotName);
+            HKFanService = new Service.Fan('Start/Pause ' + deebotName, 'FanService' + deebotName);
+            HKFanService.subtype = 'FanService' + deebotName;
+            myDeebotEcovacsAccessory.addService(HKFanService);
+          }
+
+          HKFanService.type = 'fan';
+
+          this.bindOnCharacteristic(myDeebotEcovacsAccessory, HKFanService);
+          this.bindRotationSpeedCharacteristic(myDeebotEcovacsAccessory, HKFanService);
+          if (
+            this.leftDirectionCleaningMode &&
+            this.leftDirectionCleaningMode != '' &&
+            this.rightDirectionCleaningMode &&
+            this.rightDirectionCleaningMode != ''
+          )
+            this.bindRotationDirectionCharacteristic(myDeebotEcovacsAccessory, HKFanService);
+
+          HKFanService.setPrimaryService(true);
+          this._confirmedServices.push(HKFanService);
         }
 
-        HKFanService.type = 'fan';
-
-        this.bindOnCharacteristic(myDeebotEcovacsAccessory, HKFanService);
-        this.bindRotationDirectionCharacteristic(myDeebotEcovacsAccessory, HKFanService);
-        this.bindRotationSpeedCharacteristic(myDeebotEcovacsAccessory, HKFanService);
-
-        let HKSwitchOnService = myDeebotEcovacsAccessory.getServiceByUUIDAndSubType(
-          'Start/Stop ' + deebotName,
-          'SwitchOnService' + deebotName
-        );
-
-        if (!HKSwitchOnService) {
-          this.log('INFO - Creating Main Switch Service ' + deebotName);
-          HKSwitchOnService = new Service.Switch(
+        if (this.publishSwitch) {
+          HKSwitchOnService = myDeebotEcovacsAccessory.getServiceByUUIDAndSubType(
             'Start/Stop ' + deebotName,
             'SwitchOnService' + deebotName
           );
-          HKSwitchOnService.subtype = 'SwitchOnService' + deebotName;
-          myDeebotEcovacsAccessory.addService(HKSwitchOnService);
+
+          if (!HKSwitchOnService) {
+            this.log('INFO - Creating Main Switch Service ' + deebotName);
+            HKSwitchOnService = new Service.Switch(
+              'Start/Stop ' + deebotName,
+              'SwitchOnService' + deebotName
+            );
+            HKSwitchOnService.subtype = 'SwitchOnService' + deebotName;
+            myDeebotEcovacsAccessory.addService(HKSwitchOnService);
+          }
+          this.bindSwitchOnCharacteristic(myDeebotEcovacsAccessory, HKSwitchOnService);
+
+          HKSwitchOnService.setPrimaryService(true);
+          this._confirmedServices.push(HKSwitchOnService);
         }
-        this.bindSwitchOnCharacteristic(myDeebotEcovacsAccessory, HKSwitchOnService);
 
-        let HKSwitchBipService = myDeebotEcovacsAccessory.getServiceByUUIDAndSubType(
-          'Bip ' + deebotName,
-          'SwitchBipService' + deebotName
-        );
-
-        if (!HKSwitchBipService) {
-          this.log('INFO - Creating Sound stateless Switch Service ' + deebotName);
-          HKSwitchBipService = new Service.Switch(
+        if (this.publishBipSwitch) {
+          HKSwitchBipService = myDeebotEcovacsAccessory.getServiceByUUIDAndSubType(
             'Bip ' + deebotName,
             'SwitchBipService' + deebotName
           );
-          HKSwitchBipService.subtype = 'SwitchBipService' + deebotName;
-          myDeebotEcovacsAccessory.addService(HKSwitchBipService);
+
+          if (!HKSwitchBipService) {
+            this.log('INFO - Creating Sound stateless Switch Service ' + deebotName);
+            HKSwitchBipService = new Service.Switch(
+              'Bip ' + deebotName,
+              'SwitchBipService' + deebotName
+            );
+            HKSwitchBipService.subtype = 'SwitchBipService' + deebotName;
+            myDeebotEcovacsAccessory.addService(HKSwitchBipService);
+          }
+          this.bindSwitchBipCharacteristic(myDeebotEcovacsAccessory, HKSwitchBipService);
+          this._confirmedServices.push(HKSwitchBipService);
         }
-        this.bindSwitchBipCharacteristic(myDeebotEcovacsAccessory, HKSwitchBipService);
 
-        let HKMotionService = myDeebotEcovacsAccessory.getServiceByUUIDAndSubType(
-          deebotName + ' needs attention',
-          'MotionService' + deebotName
-        );
-
-        if (!HKMotionService) {
-          this.log('INFO - Creating Motion Service ' + deebotName);
-          HKMotionService = new Service.MotionSensor(
+        if (this.publishMotionDetector) {
+          HKMotionService = myDeebotEcovacsAccessory.getServiceByUUIDAndSubType(
             deebotName + ' needs attention',
             'MotionService' + deebotName
           );
-          HKMotionService.subtype = 'MotionService' + deebotName;
-          myDeebotEcovacsAccessory.addService(HKMotionService);
+
+          if (!HKMotionService) {
+            this.log('INFO - Creating Motion Service ' + deebotName);
+            HKMotionService = new Service.MotionSensor(
+              deebotName + ' needs attention',
+              'MotionService' + deebotName
+            );
+            HKMotionService.subtype = 'MotionService' + deebotName;
+            myDeebotEcovacsAccessory.addService(HKMotionService);
+          }
+          this.bindMotionCharacteristic(HKMotionService);
+          this._confirmedServices.push(HKMotionService);
         }
-        this.bindMotionCharacteristic(HKMotionService);
 
         this.deebotEcovacsAPI.configureEvents(
           vacBot,
           HKBatteryService,
           HKFanService,
           HKSwitchOnService,
-          HKMotionService
+          HKMotionService,
+          this
         );
 
         this._confirmedAccessories.push(myDeebotEcovacsAccessory);
-        this._confirmedServices.push(HKBatteryService);
-        this._confirmedServices.push(HKFanService);
-        this._confirmedServices.push(HKSwitchOnService);
-        this._confirmedServices.push(HKMotionService);
-        this._confirmedServices.push(HKSwitchBipService);
       }
 
       this.cleanPlatform();
@@ -400,7 +451,10 @@ myDeebotEcovacsPlatform.prototype = {
           currentDirectionValue = HKFanService.getCharacteristic(Characteristic.RotationDirection)
             .value;
 
-        orderToSend = currentDirectionValue == 1 ? ['Clean', 'edge'] : ['Clean', 'auto'];
+        orderToSend =
+          currentDirectionValue == 1
+            ? ['Clean', this.leftDirectionCleaningMode]
+            : ['Clean', this.rightDirectionCleaningMode];
       }
 
       this.log.debug(
@@ -441,7 +495,10 @@ myDeebotEcovacsPlatform.prototype = {
     );
 
     if (currentDirectionValue !== value && isOn) {
-      let orderToSend = value == 1 ? ['Clean', 'edge'] : ['Clean', 'auto'];
+      let orderToSend =
+        value == 1
+          ? ['Clean', this.leftDirectionCleaningMode]
+          : ['Clean', this.rightDirectionCleaningMode];
 
       if (homebridgeAccessory.vacBot && homebridgeAccessory.vacBot.is_ready) {
         homebridgeAccessory.vacBot.run.apply(homebridgeAccessory.vacBot, orderToSend);

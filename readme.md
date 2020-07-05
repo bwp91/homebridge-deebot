@@ -64,6 +64,12 @@ Fields:
 - `country code` : country code for your account , value in : CH, TW, MY, JP, SG, TH, HK, IN, KR,US,FR, ES, UK, NO, MX, DE, PT, CH, AU, IT, NL, SE, BE, DK, OTHER (required).
 - `refreshTimer` Optional - enable refresh of deebot state every X seconds, for automation purpose if you need to activate something else based on its state change (defaults : disable, accepted range : 30-600s).
 - `cleanCache` Set it to true in case you want to remove the cached accessory (only those from this plugin). You have to restart homebridge after applying the option. Remove it after restart, otherwise it will be recreated at each startup.
+- `publishBipSwitch` Optional - defaults to true - Publish the switch that makes the deebot beeps
+- `publishFan` Optional - defaults to true - Publish the fan that makes speed cleaning available
+- `publishSwitch` Optional - defaults to true - Publish the switch that makes on/off available
+- `publishMotionDetector` Optional - defaults to true - Publish the motion detector to be triggered in case of hep needed by your deebot
+- `leftDirectionCleaningMode` Optional - defaults to 'edge' - specify the mode on left ('edge','auto','zone') - empty both if you don't want to use
+- `rightDirectionCleaningMode` Optional - defaults to 'auto' - specify the mode on left ('edge','auto','zone') - empty both if you don't want to use
 
 ## Changelog
 

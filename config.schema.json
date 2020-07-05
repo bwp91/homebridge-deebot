@@ -129,6 +129,36 @@
         "minimum": 30,
         "maximum": 600,
         "description": "Enable refresh of deebots state every X seconds, for automation purpose if you need to activate something else based on a state change of a deebot by another means than homekit. Be aware it might make you deebot smokes since the plugin will ask its status very often :)"
+      },
+      "publishBipSwitch": {
+        "title": "Publish Bip Switch",
+        "type": "boolean",
+        "default": true
+      },
+      "publishSwitch": {
+        "title": "Publish Switch",
+        "type": "boolean",
+        "default": true
+      },
+      "publishFan": {
+        "title": "Publish Fan",
+        "type": "boolean",
+        "default": true
+      },
+      "publishMotionDetector": {
+        "title": "Publish Motion detector",
+        "type": "boolean",
+        "default": true
+      },
+      "leftDirectionCleaningMode": {
+        "title": "Left direction cleaning mode",
+        "type": "string",
+        "default": "edge"
+      },
+      "rightDirectionCleaningMode": {
+        "title": "Right irection cleaning mode",
+        "type": "string",
+        "default": "auto"
       }
     }
   },
