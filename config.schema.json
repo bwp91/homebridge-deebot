@@ -9,111 +9,111 @@
     "required": ["email", "password", "countryCode"],
     "properties": {
       "email": {
-        "title": "Ecovacs account login",
+        "title": "EcoVacs account user name",
         "type": "string"
       },
       "password": {
-        "title": "Ecovacs account password",
+        "title": "EcoVacs account password",
         "type": "string"
       },
       "countryCode": {
-        "title": "2 letters countryCode from where you are (based on your public IP)",
+        "title": "Select your country code where you are located. This is based off of your public IP address.",
         "type": "string",
         "oneOf": [
           {
-            "title": "CH",
-            "enum": ["CH"]
+            "title": "China (CN)",
+            "enum": ["CN"]
           },
           {
-            "title": "TW",
+            "title": "Taiwan (TW)",
             "enum": ["TW"]
           },
           {
-            "title": "MY",
+            "title": "Malaysia (MY)",
             "enum": ["MY"]
           },
           {
-            "title": "JP",
+            "title": "Japan (JP)",
             "enum": ["JP"]
           },
           {
-            "title": "SG",
+            "title": "Singapore (SG)",
             "enum": ["SG"]
           },
           {
-            "title": "TH",
+            "title": "Thailand (TH)",
             "enum": ["TH"]
           },
           {
-            "title": "HK",
+            "title": "Hong Kong (HK)",
             "enum": ["HK"]
           },
           {
-            "title": "IN",
+            "title": "India (IN)",
             "enum": ["IN"]
           },
           {
-            "title": "KR",
+            "title": "South Korea (KR)",
             "enum": ["KR"]
           },
           {
-            "title": "US",
+            "title": "United States (US)",
             "enum": ["US"]
           },
           {
-            "title": "FR",
+            "title": "France (FR)",
             "enum": ["FR"]
           },
           {
-            "title": "ES",
+            "title": "Spain (ES)",
             "enum": ["ES"]
           },
           {
-            "title": "UK",
+            "title": "United Kingdom (UK)",
             "enum": ["UK"]
           },
           {
-            "title": "NO",
+            "title": "Norway (NO)",
             "enum": ["NO"]
           },
           {
-            "title": "MX",
-            "enum": ["MX"]
-          },
-          {
-            "title": "DE",
-            "enum": ["DE"]
-          },
-          {
-            "title": "PT",
-            "enum": ["PT"]
-          },
-          {
-            "title": "CH",
+            "title": "Switzerland (CH)",
             "enum": ["CH"]
           },
           {
-            "title": "AU",
+            "title": "Mexico (MX)",
+            "enum": ["MX"]
+          },
+          {
+            "title": "Germany (DE)",
+            "enum": ["DE"]
+          },
+          {
+            "title": "Portugal (PT)",
+            "enum": ["PT"]
+          },
+          {
+            "title": "Australia (AU)",
             "enum": ["AU"]
           },
           {
-            "title": "IT",
+            "title": "Italy (IT)",
             "enum": ["IT"]
           },
           {
-            "title": "NL",
+            "title": "Netherlands (NL)",
             "enum": ["NL"]
           },
           {
-            "title": "SE",
+            "title": "Sweden (SE)",
             "enum": ["SE"]
           },
           {
-            "title": "BE",
+            "title": "Belgium (BE)",
             "enum": ["BE"]
           },
           {
-            "title": "DK",
+            "title": "Denmark (DK)",
             "enum": ["DK"]
           },
           {
@@ -128,37 +128,71 @@
         "default": 0,
         "minimum": 30,
         "maximum": 600,
-        "description": "Enable refresh of deebots state every X seconds, for automation purpose if you need to activate something else based on a state change of a deebot by another means than homekit. Be aware it might make you deebot smokes since the plugin will ask its status very often :)"
+        "description": "Enables refresh of Deebot's state every X number of seconds. This may be useful for automation purposes if you'd like another HomeKit event to occur based on a state change of a Deebot. Be aware that setting this too often might make your Deebot 'smoke' since the plugin will ask its status very often. :)"
       },
       "publishBipSwitch": {
-        "title": "Publish Bip Switch",
+        "title": "Publish Sound Switch",
         "type": "boolean",
-        "default": true
+        "default": true,
+        "description": "Turn your Deebot notification sounds on or off."
       },
       "publishSwitch": {
-        "title": "Publish Switch",
+        "title": "Publish On/Off Switch",
         "type": "boolean",
-        "default": true
+        "default": true,
+        "description": "Turn your Deebot on or off."
       },
       "publishFan": {
-        "title": "Publish Fan",
+        "title": "Publish Fan Switch",
         "type": "boolean",
-        "default": true
+        "default": true,
+        "description": "Sets the suction power of your Deebot. 0 to 50% = Normal, 51% to 100% = Maximum"
       },
       "publishMotionDetector": {
         "title": "Publish Motion detector",
         "type": "boolean",
-        "default": true
-      },
-      "leftDirectionCleaningMode": {
-        "title": "Left direction cleaning mode",
-        "type": "string",
-        "default": "edge"
+        "default": true,
+        "description": "Provides trouble notifications for your Deebot as a motion alert."
       },
       "rightDirectionCleaningMode": {
-        "title": "Right irection cleaning mode",
+        "title": "Cleaning Mode – Counterclockwise",
         "type": "string",
-        "default": "auto"
+        "oneOf": [
+          {
+            "title": "edge",
+            "enum": ["edge"]
+          },
+          {
+            "title": "auto",
+            "enum": ["auto"]
+          },
+          {
+            "title": "zone",
+            "enum": ["zone"]
+          }
+        ],
+        "default": "auto",
+        "description": "Set the cleaning mode for the counterclockwise fan direction. Default is auto."
+      },
+      "leftDirectionCleaningMode": {
+        "title": "Cleaning Mode – Clockwise",
+        "type": "string",
+        "oneOf": [
+          {
+            "title": "edge",
+            "enum": ["edge"]
+          },
+          {
+            "title": "auto",
+            "enum": ["auto"]
+          },
+          {
+            "title": "zone",
+            "enum": ["zone"]
+          }
+        ],
+        "default": "edge",
+        "description": "Set the cleaning mode for the clockwise fan direction. Default is edge."
       }
     }
   },
