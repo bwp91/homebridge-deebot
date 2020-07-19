@@ -17,6 +17,12 @@ You can also use the [PACKAGES](https://github.com/oznu/docker-homebridge#option
 
 All notable changes to this project will be documented in this file.
 
+## 1.1.1
+
+- [NEW] improved config UI descriptions - thx to @tteuer
+- [NEW] bump dep on [js lib](https://github.com/mrbungle64/ecovacs-deebot.js) to support UK
+- [NEW] zone mode handling
+
 ## 1.1.0
 
 - [NEW] bump dep on [js lib](https://github.com/mrbungle64/ecovacs-deebot.js) that makes this plugin possible

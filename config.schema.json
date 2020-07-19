@@ -157,42 +157,14 @@
       "rightDirectionCleaningMode": {
         "title": "Cleaning Mode – Counterclockwise",
         "type": "string",
-        "oneOf": [
-          {
-            "title": "edge",
-            "enum": ["edge"]
-          },
-          {
-            "title": "auto",
-            "enum": ["auto"]
-          },
-          {
-            "title": "zone",
-            "enum": ["zone"]
-          }
-        ],
         "default": "auto",
-        "description": "Set the cleaning mode for the counterclockwise fan direction. Default is auto."
+        "description": "Set the cleaning mode for the counterclockwise fan direction. Default is auto.  (edge OR auto OR spot OR spotArea,start,1 (or any other spot number) OR customArea,start,1,1 (or any other area number and number of cleanings) "
       },
       "leftDirectionCleaningMode": {
         "title": "Cleaning Mode – Clockwise",
         "type": "string",
-        "oneOf": [
-          {
-            "title": "edge",
-            "enum": ["edge"]
-          },
-          {
-            "title": "auto",
-            "enum": ["auto"]
-          },
-          {
-            "title": "zone",
-            "enum": ["zone"]
-          }
-        ],
         "default": "edge",
-        "description": "Set the cleaning mode for the clockwise fan direction. Default is edge."
+        "description": "Set the cleaning mode for the clockwise fan direction. Default is auto. (edge OR auto OR spot OR spotArea,start,1 (or any other spot number) OR customArea,start,1,1 (or any other area number and number of cleanings) "
       }
     }
   },
