@@ -1,5 +1,5 @@
 {
-   "name": "homebridge-deebotecovacs",
+   "name": "homebridge-deebot",
    "version": "1.1.1",
    "author": "Nicolas Dujardin",
    "description": "Publish your deebot ecovacs as an homekit accessory",
