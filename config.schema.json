@@ -1,173 +1,170 @@
 {
-  "pluginAlias": "Deebot",
-  "pluginType": "platform",
-  "singular": false,
-  "headerDisplay": "This plugin is provided by [nicoduj](https://github.com/nicoduj/)",
-  "footerDisplay": "Support via [paypal](https://www.paypal.me/nicoduj/).",
-  "schema": {
-    "type": "object",
-    "required": ["email", "password", "countryCode"],
-    "properties": {
-      "email": {
-        "title": "EcoVacs account user name",
-        "type": "string"
-      },
-      "password": {
-        "title": "EcoVacs account password",
-        "type": "string"
-      },
-      "countryCode": {
-        "title": "Select your country code where you are located. This is based off of your public IP address.",
-        "type": "string",
-        "oneOf": [
-          {
-            "title": "China (CN)",
-            "enum": ["CN"]
-          },
-          {
-            "title": "Taiwan (TW)",
-            "enum": ["TW"]
-          },
-          {
-            "title": "Malaysia (MY)",
-            "enum": ["MY"]
-          },
-          {
-            "title": "Japan (JP)",
-            "enum": ["JP"]
-          },
-          {
-            "title": "Singapore (SG)",
-            "enum": ["SG"]
-          },
-          {
-            "title": "Thailand (TH)",
-            "enum": ["TH"]
-          },
-          {
-            "title": "Hong Kong (HK)",
-            "enum": ["HK"]
-          },
-          {
-            "title": "India (IN)",
-            "enum": ["IN"]
-          },
-          {
-            "title": "South Korea (KR)",
-            "enum": ["KR"]
-          },
-          {
-            "title": "United States (US)",
-            "enum": ["US"]
-          },
-          {
-            "title": "France (FR)",
-            "enum": ["FR"]
-          },
-          {
-            "title": "Spain (ES)",
-            "enum": ["ES"]
-          },
-          {
-            "title": "United Kingdom (UK)",
-            "enum": ["UK"]
-          },
-          {
-            "title": "Norway (NO)",
-            "enum": ["NO"]
-          },
-          {
-            "title": "Switzerland (CH)",
-            "enum": ["CH"]
-          },
-          {
-            "title": "Mexico (MX)",
-            "enum": ["MX"]
-          },
-          {
-            "title": "Germany (DE)",
-            "enum": ["DE"]
-          },
-          {
-            "title": "Portugal (PT)",
-            "enum": ["PT"]
-          },
-          {
-            "title": "Australia (AU)",
-            "enum": ["AU"]
-          },
-          {
-            "title": "Italy (IT)",
-            "enum": ["IT"]
-          },
-          {
-            "title": "Netherlands (NL)",
-            "enum": ["NL"]
-          },
-          {
-            "title": "Sweden (SE)",
-            "enum": ["SE"]
-          },
-          {
-            "title": "Belgium (BE)",
-            "enum": ["BE"]
-          },
-          {
-            "title": "Denmark (DK)",
-            "enum": ["DK"]
-          },
-          {
-            "title": "OTHER",
-            "enum": ["OTHER"]
-          }
-        ]
-      },
-      "refreshTimer": {
-        "title": "Refresh timer",
-        "type": "integer",
-        "default": 0,
-        "minimum": 30,
-        "maximum": 600,
-        "description": "Enables refresh of Deebot's state every X number of seconds. This may be useful for automation purposes if you'd like another HomeKit event to occur based on a state change of a Deebot. Be aware that setting this too often might make your Deebot 'smoke' since the plugin will ask its status very often. :)"
-      },
-      "publishBipSwitch": {
-        "title": "Publish Sound Switch",
-        "type": "boolean",
-        "default": true,
-        "description": "Turn your Deebot notification sounds on or off."
-      },
-      "publishSwitch": {
-        "title": "Publish On/Off Switch",
-        "type": "boolean",
-        "default": true,
-        "description": "Turn your Deebot on or off."
-      },
-      "publishFan": {
-        "title": "Publish Fan Switch",
-        "type": "boolean",
-        "default": true,
-        "description": "Sets the suction power of your Deebot. 0 to 50% = Normal, 51% to 100% = Maximum"
-      },
-      "publishMotionDetector": {
-        "title": "Publish Motion detector",
-        "type": "boolean",
-        "default": true,
-        "description": "Provides trouble notifications for your Deebot as a motion alert."
-      },
-      "rightDirectionCleaningMode": {
-        "title": "Cleaning Mode – Counterclockwise",
-        "type": "string",
-        "default": "auto",
-        "description": "Set the cleaning mode for the counterclockwise fan direction. Default is auto.  (edge OR auto OR spot OR spotArea,start,1 (or any other spot number) OR customArea,start,1,1 (or any other area number and number of cleanings) "
-      },
-      "leftDirectionCleaningMode": {
-        "title": "Cleaning Mode – Clockwise",
-        "type": "string",
-        "default": "edge",
-        "description": "Set the cleaning mode for the clockwise fan direction. Default is auto. (edge OR auto OR spot OR spotArea,start,1 (or any other spot number) OR customArea,start,1,1 (or any other area number and number of cleanings) "
+   "pluginAlias": "Deebot",
+   "pluginType": "platform",
+   "singular": false,
+   "headerDisplay": "Homebridge plugin to control ECOVACS Deebot devices.",
+   "footerDisplay": "",
+   "schema": {
+      "type": "object",
+      "required": ["email", "password", "countryCode"],
+      "properties": {
+         "email": {
+            "title": "EcoVacs account username",
+            "type": "string"
+         },
+         "password": {
+            "title": "EcoVacs account password",
+            "type": "string"
+         },
+         "countryCode": {
+            "title": "Select your country code where you are located. This is based off of your public IP address.",
+            "type": "string",
+            "oneOf": [{
+                  "title": "China (CN)",
+                  "enum": ["CN"]
+               },
+               {
+                  "title": "Taiwan (TW)",
+                  "enum": ["TW"]
+               },
+               {
+                  "title": "Malaysia (MY)",
+                  "enum": ["MY"]
+               },
+               {
+                  "title": "Japan (JP)",
+                  "enum": ["JP"]
+               },
+               {
+                  "title": "Singapore (SG)",
+                  "enum": ["SG"]
+               },
+               {
+                  "title": "Thailand (TH)",
+                  "enum": ["TH"]
+               },
+               {
+                  "title": "Hong Kong (HK)",
+                  "enum": ["HK"]
+               },
+               {
+                  "title": "India (IN)",
+                  "enum": ["IN"]
+               },
+               {
+                  "title": "South Korea (KR)",
+                  "enum": ["KR"]
+               },
+               {
+                  "title": "United States (US)",
+                  "enum": ["US"]
+               },
+               {
+                  "title": "France (FR)",
+                  "enum": ["FR"]
+               },
+               {
+                  "title": "Spain (ES)",
+                  "enum": ["ES"]
+               },
+               {
+                  "title": "United Kingdom (UK)",
+                  "enum": ["UK"]
+               },
+               {
+                  "title": "Norway (NO)",
+                  "enum": ["NO"]
+               },
+               {
+                  "title": "Switzerland (CH)",
+                  "enum": ["CH"]
+               },
+               {
+                  "title": "Mexico (MX)",
+                  "enum": ["MX"]
+               },
+               {
+                  "title": "Germany (DE)",
+                  "enum": ["DE"]
+               },
+               {
+                  "title": "Portugal (PT)",
+                  "enum": ["PT"]
+               },
+               {
+                  "title": "Australia (AU)",
+                  "enum": ["AU"]
+               },
+               {
+                  "title": "Italy (IT)",
+                  "enum": ["IT"]
+               },
+               {
+                  "title": "Netherlands (NL)",
+                  "enum": ["NL"]
+               },
+               {
+                  "title": "Sweden (SE)",
+                  "enum": ["SE"]
+               },
+               {
+                  "title": "Belgium (BE)",
+                  "enum": ["BE"]
+               },
+               {
+                  "title": "Denmark (DK)",
+                  "enum": ["DK"]
+               },
+               {
+                  "title": "OTHER",
+                  "enum": ["OTHER"]
+               }
+            ]
+         },
+         "refreshTimer": {
+            "title": "Refresh timer",
+            "type": "integer",
+            "default": 0,
+            "minimum": 30,
+            "maximum": 600,
+            "description": "Enables refresh of Deebot's state every X number of seconds. This may be useful for automation purposes if you'd like another HomeKit event to occur based on a state change of a Deebot. Be aware that setting this too often might make your Deebot 'smoke' since the plugin will ask its status very often. :)"
+         },
+         "publishBipSwitch": {
+            "title": "Publish Sound Switch",
+            "type": "boolean",
+            "default": true,
+            "description": "Turn your Deebot notification sounds on or off."
+         },
+         "publishSwitch": {
+            "title": "Publish On/Off Switch",
+            "type": "boolean",
+            "default": true,
+            "description": "Turn your Deebot on or off."
+         },
+         "publishFan": {
+            "title": "Publish Fan Switch",
+            "type": "boolean",
+            "default": true,
+            "description": "Sets the suction power of your Deebot. 0 to 50% = Normal, 51% to 100% = Maximum"
+         },
+         "publishMotionDetector": {
+            "title": "Publish Motion detector",
+            "type": "boolean",
+            "default": true,
+            "description": "Provides trouble notifications for your Deebot as a motion alert."
+         },
+         "rightDirectionCleaningMode": {
+            "title": "Cleaning Mode – Counterclockwise",
+            "type": "string",
+            "default": "auto",
+            "description": "Set the cleaning mode for the counterclockwise fan direction. Default is auto.  (edge OR auto OR spot OR spotArea,start,1 (or any other spot number) OR customArea,start,1,1 (or any other area number and number of cleanings) "
+         },
+         "leftDirectionCleaningMode": {
+            "title": "Cleaning Mode – Clockwise",
+            "type": "string",
+            "default": "edge",
+            "description": "Set the cleaning mode for the clockwise fan direction. Default is auto. (edge OR auto OR spot OR spotArea,start,1 (or any other spot number) OR customArea,start,1,1 (or any other area number and number of cleanings) "
+         }
       }
-    }
-  },
-  "form": null,
-  "display": null
+   }
 }

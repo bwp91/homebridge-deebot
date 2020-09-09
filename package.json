@@ -1,7 +1,10 @@
 {
    "name": "homebridge-deebot",
    "version": "1.2.0",
-   "author": "Nicolas Dujardin",
+   "author": "bwp91",
+   "contributors": [
+      "nicoduj"
+   ],
    "description": "Publish your deebot ecovacs as an homekit accessory",
    "license": "ISC",
    "keywords": [
@@ -18,10 +21,10 @@
    },
    "repository": {
       "type": "git",
-      "url": "git+https://github.com/nicoduj/homebridge-deebotecovacs.git"
+      "url": "https://github.com/bwp91/homebridge-deebot"
    },
    "bugs": {
-      "url": "https://github.com/nicoduj/homebridge-deebotecovacs/issues"
+      "url": "https://github.com/bwp91/homebridge-deebot/issues"
    },
    "dependencies": {
       "ecovacs-deebot": "^0.4.17",
