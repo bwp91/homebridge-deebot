@@ -5,15 +5,16 @@
    "contributors": [
       "nicoduj"
    ],
-   "description": "Publish your deebot ecovacs as an homekit accessory",
+   "description": "Homebridge plugin to control ECOVACS Deebot devices.",
    "license": "ISC",
    "keywords": [
+      "homebridge",
       "homebridge-plugin",
-      "deebot",
-      "sucks",
+      "homekit",
       "ecovacs",
+      "deebot",
       "vacuum",
-      "homekit"
+      "hoover"
    ],
    "engines": {
       "homebridge": ">=0.4.50",
