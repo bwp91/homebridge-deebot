@@ -6,7 +6,7 @@
       "nicoduj"
    ],
    "description": "Homebridge plugin to control ECOVACS Deebot devices.",
-   "license": "ISC",
+   "license": "MIT",
    "keywords": [
       "homebridge",
       "homebridge-plugin",
