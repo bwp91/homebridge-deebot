@@ -129,26 +129,26 @@
             "maximum": 600,
             "description": "Enables refresh of Deebot's state every X number of seconds. This may be useful for automation purposes if you'd like another HomeKit event to occur based on a state change of a Deebot. Be aware that setting this too often might make your Deebot 'smoke' since the plugin will ask its status very often. :)"
          },
-         "publishBipSwitch": {
-            "title": "Publish Sound Switch",
+         "hideBeepSwitch": {
+            "title": "Hide Sound Switch",
             "type": "boolean",
             "default": true,
             "description": "Turn your Deebot notification sounds on or off."
          },
-         "publishSwitch": {
-            "title": "Publish On/Off Switch",
+         "hideSwitch": {
+            "title": "Hide On/Off Switch",
             "type": "boolean",
             "default": true,
             "description": "Turn your Deebot on or off."
          },
-         "publishFan": {
-            "title": "Publish Fan Switch",
+         "hideFan": {
+            "title": "Hide Fan Switch",
             "type": "boolean",
             "default": true,
             "description": "Sets the suction power of your Deebot. 0 to 50% = Normal, 51% to 100% = Maximum"
          },
-         "publishMotionDetector": {
-            "title": "Publish Motion detector",
+         "hideMotionDetector": {
+            "title": "Hide Motion detector",
             "type": "boolean",
             "default": true,
             "description": "Provides trouble notifications for your Deebot as a motion alert."
