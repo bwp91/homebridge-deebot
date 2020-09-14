@@ -1,19 +1,18 @@
 {
    "pluginAlias": "Deebot",
    "pluginType": "platform",
-   "singular": false,
+   "singular": true,
    "headerDisplay": "Homebridge plugin to control ECOVACS Deebot devices.",
    "footerDisplay": "",
    "schema": {
       "type": "object",
-      "required": ["email", "password", "countryCode"],
       "properties": {
-         "email": {
-            "title": "EcoVacs account username",
+         "username": {
+            "title": "ECOVACS account username",
             "type": "string"
          },
          "password": {
-            "title": "EcoVacs account password",
+            "title": "ECOVACS account password",
             "type": "string"
          },
          "countryCode": {
@@ -121,50 +120,27 @@
                }
             ]
          },
-         "refreshTimer": {
+         "ref": {
             "title": "Refresh timer",
             "type": "integer",
             "default": 0,
             "minimum": 30,
             "maximum": 600,
             "description": "Enables refresh of Deebot's state every X number of seconds. This may be useful for automation purposes if you'd like another HomeKit event to occur based on a state change of a Deebot. Be aware that setting this too often might make your Deebot 'smoke' since the plugin will ask its status very often. :)"
-         },
-         "hideBeepSwitch": {
-            "title": "Hide Sound Switch",
-            "type": "boolean",
-            "default": true,
-            "description": "Turn your Deebot notification sounds on or off."
-         },
-         "hideSwitch": {
-            "title": "Hide On/Off Switch",
-            "type": "boolean",
-            "default": true,
-            "description": "Turn your Deebot on or off."
-         },
-         "hideFan": {
-            "title": "Hide Fan Switch",
-            "type": "boolean",
-            "default": true,
-            "description": "Sets the suction power of your Deebot. 0 to 50% = Normal, 51% to 100% = Maximum"
-         },
-         "hideMotionDetector": {
-            "title": "Hide Motion detector",
-            "type": "boolean",
-            "default": true,
-            "description": "Provides trouble notifications for your Deebot as a motion alert."
-         },
-         "rightDirectionCleaningMode": {
-            "title": "Cleaning Mode – Counterclockwise",
-            "type": "string",
-            "default": "auto",
-            "description": "Set the cleaning mode for the counterclockwise fan direction. Default is auto.  (edge OR auto OR spot OR spotArea,start,1 (or any other spot number) OR customArea,start,1,1 (or any other area number and number of cleanings) "
-         },
-         "leftDirectionCleaningMode": {
-            "title": "Cleaning Mode – Clockwise",
-            "type": "string",
-            "default": "edge",
-            "description": "Set the cleaning mode for the clockwise fan direction. Default is auto. (edge OR auto OR spot OR spotArea,start,1 (or any other spot number) OR customArea,start,1,1 (or any other area number and number of cleanings) "
          }
-      }
-   }
+      },
+      "required": [
+         "username",
+         "password",
+         "countryCode"
+      ]
+   },
+   "layout": [{
+      "type": "fieldset",
+      "items": [
+         "countryCode",
+         "username",
+         "password"
+      ]
+   }]
 }
