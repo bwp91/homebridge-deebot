@@ -1,300 +1,156 @@
 {
-   "pluginAlias":"eWeLink",
-   "pluginType":"platform",
-   "singular":true,
-   "headerDisplay":"Homebridge plugin to control eWeLink devices with original firmware.",
-   "footerDisplay":"For help and support please visit our [GitHub Wiki](https://github.com/bwp91/homebridge-ewelink/wiki).",
-   "schema":{
-      "type":"object",
-      "properties":{
-         "name":{
-            "type":"string",
-            "default":"eWeLink"
+   "pluginAlias": "Deebot",
+   "pluginType": "platform",
+   "singular": true,
+   "headerDisplay": "Homebridge plugin to control ECOVACS Deebot devices.",
+   "footerDisplay": "",
+   "schema": {
+      "type": "object",
+      "properties": {
+         "countryCode": {
+            "title": "Select your country code where you are located. This is based off of your public IP address.",
+            "type": "string",
+            "oneOf": [{
+                  "title": "China (CN)",
+                  "enum": ["CN"]
+               },
+               {
+                  "title": "Taiwan (TW)",
+                  "enum": ["TW"]
+               },
+               {
+                  "title": "Malaysia (MY)",
+                  "enum": ["MY"]
+               },
+               {
+                  "title": "Japan (JP)",
+                  "enum": ["JP"]
+               },
+               {
+                  "title": "Singapore (SG)",
+                  "enum": ["SG"]
+               },
+               {
+                  "title": "Thailand (TH)",
+                  "enum": ["TH"]
+               },
+               {
+                  "title": "Hong Kong (HK)",
+                  "enum": ["HK"]
+               },
+               {
+                  "title": "India (IN)",
+                  "enum": ["IN"]
+               },
+               {
+                  "title": "South Korea (KR)",
+                  "enum": ["KR"]
+               },
+               {
+                  "title": "United States (US)",
+                  "enum": ["US"]
+               },
+               {
+                  "title": "France (FR)",
+                  "enum": ["FR"]
+               },
+               {
+                  "title": "Spain (ES)",
+                  "enum": ["ES"]
+               },
+               {
+                  "title": "United Kingdom (UK)",
+                  "enum": ["UK"]
+               },
+               {
+                  "title": "Norway (NO)",
+                  "enum": ["NO"]
+               },
+               {
+                  "title": "Switzerland (CH)",
+                  "enum": ["CH"]
+               },
+               {
+                  "title": "Mexico (MX)",
+                  "enum": ["MX"]
+               },
+               {
+                  "title": "Germany (DE)",
+                  "enum": ["DE"]
+               },
+               {
+                  "title": "Portugal (PT)",
+                  "enum": ["PT"]
+               },
+               {
+                  "title": "Australia (AU)",
+                  "enum": ["AU"]
+               },
+               {
+                  "title": "Italy (IT)",
+                  "enum": ["IT"]
+               },
+               {
+                  "title": "Netherlands (NL)",
+                  "enum": ["NL"]
+               },
+               {
+                  "title": "Sweden (SE)",
+                  "enum": ["SE"]
+               },
+               {
+                  "title": "Belgium (BE)",
+                  "enum": ["BE"]
+               },
+               {
+                  "title": "Denmark (DK)",
+                  "enum": ["DK"]
+               },
+               {
+                  "title": "OTHER",
+                  "enum": ["OTHER"]
+               }
+            ]
          },
-         "countryCode":{
-            "type":"string",
-            "title":"Country Code",
-            "description":"The telephone country code linked to your eWeLink account (without the +)."
+         "username": {
+            "title": "ECOVACS account username",
+            "type": "string"
          },
-         "username":{
-            "type":"string",
-            "title":"Username",
-            "description":"The phone number or email address linked to your eWeLink account. If you use a phone number please enter the country code (with the +), for example +8613185260282."
-         },
-         "password":{
-            "type":"string",
-            "title":"Password",
-            "description":"The password for your eWeLink account."
+         "password": {
+            "title": "ECOVACS account password",
+            "type": "string"
          },
          "debug":{
             "title":"Debug Logging",
             "type":"boolean",
-            "required":true,
             "description":"If enabled, more information will be added to the Homebridge log.",
             "default":false
          },
-         "debugReqRes":{
-            "title":"Request & Response Logging",
-            "type":"boolean",
-            "required":true,
-            "description":"If enabled, HTTP, web socket and LAN mode messages will be added to the log. Not recommended for long-term use.",
-            "default":false
-         },
-         "hideDevFromHB":{
-            "type":"string",
-            "title":"Hide Devices",
-            "description":"A list of eWeLink devices to hide from Homebridge. For example '10009553c8' or multiple devices separated with a comma '10009553c8,10009553c9'.",
-            "default":""
-         },
-         "hideFromHB":{
-            "type":"string",
-            "title":"Hide Device Channels",
-            "description":"A list of device channels to hide from Homebridge. For example '10009553c8SW1' or multiple channels separated with a comma '10009553c8SW1,10009553c9SW2'. Only channels from switches, lights and irrigation valves can be hidden.",
-            "default":""
-         },
-         "sensorTimeLength":{
-            "type":"integer",
-            "title":"Sensor Length",
-            "description":"The number of seconds which the sensor tile in the Home app will light up for if a sensor detects something.",
-            "default":"2",
-            "maximum":999
-         },
-         "sensorTimeDifference":{
-            "type":"integer",
-            "title":"Sensor Lag",
-            "description":"An offset in seconds to ignore any notifications if they is a delay between a sensor detecting something and Homebridge receiving the notification.",
-            "default":"120",
-            "maximum":999
-         },
-         "valveTimeLength":{
-            "type":"integer",
-            "title":"Valve Duration",
-            "description":"The default number of seconds that irrigation valves will run for.",
-            "default":"20",
-            "maximum":999
-         },
-         "hideTHSwitch":{
-            "title":"Hide TH10/TH16 Switch",
-            "type":"boolean",
-            "description":"If enabled, the switch for the TH10/TH16 devices will be hidden from Homebridge.",
-            "default":false
-         },
-         "hideZBLDPress":{
-            "title":"Hide Double/Long Press",
-            "type":"boolean",
-            "description":"If enabled, double and long press options will be hidden for the ZigBee button.",
-            "default":false
-         },
-         "groups":{
-            "type":"array",
-            "title":"Custom Device Types",
-            "description":"You can use this setting to set up custom device types within Homebridge. Currently only blinds, garage doors and locks are supported.",
-            "items":{
-               "type":"object",
-               "properties":{
-                  "deviceId":{
-                     "type":"string",
-                     "title":"Device ID",
-                     "description":"Device ID from your eWeLink app (ten digits normally in the format 1000******)."
-                  },
-                  "type":{
-                     "type":"string",
-                     "title":"Type",
-                     "default":"null",
-                     "description":"The new type for this device.",
-                     "oneOf":[
-                        {
-                           "title":"Blind",
-                           "enum":[
-                              "blind"
-                           ]
-                        },
-                        {
-                           "title":"Garage Door",
-                           "enum":[
-                              "garage"
-                           ]
-                        },
-                        {
-                           "title":"Lock",
-                           "enum":[
-                              "lock"
-                           ]
-                        }
-                     ]
-                  },
-                  "setup":{
-                     "type":"string",
-                     "title":"Device Setup",
-                     "default":"null",
-                     "description":"The device setup. Please ignore this setting for locks",
-                     "oneOf":[
-                        {
-                           "title":"One Switch - for up and down",
-                           "enum":[
-                              "oneSwitch"
-                           ]
-                        },
-                        {
-                           "title":"Two Switches - one for up and one for down",
-                           "enum":[
-                              "twoSwitch"
-                           ]
-                        }
-                     ]
-                  },
-                  "operationTime":{
-                     "type":"number",
-                     "title":"Operation Time",
-                     "description":"For blinds and garage doors this is the total time in deciseconds to fully open/close the device. For locks this is the time to show the Home app tile as unlocked. Count the time in seconds and multiply by 10, for example 100 for 10 seconds or 75 for 7.5 seconds.",
-                     "default":100
-                  },
-                  "sensorId":{
-                     "type":"string",
-                     "title":"Sensor",
-                     "description":"A Sonoff DW2 sensor can optionally be used for blinds and garage doors. This is to determine the current open/closed state of the device. Please enter the 10 digit device ID. Otherwise leave this blank."
-                  }
-               }
-            }
-         },
-         "bridgeSensors":{
-            "type":"array",
-            "title":"Sensors",
-            "description":"You can expose different types of sensors connected to your RF Bridge in HomeKit.",
-            "items":{
-               "type":"object",
-               "properties":{
-                  "deviceId":{
-                     "type":"string",
-                     "title":"RF Bridge Device ID",
-                     "description":"Device ID of your RF Bridge from your eWeLink app (10 digits normally in the format 1000******)."
-                  },
-                  "fullDeviceId":{
-                     "type":"string",
-                     "title":"Sensor Device ID",
-                     "description":"Device ID of the sensor from Homebridge (13 digits normally in the format 1000******SW*)."
-                  },
-                  "type":{
-                     "type":"string",
-                     "title":"Sensor Type",
-                     "default":"motion",
-                     "description":"Select the type of sensor you would like to expose this as in Homebridge.",
-                     "oneOf":[
-                        {
-                           "title":"Motion",
-                           "enum":[
-                              "motion"
-                           ]
-                        },
-                        {
-                           "title":"Smoke/Fire",
-                           "enum":[
-                              "smoke"
-                           ]
-                        },
-                        {
-                           "title":"Water/Leak",
-                           "enum":[
-                              "water"
-                           ]
-                        },
-                        {
-                           "title":"Carbon Monoxide",
-                           "enum":[
-                              "co"
-                           ]
-                        },
-                        {
-                           "title":"Carbon Dioxide",
-                           "enum":[
-                              "co2"
-                           ]
-                        },
-                        {
-                           "title":"Occupancy",
-                           "enum":[
-                              "occupancy"
-                           ]
-                        },
-                        {
-                           "title":"Contact",
-                           "enum":[
-                              "contact"
-                           ]
-                        }
-                     ]
-                  }
-               }
-            }
+         "ref": {
+            "title": "Refresh Timer",
+            "type": "integer",
+            "default": 300,
+            "minimum": 30,
+            "maximum": 600,
+            "description": "Enables refresh of Deebot's state every X number of seconds."
          }
       },
-      "required":[
+      "required": [
          "countryCode",
          "username",
-         "password"
+         "password",
+         "debug",
+         "ref"
       ]
    },
-   "layout":[
-      {
-         "type":"fieldset",
-         "items":[
-            "countryCode",
-            "username",
-            "password"
-         ]
-      },
-      {
-         "type":"fieldset",
-         "title":"Optional",
-         "description":"Only adjust these settings if you know what you are doing.",
-         "expandable":true,
-         "items":[
-            "debug",
-            "debugReqRes",
-            "hideDevFromHB",
-            "hideFromHB",
-            "sensorTimeLength",
-            "sensorTimeDifference",
-            "valveTimeLength",
-            "hideTHSwitch",
-            "hideZBLDPress"
-         ]
-      },
-      {
-         "key":"groups",
-         "expandable":true,
-         "title":"Custom Device Types",
-         "add":"Add Another Type",
-         "type":"array",
-         "items":[
-            {
-               "type":"fieldset",
-               "items":[
-                  "groups[].deviceId",
-                  "groups[].type",
-                  "groups[].setup",
-                  "groups[].operationTime",
-                  "groups[].sensorId"
-               ]
-            }
-         ]
-      },
-      {
-         "key":"bridgeSensors",
-         "title":"RF Bridge Sensors",
-         "expandable":true,
-         "add":"Add Another Sensor",
-         "type":"array",
-         "items":[
-            {
-               "type":"fieldset",
-               "items":[
-                  "bridgeSensors[].deviceId",
-                  "bridgeSensors[].fullDeviceId",
-                  "bridgeSensors[].type"
-               ]
-            }
-         ]
-      }
-   ]
+   "layout": [{
+      "type": "fieldset",
+      "items": [
+         "countryCode",
+         "username",
+         "password",
+         "debug",
+         "ref"
+      ]
+   }]
 }
