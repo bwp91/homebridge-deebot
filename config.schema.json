@@ -7,14 +7,6 @@
    "schema": {
       "type": "object",
       "properties": {
-         "username": {
-            "title": "ECOVACS account username",
-            "type": "string"
-         },
-         "password": {
-            "title": "ECOVACS account password",
-            "type": "string"
-         },
          "countryCode": {
             "title": "Select your country code where you are located. This is based off of your public IP address.",
             "type": "string",
@@ -120,19 +112,35 @@
                }
             ]
          },
+         "username": {
+            "title": "ECOVACS account username",
+            "type": "string"
+         },
+         "password": {
+            "title": "ECOVACS account password",
+            "type": "string"
+         },
+         "debug":{
+            "title":"Debug Logging",
+            "type":"boolean",
+            "description":"If enabled, more information will be added to the Homebridge log.",
+            "default":false
+         },
          "ref": {
-            "title": "Refresh timer",
+            "title": "Refresh Timer",
             "type": "integer",
-            "default": 0,
+            "default": 300,
             "minimum": 30,
             "maximum": 600,
-            "description": "Enables refresh of Deebot's state every X number of seconds. This may be useful for automation purposes if you'd like another HomeKit event to occur based on a state change of a Deebot. Be aware that setting this too often might make your Deebot 'smoke' since the plugin will ask its status very often. :)"
+            "description": "Enables refresh of Deebot's state every X number of seconds."
          }
       },
       "required": [
+         "countryCode",
          "username",
          "password",
-         "countryCode"
+         "debug",
+         "ref"
       ]
    },
    "layout": [{
@@ -140,7 +148,9 @@
       "items": [
          "countryCode",
          "username",
-         "password"
+         "password",
+         "debug",
+         "ref"
       ]
    }]
 }
