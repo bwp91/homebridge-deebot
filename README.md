@@ -20,6 +20,7 @@ This package will expose:
 * A switch to send your device back to the charging station
 * A motion sensor to alert you if your device needs attention
 * A battery service to alert you if your device's battery is low
+* A humidity sensor service to show clearly the battery level % (humidity sensor is the best I can do :/)
 
 This package:
 * Does not require the canvas library unlike [homebridge-deebotEcovacs](https://github.com/nicoduj/homebridge-deebotEcovacs)
