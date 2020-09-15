@@ -23,7 +23,6 @@ This package will expose:
 * A humidity sensor service to show clearly the battery level % (humidity sensor is the best I can do :/)
 
 This package:
-* Does not require the canvas library unlike [homebridge-deebotEcovacs](https://github.com/nicoduj/homebridge-deebotEcovacs)
 * Has only been tested with the N79 device (the device that I own)
 
 Credit to [@nicoduj](https://github.com/nicoduj) for [homebridge-deebotEcovacs](https://github.com/nicoduj/homebridge-deebotEcovacs).
