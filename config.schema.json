@@ -1,209 +1,147 @@
 {
-   "pluginAlias":"Deebot",
-   "pluginType":"platform",
-   "singular":true,
-   "headerDisplay":"Homebridge plugin to control ECOVACS Deebot devices.",
-   "footerDisplay":"",
-   "schema":{
-      "type":"object",
-      "properties":{
-         "countryCode":{
-            "title":"Select your country code where you are located. This is based off of your public IP address.",
-            "type":"string",
-            "oneOf":[
-               {
-                  "title":"China (CN)",
-                  "enum":[
-                     "CN"
-                  ]
-               },
-               {
-                  "title":"Taiwan (TW)",
-                  "enum":[
-                     "TW"
-                  ]
-               },
-               {
-                  "title":"Malaysia (MY)",
-                  "enum":[
-                     "MY"
-                  ]
-               },
-               {
-                  "title":"Japan (JP)",
-                  "enum":[
-                     "JP"
-                  ]
-               },
-               {
-                  "title":"Singapore (SG)",
-                  "enum":[
-                     "SG"
-                  ]
-               },
-               {
-                  "title":"Thailand (TH)",
-                  "enum":[
-                     "TH"
-                  ]
-               },
-               {
-                  "title":"Hong Kong (HK)",
-                  "enum":[
-                     "HK"
-                  ]
-               },
-               {
-                  "title":"India (IN)",
-                  "enum":[
-                     "IN"
-                  ]
-               },
-               {
-                  "title":"South Korea (KR)",
-                  "enum":[
-                     "KR"
-                  ]
-               },
-               {
-                  "title":"United States (US)",
-                  "enum":[
-                     "US"
-                  ]
-               },
-               {
-                  "title":"France (FR)",
-                  "enum":[
-                     "FR"
-                  ]
-               },
-               {
-                  "title":"Spain (ES)",
-                  "enum":[
-                     "ES"
-                  ]
-               },
-               {
-                  "title":"United Kingdom (UK)",
-                  "enum":[
-                     "UK"
-                  ]
-               },
-               {
-                  "title":"Norway (NO)",
-                  "enum":[
-                     "NO"
-                  ]
-               },
-               {
-                  "title":"Switzerland (CH)",
-                  "enum":[
-                     "CH"
-                  ]
-               },
-               {
-                  "title":"Mexico (MX)",
-                  "enum":[
-                     "MX"
-                  ]
-               },
-               {
-                  "title":"Germany (DE)",
-                  "enum":[
-                     "DE"
-                  ]
-               },
-               {
-                  "title":"Portugal (PT)",
-                  "enum":[
-                     "PT"
-                  ]
-               },
-               {
-                  "title":"Australia (AU)",
-                  "enum":[
-                     "AU"
-                  ]
-               },
-               {
-                  "title":"Italy (IT)",
-                  "enum":[
-                     "IT"
-                  ]
-               },
-               {
-                  "title":"Netherlands (NL)",
-                  "enum":[
-                     "NL"
-                  ]
-               },
-               {
-                  "title":"Sweden (SE)",
-                  "enum":[
-                     "SE"
-                  ]
-               },
-               {
-                  "title":"Belgium (BE)",
-                  "enum":[
-                     "BE"
-                  ]
-               },
-               {
-                  "title":"Denmark (DK)",
-                  "enum":[
-                     "DK"
-                  ]
-               },
-               {
-                  "title":"OTHER",
-                  "enum":[
-                     "OTHER"
-                  ]
-               }
-            ]
-         },
-         "username":{
-            "title":"ECOVACS account username",
-            "type":"string"
-         },
-         "password":{
-            "title":"ECOVACS account password",
-            "type":"string"
-         },
-         "debug":{
-            "title":"Debug Logging",
-            "type":"boolean",
-            "description":"If enabled, more information will be added to the Homebridge log.",
-            "default":false
-         },
-         "ref":{
-            "title":"Refresh Timer",
-            "type":"integer",
-            "default":300,
-            "minimum":30,
-            "maximum":600,
-            "description":"Enables refresh of Deebot's state every X number of seconds."
-         }
+  "pluginAlias": "Deebot",
+  "pluginType": "platform",
+  "singular": true,
+  "headerDisplay": "Homebridge plugin to control ECOVACS Deebot devices.",
+  "footerDisplay": "",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "countryCode": {
+        "title": "Select your country code where you are located. This is based off of your public IP address.",
+        "type": "string",
+        "oneOf": [
+          {
+            "title": "China (CN)",
+            "enum": ["CN"]
+          },
+          {
+            "title": "Taiwan (TW)",
+            "enum": ["TW"]
+          },
+          {
+            "title": "Malaysia (MY)",
+            "enum": ["MY"]
+          },
+          {
+            "title": "Japan (JP)",
+            "enum": ["JP"]
+          },
+          {
+            "title": "Singapore (SG)",
+            "enum": ["SG"]
+          },
+          {
+            "title": "Thailand (TH)",
+            "enum": ["TH"]
+          },
+          {
+            "title": "Hong Kong (HK)",
+            "enum": ["HK"]
+          },
+          {
+            "title": "India (IN)",
+            "enum": ["IN"]
+          },
+          {
+            "title": "South Korea (KR)",
+            "enum": ["KR"]
+          },
+          {
+            "title": "United States (US)",
+            "enum": ["US"]
+          },
+          {
+            "title": "France (FR)",
+            "enum": ["FR"]
+          },
+          {
+            "title": "Spain (ES)",
+            "enum": ["ES"]
+          },
+          {
+            "title": "United Kingdom (UK)",
+            "enum": ["UK"]
+          },
+          {
+            "title": "Norway (NO)",
+            "enum": ["NO"]
+          },
+          {
+            "title": "Switzerland (CH)",
+            "enum": ["CH"]
+          },
+          {
+            "title": "Mexico (MX)",
+            "enum": ["MX"]
+          },
+          {
+            "title": "Germany (DE)",
+            "enum": ["DE"]
+          },
+          {
+            "title": "Portugal (PT)",
+            "enum": ["PT"]
+          },
+          {
+            "title": "Australia (AU)",
+            "enum": ["AU"]
+          },
+          {
+            "title": "Italy (IT)",
+            "enum": ["IT"]
+          },
+          {
+            "title": "Netherlands (NL)",
+            "enum": ["NL"]
+          },
+          {
+            "title": "Sweden (SE)",
+            "enum": ["SE"]
+          },
+          {
+            "title": "Belgium (BE)",
+            "enum": ["BE"]
+          },
+          {
+            "title": "Denmark (DK)",
+            "enum": ["DK"]
+          },
+          {
+            "title": "OTHER",
+            "enum": ["OTHER"]
+          }
+        ]
       },
-      "required":[
-         "countryCode",
-         "username",
-         "password",
-         "debug",
-         "ref"
-      ]
-   },
-   "layout":[
-      {
-         "type":"fieldset",
-         "items":[
-            "countryCode",
-            "username",
-            "password",
-            "debug",
-            "ref"
-         ]
+      "username": {
+        "title": "ECOVACS account username",
+        "type": "string"
+      },
+      "password": {
+        "title": "ECOVACS account password",
+        "type": "string"
+      },
+      "debug": {
+        "title": "Debug Logging",
+        "type": "boolean",
+        "description": "If enabled, more information will be added to the Homebridge log.",
+        "default": false
+      },
+      "ref": {
+        "title": "Refresh Timer",
+        "type": "integer",
+        "default": 300,
+        "minimum": 30,
+        "maximum": 600,
+        "description": "Enables refresh of Deebot's state every X number of seconds."
       }
-   ]
+    },
+    "required": ["countryCode", "username", "password", "debug", "ref"]
+  },
+  "layout": [
+    {
+      "type": "fieldset",
+      "items": ["countryCode", "username", "password", "debug", "ref"]
+    }
+  ]
 }

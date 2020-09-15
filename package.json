@@ -1,34 +1,34 @@
 {
-   "name": "homebridge-deebot",
-   "version": "1.2.10",
-   "author": "bwp91",
-   "contributors": [
-      "nicoduj"
-   ],
-   "description": "Homebridge plugin to control ECOVACS Deebot devices.",
-   "license": "MIT",
-   "keywords": [
-      "homebridge",
-      "homebridge-plugin",
-      "homekit",
-      "ecovacs",
-      "deebot",
-      "vacuum",
-      "hoover"
-   ],
-   "engines": {
-      "homebridge": ">=0.4.50",
-      "node": ">=10.20.0"
-   },
-   "repository": {
-      "type": "git",
-      "url": "https://github.com/bwp91/homebridge-deebot"
-   },
-   "bugs": {
-      "url": "https://github.com/bwp91/homebridge-deebot/issues"
-   },
-   "dependencies": {
-      "ecovacs-deebot": "bwp91/ecovacs-deebot.js",
-      "node-machine-id": "1.1.12"
-   }
+  "name": "homebridge-deebot",
+  "version": "1.2.10",
+  "author": "bwp91",
+  "contributors": [
+    "nicoduj"
+  ],
+  "description": "Homebridge plugin to control ECOVACS Deebot devices.",
+  "license": "MIT",
+  "keywords": [
+    "homebridge",
+    "homebridge-plugin",
+    "homekit",
+    "ecovacs",
+    "deebot",
+    "vacuum",
+    "hoover"
+  ],
+  "engines": {
+    "homebridge": ">=0.4.50",
+    "node": ">=10.20.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bwp91/homebridge-deebot"
+  },
+  "bugs": {
+    "url": "https://github.com/bwp91/homebridge-deebot/issues"
+  },
+  "dependencies": {
+    "ecovacs-deebot": "0.4.20",
+    "node-machine-id": "1.1.12"
+  }
 }
