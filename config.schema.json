@@ -127,6 +127,13 @@
         "description": "If enabled, more information will be added to the Homebridge log.",
         "default": false
       },
+      "debugReqRes": {
+        "title": "Request & Response Logging",
+        "type": "boolean",
+        "required": true,
+        "description": "If enabled, HTTP, web socket and LAN mode messages will be added to the log. Not recommended for long-term use.",
+        "default": false
+      },
       "ref": {
         "title": "Refresh Timer",
         "type": "integer",
@@ -141,7 +148,14 @@
   "layout": [
     {
       "type": "fieldset",
-      "items": ["countryCode", "username", "password", "debug", "ref"]
+      "items": ["countryCode", "username", "password"]
+    },
+    {
+      "type": "fieldset",
+      "title": "Optional",
+      "description": "Only adjust these settings if you know what you are doing.",
+      "expandable": true,
+      "items": ["debug", "debugReqRes", "ref"]
     }
   ]
 }
