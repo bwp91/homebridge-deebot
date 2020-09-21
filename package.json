@@ -28,7 +28,7 @@
     "url": "https://github.com/bwp91/homebridge-deebot/issues"
   },
   "dependencies": {
-    "ecovacs-deebot": "0.4.20",
+    "ecovacs-deebot": "0.4.21",
     "node-machine-id": "1.1.12"
   },
   "devDependencies": {
