@@ -1,6 +1,6 @@
 /* jshint esversion: 9, -W014, -W030, node: true */
-"use strict";
+'use strict'
 module.exports = function (homebridge) {
-  let Deebot = require("./lib/deebot.js")(homebridge);
-  homebridge.registerPlatform("homebridge-deebot", "Deebot", Deebot, true);
-};
+  const Deebot = require('./lib/deebot.js')(homebridge)
+  homebridge.registerPlatform('homebridge-deebot', 'Deebot', Deebot, true)
+}
