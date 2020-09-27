@@ -28,3 +28,6 @@ This package:
 * Has only been tested with the N79 device (the device that I own)
 
 Credit to [@nicoduj](https://github.com/nicoduj) for [homebridge-deebotEcovacs](https://github.com/nicoduj/homebridge-deebotEcovacs).
+
+### Disclaimer
+I am in no way affiliated with ECOVACS and this plugin is a personal project that I maintain in my free time.
