@@ -5,8 +5,10 @@
  Homebridge plugin to control ECOVACS Deebot devices.
  
  [![Discord](https://img.shields.io/discord/432663330281226270?color=728ED5&logo=discord&label=discord)](https://discord.com/channels/432663330281226270/742733745743855627)
- [![npm](https://img.shields.io/npm/dt/homebridge-deebot)](https://www.npmjs.com/package/homebridge-deebot)   
- [![npm](https://img.shields.io/npm/v/homebridge-deebot/latest?label=release)](https://www.npmjs.com/package/homebridge-deebot)
+ [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)   
+ [![npm](https://img.shields.io/npm/v/homebridge-deebot/latest?label=release)](https://www.npmjs.com/package/homebridge-deebot)   
+ [![npm](https://img.shields.io/npm/dt/homebridge-deebot)](https://www.npmjs.com/package/homebridge-deebot)
+ [![Contribute](https://img.shields.io/badge/contribute-a%20drink-yellow)](https://ko-fi.com/bwp91)
 
 </span>
 
