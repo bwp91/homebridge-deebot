@@ -27,6 +27,24 @@
   "bugs": {
     "url": "https://github.com/bwp91/homebridge-deebot/issues"
   },
+  "funding": [
+    {
+      "type": "kofi",
+      "url": "https://ko-fi.com/bwp91"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/bwp91"
+    },
+    {
+      "type": "paypal",
+      "url": "https://www.paypal.me/BenPotter"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/bwp91"
+    }
+  ],
   "dependencies": {
     "ecovacs-deebot": "0.4.21",
     "node-machine-id": "1.1.12"
