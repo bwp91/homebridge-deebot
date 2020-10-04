@@ -12,7 +12,7 @@
 
 </span>
 
-### About
+### Plugin Information
 
 
 This package is a much simplified version of [homebridge-deebotEcovacs](https://github.com/nicoduj/homebridge-deebotEcovacs). If you are looking for more configurable options and different cleaning modes then [homebridge-deebotEcovacs](https://github.com/nicoduj/homebridge-deebotEcovacs) will be more appropriate for you.
@@ -28,6 +28,10 @@ This package:
 * Has only been tested with the N79 device (the device that I own)
 
 Credit to [@nicoduj](https://github.com/nicoduj) for [homebridge-deebotEcovacs](https://github.com/nicoduj/homebridge-deebotEcovacs).
+
+### About
+* [About Me](https://github.com/sponsors/bwp91)
+* [Support Request](https://github.com/bwp91/homebridge-deebot/issues/new/choose)
 
 ### Disclaimer
 I am in no way affiliated with ECOVACS and this plugin is a personal project that I maintain in my free time.
