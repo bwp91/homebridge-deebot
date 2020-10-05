@@ -20,7 +20,7 @@ Which version of Homebridge/HOOBS do you have?
 
 ...
 
-Which version of this plugin (homebridge-ewelink) do you have?
+Which version of this plugin (homebridge-deebot) do you have?
 
 ...
 
