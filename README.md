@@ -23,8 +23,9 @@ This package will expose:
 * A battery service to alert you if your device's battery is low
 * A humidity sensor service to show clearly the battery level % (humidity sensor is the best I can do :/)
 
-This package:
-* Has only been tested with the N79 device (the device that I own)
+This package has been tested with:
+* The `N79` model (the device that I own)
+* The `N79S` and `907`
 
 Credit to [@nicoduj](https://github.com/nicoduj) for [homebridge-deebotEcovacs](https://github.com/nicoduj/homebridge-deebotEcovacs).
 
