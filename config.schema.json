@@ -131,7 +131,7 @@
         "title": "Request & Response Logging",
         "type": "boolean",
         "required": true,
-        "description": "If enabled, HTTP, web socket and LAN mode messages will be added to the log. Not recommended for long-term use.",
+        "description": "If enabled, HTTP messages will be added to the log. Not recommended for long-term use.",
         "default": false
       },
       "ref": {
