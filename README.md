@@ -1,18 +1,21 @@
+<p align="center">
+   <a href="https://github.com/bwp91/homebridge-deebot"><img alt="homebridge-deebot" src="https://user-images.githubusercontent.com/43026681/95466026-ca9b5a80-0973-11eb-84ec-8c3dff2f655e.png" width="600px"></a>
+</p>
 <span align="center">
   
 # homebridge-deebot 
 
- Homebridge plugin to control ECOVACS Deebot devices.
- 
-  [![npm](https://img.shields.io/npm/v/homebridge-deebot/latest?label=release)](https://www.npmjs.com/package/homebridge-deebot)   
-  [![npm](https://img.shields.io/npm/dt/homebridge-deebot)](https://www.npmjs.com/package/homebridge-deebot)
-  [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)   
-  [![Discord](https://img.shields.io/discord/432663330281226270?color=728ED5&logo=discord&label=discord)](https://discord.com/channels/432663330281226270/742733745743855627)
+Homebridge plugin to control ECOVACS Deebot devices.
+
+[![npm](https://img.shields.io/npm/v/homebridge-deebot/latest?label=release)](https://www.npmjs.com/package/homebridge-deebot)
+[![npm](https://img.shields.io/npm/v/homebridge-deebot/beta?label=beta)](https://github.com/bwp91/homebridge-deebot/wiki/Beta-Version)   
+[![npm](https://img.shields.io/npm/dt/homebridge-deebot)](https://www.npmjs.com/package/homebridge-deebot)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)   
+[![Discord](https://img.shields.io/discord/432663330281226270?color=728ED5&logo=discord&label=discord)](https://discord.com/channels/432663330281226270/742733745743855627)
 
 </span>
 
 ### Plugin Information
-
 
 This package is a much simplified version of [homebridge-deebotEcovacs](https://github.com/nicoduj/homebridge-deebotEcovacs). If you are looking for more configurable options and different cleaning modes then [homebridge-deebotEcovacs](https://github.com/nicoduj/homebridge-deebotEcovacs) will be more appropriate for you.
 
@@ -28,6 +31,12 @@ This package has been tested with:
 * The `N79S` and `907`
 
 Credit to [@nicoduj](https://github.com/nicoduj) for [homebridge-deebotEcovacs](https://github.com/nicoduj/homebridge-deebotEcovacs).
+
+### Setup
+* [Installation (Homebridge)](https://github.com/bwp91/homebridge-deebot/wiki/Installation-(Homebridge))
+* [Installation (HOOBS)](https://github.com/bwp91/homebridge-deebot/wiki/Installation-(HOOBS))
+* [Configuration](https://github.com/bwp91/homebridge-deebot/wiki/Configuration)
+* [Beta Version](https://github.com/bwp91/homebridge-deebot/wiki/Beta-Version)
 
 ### About
 * [About Me](https://github.com/sponsors/bwp91)
