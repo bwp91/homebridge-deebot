@@ -7,7 +7,7 @@
 
 Homebridge plugin to control ECOVACS Deebot devices.
 
-[![npm](https://img.shields.io/npm/v/homebridge-deebot/latest?label=release)](https://www.npmjs.com/package/homebridge-deebot)
+[![npm](https://img.shields.io/npm/v/homebridge-deebot/latest?label=latest)](https://www.npmjs.com/package/homebridge-deebot)
 [![npm](https://img.shields.io/npm/v/homebridge-deebot/beta?label=beta)](https://github.com/bwp91/homebridge-deebot/wiki/Beta-Version)   
 [![npm](https://img.shields.io/npm/dt/homebridge-deebot)](https://www.npmjs.com/package/homebridge-deebot)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)   
