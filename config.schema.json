@@ -137,7 +137,7 @@
       "ref": {
         "title": "Refresh Timer",
         "type": "integer",
-        "default": 300,
+        "default": 120,
         "minimum": 30,
         "maximum": 600,
         "description": "Enables refresh of Deebot's state every X number of seconds."
