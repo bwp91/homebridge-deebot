@@ -47,6 +47,7 @@
   ],
   "dependencies": {
     "ecovacs-deebot": "0.4.21",
+    "interval-promise": "1.4.0",
     "node-machine-id": "1.1.12"
   }
 }
