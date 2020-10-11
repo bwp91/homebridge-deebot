@@ -141,6 +141,13 @@
         "minimum": 30,
         "maximum": 600,
         "description": "Enables refresh of Deebot's state every X number of seconds."
+      },
+      "hideBattHumidity": {
+        "title": "Hide Battery Humidity Sensor",
+        "type": "boolean",
+        "required": true,
+        "description": "If enabled, the humiditiy sensor showing the battery percentage will be hidden.",
+        "default": false
       }
     },
     "required": ["countryCode", "username", "password", "debug", "ref"]
@@ -155,7 +162,7 @@
       "title": "Optional",
       "description": "Only adjust these settings if you know what you are doing.",
       "expandable": true,
-      "items": ["debug", "debugReqRes", "ref"]
+      "items": ["debug", "debugReqRes", "ref", "hideBattHumidity"]
     }
   ]
 }
