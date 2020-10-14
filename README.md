@@ -27,7 +27,7 @@ This package will expose:
 * A switch to send your device back to the charging station
 * A motion sensor to alert you if your device needs attention
 * A battery service to alert you if your device's battery is low
-* A humidity sensor service to show clearly the battery level % (humidity sensor is the best I can do :/)
+* An optional humidity sensor service to show clearly the battery level percentage
 
 This package has been tested with:
 * The `N79` model (the device that I own)
