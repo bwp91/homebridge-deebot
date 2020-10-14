@@ -120,13 +120,13 @@
         ]
       },
       "username": {
-        "title": "ECOVACS username",
+        "title": "ECOVACS Username",
         "description": "The username for your ECOVACS account.",
         "required": true,
         "type": "string"
       },
       "password": {
-        "title": "ECOVACS password",
+        "title": "ECOVACS Password",
         "description": "The password for your ECOVACS account.",
         "required": true,
         "type": "string"
@@ -148,7 +148,7 @@
       "hideBattHumidity": {
         "title": "Hide Battery Humidity Sensor",
         "type": "boolean",
-        "description": "If enabled, the humiditiy sensor showing the battery percentage will be hidden.",
+        "description": "If enabled, the humidity sensor showing the battery percentage will be hidden.",
         "default": false
       },
       "disablePlugin": {
