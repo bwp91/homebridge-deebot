@@ -7,6 +7,10 @@
   "schema": {
     "type": "object",
     "properties": {
+      "name": {
+        "type": "string",
+        "default": "Deebot"
+      },
       "countryCode": {
         "title": "Country Code",
         "description": "Select your country code where your ECOVACS account is registered.",
