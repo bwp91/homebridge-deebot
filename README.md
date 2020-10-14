@@ -38,6 +38,7 @@ Credit to [@nicoduj](https://github.com/nicoduj) for [homebridge-deebotEcovacs](
 ### Setup
 * [Installation (Homebridge)](https://github.com/bwp91/homebridge-deebot/wiki/Installation-(Homebridge))
 * [Installation (HOOBS)](https://github.com/bwp91/homebridge-deebot/wiki/Installation-(HOOBS))
+* [Configuration](https://github.com/bwp91/homebridge-deebot/wiki/Configuration)
 * [Beta Version](https://github.com/bwp91/homebridge-deebot/wiki/Beta-Version)
 
 ### About
