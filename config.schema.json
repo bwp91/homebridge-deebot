@@ -3,13 +3,15 @@
   "pluginType": "platform",
   "singular": true,
   "headerDisplay": "Homebridge plugin to control ECOVACS Deebot devices.",
-  "footerDisplay": "",
+  "footerDisplay": "For help and support please visit our [GitHub Wiki](https://github.com/bwp91/homebridge-deebot/wiki).",
   "schema": {
     "type": "object",
     "properties": {
       "countryCode": {
-        "title": "Select your country code where you are located. This is based off of your public IP address.",
+        "title": "Country Code",
+        "description": "Select your country code where your ECOVACS account is registered.",
         "type": "string",
+        "required": true,
         "oneOf": [
           {
             "title": "China (CN)",
@@ -114,11 +116,15 @@
         ]
       },
       "username": {
-        "title": "ECOVACS account username",
+        "title": "ECOVACS username",
+        "description": "The username for your ECOVACS account.",
+        "required": true,
         "type": "string"
       },
       "password": {
-        "title": "ECOVACS account password",
+        "title": "ECOVACS password",
+        "description": "The password for your ECOVACS account.",
+        "required": true,
         "type": "string"
       },
       "debug": {
@@ -127,42 +133,46 @@
         "description": "If enabled, more information will be added to the Homebridge log.",
         "default": false
       },
-      "debugReqRes": {
-        "title": "Request & Response Logging",
-        "type": "boolean",
-        "required": true,
-        "description": "If enabled, HTTP messages will be added to the log. Not recommended for long-term use.",
-        "default": false
-      },
       "ref": {
         "title": "Refresh Timer",
         "type": "integer",
         "default": 120,
         "minimum": 30,
         "maximum": 600,
-        "description": "Enables refresh of Deebot's state every X number of seconds."
+        "description": "An interval (in seconds) in which your devices will refresh with ECOVACS."
       },
       "hideBattHumidity": {
         "title": "Hide Battery Humidity Sensor",
         "type": "boolean",
-        "required": true,
         "description": "If enabled, the humiditiy sensor showing the battery percentage will be hidden.",
         "default": false
+      },
+      "disablePlugin": {
+        "type": "boolean"
       }
-    },
-    "required": ["countryCode", "username", "password", "debug", "ref"]
+    }
   },
   "layout": [
     {
       "type": "fieldset",
-      "items": ["countryCode", "username", "password"]
+      "title": "Required Settings",
+      "description": "These are the basic settings that are required for this plugin to work.",
+      "items": [
+        "countryCode",
+        "username",
+        "password"
+      ]
     },
     {
       "type": "fieldset",
-      "title": "Optional",
-      "description": "Only adjust these settings if you know what you are doing.",
+      "title": "Optional Settings",
+      "description": "A variety of optional settings for general use of this plugin.",
       "expandable": true,
-      "items": ["debug", "debugReqRes", "ref", "hideBattHumidity"]
+      "items": [
+        "debug",
+        "ref",
+        "hideBattHumidity"
+      ]
     }
   ]
 }
