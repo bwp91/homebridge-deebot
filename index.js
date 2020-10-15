@@ -1,6 +1,7 @@
-/* jshint -W014, -W033, esversion: 8 */
+/* jshint -W014, -W033, esversion: 9 */
+/* eslint-disable new-cap */
 'use strict'
-module.exports = function (homebridge) {
-  const Deebot = require('./lib/deebot.js')(homebridge)
-  homebridge.registerPlatform('homebridge-deebot', 'Deebot', Deebot, true)
+const DeebotPlatform = require('./lib/deebot-platform.js')
+module.exports = (hb) => {
+  hb.registerPlatform('homebridge-deebot', 'Deebot', DeebotPlatform, true)
 }
