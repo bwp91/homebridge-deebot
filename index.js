@@ -2,4 +2,4 @@
 /* eslint-disable new-cap */
 'use strict'
 const deebotPlatform = require('./lib/deebot-platform.js')
-module.exports = hb => hb.registerPlatform('Deebot', deebotPlatform)
+module.exports = hb => hb.registerPlatform('homebridge-deebot', 'Deebot', deebotPlatform)
