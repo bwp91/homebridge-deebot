@@ -5,7 +5,7 @@
   
 # homebridge-deebot 
 
-Homebridge plugin to control ECOVACS Deebot devices.
+Homebridge/HOOBS plugin to control ECOVACS Deebot devices.
 
 [![npm](https://img.shields.io/npm/v/homebridge-deebot/latest?label=latest)](https://www.npmjs.com/package/homebridge-deebot)
 [![npm](https://img.shields.io/npm/v/homebridge-deebot/beta?label=beta)](https://github.com/bwp91/homebridge-deebot/wiki/Beta-Version)   
@@ -15,8 +15,8 @@ Homebridge plugin to control ECOVACS Deebot devices.
 
 </span>
 
-### Homebridge
-To use this plugin, you will need to already have Homebridge installed. Please refer to the [Homebridge website](https://homebridge.io) for more information and installation instructions.
+### Prerequisites
+To use this plugin, you will need to already have [Homebridge](https://homebridge.io) or [HOOBS](https://hoobs.org) installed. Please refer to the links for more information and installation instructions.
 
 ### Plugin Information
 
