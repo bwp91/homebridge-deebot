@@ -13,7 +13,7 @@
       },
       "countryCode": {
         "title": "Country Code",
-        "description": "Select your country code where your ECOVACS account is registered.",
+        "description": "Select your two letter country code where your ECOVACS account is registered, or select 'OTHER' if your country is not listed.",
         "type": "string",
         "required": true,
         "oneOf": [
