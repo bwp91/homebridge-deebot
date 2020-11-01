@@ -137,6 +137,12 @@
         "description": "If enabled, more information will be added to the Homebridge logs.",
         "default": false
       },
+      "disablePlugin": {
+        "title": "Disable Plugin",
+        "type": "boolean",
+        "description": "If checked, the plugin will remove all ECOVACS accessories from Homebridge and not load the plugin on Homebridge restart.",
+        "default": false
+      },
       "refreshTime": {
         "title": "Refresh Timer",
         "type": "integer",
@@ -144,6 +150,12 @@
         "minimum": 30,
         "maximum": 600,
         "description": "An interval (in seconds) in which your devices will refresh with ECOVACS."
+      },
+      "hideBattHumidity": {
+        "title": "Hide Battery Humidity Sensor",
+        "type": "boolean",
+        "description": "If enabled, the humidity sensor showing the battery percentage will be hidden.",
+        "default": false
       },
       "lowBattThreshold": {
         "title": "Low Battery Threshold",
@@ -160,15 +172,6 @@
         "minimum": 1,
         "maximum": 120,
         "description": "The length of time (in seconds) that the motion detector in Homebridge will be activated if your Deebot sends a message or needs help. The message sent is viewable in the Homebridge logs."
-      },
-      "hideBattHumidity": {
-        "title": "Hide Battery Humidity Sensor",
-        "type": "boolean",
-        "description": "If enabled, the humidity sensor showing the battery percentage will be hidden.",
-        "default": false
-      },
-      "disablePlugin": {
-        "type": "boolean"
       }
     }
   },
@@ -190,8 +193,9 @@
       "expandable": true,
       "items": [
         "debug",
-        "hideBattHumidity",
+        "disablePlugin",
         "refreshTime",
+        "hideBattHumidity",
         "lowBattThreshold",
         "motionDuration"
       ]
