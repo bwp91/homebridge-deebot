@@ -26,7 +26,7 @@ This package will expose:
 * A switch to turn auto cleaning mode on and off
 * A switch to send your device back to the charging station
 * A motion sensor to alert you if your device needs attention
-* A battery service to alert you if your device's battery is low
+* A battery service to show the device's battery status
 * An optional humidity sensor service to show clearly the battery level percentage
 
 This package has been tested with:
