@@ -33,8 +33,6 @@ This package has been tested with:
 * The `N79` model (the device that I own)
 * The `N79S` and `907`
 
-Credit to [@nicoduj](https://github.com/nicoduj) for [homebridge-deebotEcovacs](https://github.com/nicoduj/homebridge-deebotEcovacs).
-
 ### Setup
 * [Installation (Homebridge)](https://github.com/bwp91/homebridge-deebot/wiki/Installation-(Homebridge))
 * [Installation (HOOBS)](https://github.com/bwp91/homebridge-deebot/wiki/Installation-(HOOBS))
@@ -44,6 +42,10 @@ Credit to [@nicoduj](https://github.com/nicoduj) for [homebridge-deebotEcovacs](
 ### About
 * [About Me](https://github.com/sponsors/bwp91)
 * [Support Request](https://github.com/bwp91/homebridge-deebot/issues/new/choose)
+
+### Credits
+* To [@nicoduj](https://github.com/nicoduj) for [homebridge-deebotEcovacs](https://github.com/nicoduj/homebridge-deebotEcovacs).
+* To [@mrbungle64](https://github.com/mrbungle64) for the [ecovacs-deebot.js](https://github.com/mrbungle64/ecovacs-deebot.js) client.
 
 ### Disclaimer
 I am in no way affiliated with ECOVACS and this plugin is a personal project that I maintain in my free time.
