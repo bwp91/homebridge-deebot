@@ -2,8 +2,7 @@
   "pluginAlias": "Deebot",
   "pluginType": "platform",
   "singular": true,
-  "headerDisplay": "Homebridge/HOOBS plugin to control ECOVACS Deebot devices.",
-  "footerDisplay": "For help and support please visit our [GitHub Wiki](https://github.com/bwp91/homebridge-deebot/wiki).",
+  "headerDisplay": "<p align=\"center\"><img width=\"75%\" src=\"https://user-images.githubusercontent.com/43026681/95466026-ca9b5a80-0973-11eb-84ec-8c3dff2f655e.png\"></p><p align=\"center\">For help and support please visit our <a href=\"https://github.com/bwp91/homebridge-deebot/wiki\">GitHub Wiki</a>. We hope you find this plugin useful!</p>",
   "schema": {
     "type": "object",
     "properties": {
