@@ -39,6 +39,10 @@ This package has been tested with:
 * [Configuration](https://github.com/bwp91/homebridge-deebot/wiki/Configuration)
 * [Beta Version](https://github.com/bwp91/homebridge-deebot/wiki/Beta-Version)
 
+### How-to Guides
+* [How to remove an accessory from the cache](https://github.com/bwp91/homebridge-deebot/wiki/How-to-remove-an-accessory-from-the-cache)
+* [How to update node](https://github.com/bwp91/homebridge-deebot/wiki/How-to-update-node)
+
 ### About
 * [About Me](https://github.com/sponsors/bwp91)
 * [Support Request](https://github.com/bwp91/homebridge-deebot/issues/new/choose)
