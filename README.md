@@ -19,19 +19,14 @@ Homebridge/HOOBS plugin to control ECOVACS Deebot devices.
 To use this plugin, you will need to already have [Homebridge](https://homebridge.io) or [HOOBS](https://hoobs.org) installed. Please refer to the links for more information and installation instructions.
 
 ### Plugin Information
-
-This package is a much simplified version of [homebridge-deebotEcovacs](https://github.com/nicoduj/homebridge-deebotEcovacs). If you are looking for more configurable options and different cleaning modes then [homebridge-deebotEcovacs](https://github.com/nicoduj/homebridge-deebotEcovacs) will be more appropriate for you.
-
-This package will expose:
-* A switch to turn auto cleaning mode on and off
-* A switch to send your device back to the charging station
-* A motion sensor to alert you if your device needs attention
-* A battery service to show the device's battery status
-* An optional humidity sensor service to show clearly the battery level percentage
-
-This package has been tested with:
-* The `N79` model (the device that I own)
-* The `N79S` and `907`
+* This package is a much simplified version of [homebridge-deebotEcovacs](https://github.com/nicoduj/homebridge-deebotEcovacs). If you are looking for more configurable options and different cleaning modes then [homebridge-deebotEcovacs](https://github.com/nicoduj/homebridge-deebotEcovacs) will be more appropriate for you.
+* This plugin uses your ECOVACS credentials to obtain and control your devices via the cloud.
+* This package will expose:
+  * A switch to turn auto cleaning mode on and off
+  * A switch to send your device back to the charging station
+  * A motion sensor to alert you if your device needs attention
+  * A battery service to show the device's battery status
+  * An optional humidity sensor service to show clearly the battery level percentage
 
 ### Setup
 * [Installation (Homebridge)](https://github.com/bwp91/homebridge-deebot/wiki/Installation-(Homebridge))
@@ -39,17 +34,21 @@ This package has been tested with:
 * [Configuration](https://github.com/bwp91/homebridge-deebot/wiki/Configuration)
 * [Beta Version](https://github.com/bwp91/homebridge-deebot/wiki/Beta-Version)
 
+### Features
+* [Supported Devices](https://github.com/bwp91/homebridge-deebot/wiki/Supported-Devices)
+
 ### How-to Guides
 * [How to remove an accessory from the cache](https://github.com/bwp91/homebridge-deebot/wiki/How-to-remove-an-accessory-from-the-cache)
 * [How to update node](https://github.com/bwp91/homebridge-deebot/wiki/How-to-update-node)
 
 ### About
 * [About Me](https://github.com/sponsors/bwp91)
+* [Changelog](https://github.com/bwp91/homebridge-deebot/releases)
 * [Support Request](https://github.com/bwp91/homebridge-deebot/issues/new/choose)
 
 ### Credits
-* To [@nicoduj](https://github.com/nicoduj) for [homebridge-deebotEcovacs](https://github.com/nicoduj/homebridge-deebotEcovacs).
 * To [@mrbungle64](https://github.com/mrbungle64) for the [ecovacs-deebot.js](https://github.com/mrbungle64/ecovacs-deebot.js) client.
+* To [@nicoduj](https://github.com/nicoduj) for [homebridge-deebotEcovacs](https://github.com/nicoduj/homebridge-deebotEcovacs).
 
 ### Disclaimer
 I am in no way affiliated with ECOVACS and this plugin is a personal project that I maintain in my free time.
