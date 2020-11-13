@@ -16,7 +16,7 @@ Homebridge/HOOBS plugin to control ECOVACS Deebot devices.
 </span>
 
 ### Prerequisites
-To use this plugin, you will need to already have [Homebridge](https://homebridge.io) or [HOOBS](https://hoobs.org) installed. Please refer to the links for more information and installation instructions.
+* To use this plugin, you will need to already have [Homebridge](https://homebridge.io) or [HOOBS](https://hoobs.org) installed. Please refer to the links for more information and installation instructions.
 
 ### Plugin Information
 * This package is a much simplified version of [homebridge-deebotEcovacs](https://github.com/nicoduj/homebridge-deebotEcovacs). If you are looking for more configurable options and different cleaning modes then [homebridge-deebotEcovacs](https://github.com/nicoduj/homebridge-deebotEcovacs) will be more appropriate for you.
@@ -51,4 +51,4 @@ To use this plugin, you will need to already have [Homebridge](https://homebridg
 * To [@nicoduj](https://github.com/nicoduj) for [homebridge-deebotEcovacs](https://github.com/nicoduj/homebridge-deebotEcovacs).
 
 ### Disclaimer
-I am in no way affiliated with ECOVACS and this plugin is a personal project that I maintain in my free time.
+* I am in no way affiliated with ECOVACS and this plugin is a personal project that I maintain in my free time.
