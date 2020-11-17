@@ -20,8 +20,8 @@
     "hoover"
   ],
   "engines": {
-    "homebridge": ">=1.1.0",
-    "node": ">=14.15.0"
+    "homebridge": "^1.1.0",
+    "node": "^14.15.1"
   },
   "repository": {
     "type": "git",
@@ -50,7 +50,7 @@
   ],
   "dependencies": {
     "ecovacs-deebot": "alpha",
-    "interval-promise": "1.4.0",
-    "node-machine-id": "1.1.12"
+    "interval-promise": "^1.4.0",
+    "node-machine-id": "^1.1.12"
   }
 }
