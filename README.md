@@ -32,10 +32,10 @@ Homebridge/HOOBS plugin to control ECOVACS Deebot devices.
 * [Installation (Homebridge)](https://github.com/bwp91/homebridge-deebot/wiki/Installation-(Homebridge))
 * [Installation (HOOBS)](https://github.com/bwp91/homebridge-deebot/wiki/Installation-(HOOBS))
 * [Configuration](https://github.com/bwp91/homebridge-deebot/wiki/Configuration)
-* [Beta Version](https://github.com/bwp91/homebridge-deebot/wiki/Beta-Version)
 
 ### Features
 * [Supported Devices](https://github.com/bwp91/homebridge-deebot/wiki/Supported-Devices)
+* [Beta Version](https://github.com/bwp91/homebridge-deebot/wiki/Beta-Version)
 
 ### How-to Guides
 * [How to remove an accessory from the cache](https://github.com/bwp91/homebridge-deebot/wiki/How-to-remove-an-accessory-from-the-cache)
