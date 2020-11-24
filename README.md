@@ -47,8 +47,9 @@ Homebridge/HOOBS plugin to control ECOVACS Deebot devices.
 * [Support Request](https://github.com/bwp91/homebridge-deebot/issues/new/choose)
 
 ### Credits
-* To [@mrbungle64](https://github.com/mrbungle64) for the [ecovacs-deebot.js](https://github.com/mrbungle64/ecovacs-deebot.js) client.
-* To [@nicoduj](https://github.com/nicoduj) for [homebridge-deebotEcovacs](https://github.com/nicoduj/homebridge-deebotEcovacs).
+* To the owner of [ecovacs-deebot.js](https://github.com/mrbungle64/ecovacs-deebot.js) client: [@mrbungle64]
+* To the owner of [homebridge-deebotEcovacs](https://github.com/nicoduj/homebridge-deebotEcovacs): [@nicoduj](https://github.com/nicoduj)
+* To the creators/contributors of [Homebridge](https://homebridge.io) who make this plugin possible
 
 ### Disclaimer
 * I am in no way affiliated with ECOVACS and this plugin is a personal project that I maintain in my free time.
