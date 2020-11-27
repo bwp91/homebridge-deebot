@@ -1,11 +1,11 @@
 <p align="center">
-   <a href="https://github.com/bwp91/homebridge-deebot"><img alt="homebridge-deebot" src="https://user-images.githubusercontent.com/43026681/98989883-a1955900-2521-11eb-8709-2459bb949487.png" width="600px"></a>
+   <a href="https://github.com/bwp91/homebridge-deebot"><img alt="homebridge-deebot" src="https://user-images.githubusercontent.com/43026681/100441336-32317480-309e-11eb-8c42-2eb1ebffc935.png" width="600px"></a>
 </p>
 <span align="center">
   
 # homebridge-deebot 
 
-Homebridge/HOOBS plugin to control ECOVACS Deebot devices.
+Homebridge/HOOBS plugin to control ECOVACS Deebot devices
 
 [![npm](https://img.shields.io/npm/v/homebridge-deebot/latest?label=latest)](https://www.npmjs.com/package/homebridge-deebot)
 [![npm](https://img.shields.io/npm/v/homebridge-deebot/beta?label=beta)](https://github.com/bwp91/homebridge-deebot/wiki/Beta-Version)   
