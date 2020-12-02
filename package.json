@@ -19,6 +19,7 @@
     "vacuum",
     "hoover"
   ],
+  "main": "lib/index.js",
   "engines": {
     "homebridge": "^1.1.0",
     "node": "^14.15.1"
