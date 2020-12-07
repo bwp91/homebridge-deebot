@@ -1,5 +1,5 @@
 <p align="center">
-   <a href="https://github.com/bwp91/homebridge-deebot"><img alt="homebridge-deebot" src="https://user-images.githubusercontent.com/43026681/100441336-32317480-309e-11eb-8c42-2eb1ebffc935.png" width="600px"></a>
+   <a href="https://github.com/bwp91/homebridge-deebot"><img alt="homebridge-deebot" src="https://user-images.githubusercontent.com/43026681/101321841-f0eb5280-385d-11eb-8dd4-f57113f6e078.png" width="600px"></a>
 </p>
 <span align="center">
   
