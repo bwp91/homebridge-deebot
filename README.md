@@ -49,6 +49,7 @@ Homebridge/HOOBS plugin to control ECOVACS Deebot devices
 ### Credits
 * To the owner of [ecovacs-deebot.js](https://github.com/mrbungle64/ecovacs-deebot.js) client: [@mrbungle64](https://github.com/mrbungle64).
 * To the owner of [homebridge-deebotEcovacs](https://github.com/nicoduj/homebridge-deebotEcovacs): [@nicoduj](https://github.com/nicoduj).
+* To the creator of the awesome plugin header logo: [Keryan Belahcene](https://www.instagram.com/keryan.me).
 * To the creators/contributors of [Homebridge](https://homebridge.io) who make this plugin possible.
 
 ### Disclaimer
