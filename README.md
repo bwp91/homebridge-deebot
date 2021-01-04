@@ -5,7 +5,7 @@
   
 # homebridge-deebot 
 
-Homebridge/HOOBS plugin to control ECOVACS Deebot devices
+Homebridge plugin to control ECOVACS Deebot devices
 
 [![npm](https://img.shields.io/npm/v/homebridge-deebot/latest?label=latest)](https://www.npmjs.com/package/homebridge-deebot)
 [![npm](https://img.shields.io/npm/v/homebridge-deebot/beta?label=beta)](https://github.com/bwp91/homebridge-deebot/wiki/Beta-Version)   
@@ -16,18 +16,15 @@ Homebridge/HOOBS plugin to control ECOVACS Deebot devices
 
 </span>
 
+### Plugin Information
+
+* This plugin allows you to view and control your ECOVACS devices within HomeKit. The plugin:
+  * requires your ECOVACS credentials to function
+  * uses a cloud-based connection (i.e. requires the internet)
+* This package is a much simplified version of [homebridge-deebotEcovacs](https://github.com/nicoduj/homebridge-deebotEcovacs). If you are looking for more configurable options and different cleaning modes then [homebridge-deebotEcovacs](https://github.com/nicoduj/homebridge-deebotEcovacs) will be more appropriate for you.
+
 ### Prerequisites
 * To use this plugin, you will need to already have [Homebridge](https://homebridge.io) or [HOOBS](https://hoobs.org) installed. Please refer to the links for more information and installation instructions.
-
-### Plugin Information
-* This package is a much simplified version of [homebridge-deebotEcovacs](https://github.com/nicoduj/homebridge-deebotEcovacs). If you are looking for more configurable options and different cleaning modes then [homebridge-deebotEcovacs](https://github.com/nicoduj/homebridge-deebotEcovacs) will be more appropriate for you.
-* This plugin uses your ECOVACS credentials to obtain and control your devices via the cloud.
-* This package will expose:
-  * A switch to turn auto cleaning mode on and off
-  * A switch to send your device back to the charging station
-  * A motion sensor to alert you if your device needs attention
-  * A battery service to show the device's battery status
-  * An optional humidity sensor service to show clearly the battery level percentage
 
 ### Setup
 * [Installation (Homebridge)](https://github.com/bwp91/homebridge-deebot/wiki/Installation-(Homebridge))
