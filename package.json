@@ -5,7 +5,7 @@
   "contributors": [
     "nicoduj"
   ],
-  "description": "Homebridge/HOOBS plugin to control ECOVACS Deebot devices.",
+  "description": "Homebridge plugin to control ECOVACS Deebot devices.",
   "license": "MIT",
   "keywords": [
     "homebridge",
