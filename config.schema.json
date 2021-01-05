@@ -156,11 +156,10 @@
         "maximum": 120,
         "description": "The length of time (in seconds) that the motion detector will be activated if your Deebot sends a message or needs help. The message is viewable in the log."
       },
-      "hideBattHumidity": {
-        "title": "Hide Battery Humidity Sensor",
+      "showBattHumidity": {
+        "title": "Show (Humidity) Battery Sensor",
         "type": "boolean",
-        "description": "If checked, the humidity sensor showing the battery percentage will be hidden.",
-        "default": true
+        "description": "If checked, a humidity sensor showing the battery percentage will be shown."
       },
       "debug": {
         "title": "Debug Logging",
@@ -191,7 +190,7 @@
         "refreshTime",
         "lowBattThreshold",
         "motionDuration",
-        "hideBattHumidity",
+        "showBattHumidity",
         "debug",
         "disablePlugin"
       ]
