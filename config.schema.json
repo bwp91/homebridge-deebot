@@ -140,14 +140,6 @@
         "maximum": 600,
         "description": "An interval (in seconds) in which your devices will refresh with ECOVACS. Must be between 30 and 1800."
       },
-      "lowBattThreshold": {
-        "title": "Low Battery Threshold",
-        "type": "number",
-        "placeholder": 20,
-        "minimum": 1,
-        "maximum": 100,
-        "description": "The battery percentage at which the plugin should display a low battery status."
-      },
       "motionDuration": {
         "title": "Alert Notification Time",
         "type": "number",
@@ -155,6 +147,14 @@
         "minimum": 1,
         "maximum": 120,
         "description": "The length of time (in seconds) that the motion detector will be activated if your Deebot sends a message or needs help. The message is viewable in the log."
+      },
+      "lowBattThreshold": {
+        "title": "Low Battery Threshold",
+        "type": "number",
+        "placeholder": 20,
+        "minimum": 1,
+        "maximum": 100,
+        "description": "The battery percentage at which the plugin should display a low battery status."
       },
       "showBattHumidity": {
         "title": "Show (Humidity) Battery Sensor",
@@ -188,8 +188,8 @@
       "title": "Optional Settings",
       "items": [
         "refreshTime",
-        "lowBattThreshold",
         "motionDuration",
+        "lowBattThreshold",
         "showBattHumidity",
         "debug",
         "disablePlugin"
