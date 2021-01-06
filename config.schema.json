@@ -138,7 +138,7 @@
         "placeholder": 120,
         "minimum": 30,
         "maximum": 600,
-        "description": "An interval (in seconds) in which your devices will refresh with ECOVACS."
+        "description": "An interval (in seconds) in which your devices will refresh with ECOVACS. Must be between 30 and 1800."
       },
       "lowBattThreshold": {
         "title": "Low Battery Threshold",
