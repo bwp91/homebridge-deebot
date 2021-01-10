@@ -14,7 +14,6 @@
       },
       "countryCode": {
         "title": "Country Code",
-        "description": "Select the country where your ECOVACS account is registered, or 'OTHER' not listed.",
         "type": "string",
         "required": true,
         "oneOf": [
@@ -122,13 +121,11 @@
       },
       "username": {
         "title": "ECOVACS Username",
-        "description": "The username for your ECOVACS account.",
         "required": true,
         "type": "string"
       },
       "password": {
         "title": "ECOVACS Password",
-        "description": "The password for your ECOVACS account.",
         "required": true,
         "type": "string"
       },
@@ -191,6 +188,7 @@
     {
       "type": "fieldset",
       "title": "Optional Settings",
+      "expandable": true,
       "items": [
         "refreshTime",
         "debug",
@@ -200,7 +198,6 @@
     {
       "type": "fieldset",
       "title": "Device Specific Settings",
-      "description": "Further optional settings for specific devices.",
       "expandable": true,
       "items": [
         "ignoredDevices",
