@@ -52,3 +52,4 @@ Homebridge plugin to control ECOVACS Deebot devices
 
 ### Disclaimer
 * I am in no way affiliated with ECOVACS and this plugin is a personal project that I maintain in my free time.
+* Use this plugin entirely at your own risk - please see licence for more information.
