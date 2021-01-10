@@ -197,7 +197,7 @@
     },
     {
       "type": "fieldset",
-      "title": "Device Specific Settings",
+      "title": "Device Settings",
       "expandable": true,
       "items": [
         "ignoredDevices",
