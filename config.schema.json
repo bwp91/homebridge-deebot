@@ -137,6 +137,11 @@
         "maximum": 600,
         "description": "An interval (in seconds) in which your devices will refresh with ECOVACS. Must be between 30 and 1800."
       },
+      "disableDeviceLogging": {
+        "type": "boolean",
+        "title": "Disable Device Logging",
+        "description": "If checked, device updates will not be added to the log."
+      },
       "debug": {
         "title": "Debug Logging",
         "type": "boolean",
@@ -191,6 +196,7 @@
       "expandable": true,
       "items": [
         "refreshTime",
+        "disableDeviceLogging",
         "debug",
         "disablePlugin"
       ]
