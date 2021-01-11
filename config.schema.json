@@ -134,8 +134,7 @@
         "type": "number",
         "placeholder": 120,
         "minimum": 30,
-        "maximum": 600,
-        "description": "An interval (in seconds) in which your devices will refresh with ECOVACS. Must be between 30 and 1800."
+        "description": "An interval (in seconds) in which your devices will refresh with ECOVACS. Must be 30 or more."
       },
       "disableDeviceLogging": {
         "type": "boolean",
@@ -162,16 +161,14 @@
         "type": "number",
         "placeholder": 30,
         "minimum": 1,
-        "maximum": 120,
-        "description": "The length of time (in seconds) that the motion detector will be activated if your Deebot sends a message or needs help. The message is viewable in the log."
+        "description": "The length of time (in seconds) that the motion detector will be activated if your Deebot sends a message or needs help. The message is viewable in the log. Must be 1 or more."
       },
       "lowBattThreshold": {
         "title": "Low Battery Threshold",
         "type": "number",
         "placeholder": 20,
         "minimum": 1,
-        "maximum": 100,
-        "description": "The battery percentage at which the plugin should display a low battery status."
+        "description": "The battery percentage at which the plugin should display a low battery status. Must be 1 or more."
       },
       "showBattHumidity": {
         "title": "Show (Humidity) Battery Sensor",
