@@ -6,7 +6,9 @@ All notable changes to this homebridge-deebot will be documented in this file.
 
 ### Changes
 
-* Changes to plugin now in CHANGELOG.md
+* Replaced `countryCode` selectbox with inputbox for responsiveness
+* Support for all valid country codes
+* Added CHANGELOG.md
 
 ## 2.6.0 (2021-01-12)
 
