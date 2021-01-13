@@ -2,6 +2,12 @@
 
 All notable changes to this homebridge-deebot will be documented in this file.
 
+## BETA
+
+### Changes
+
+* Changes to plugin now in CHANGELOG.md
+
 ## 2.6.0 (2021-01-12)
 
 ### New
