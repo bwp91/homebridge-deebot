@@ -30,6 +30,7 @@ Homebridge plugin to control ECOVACS Deebot devices
 * [Installation (Homebridge)](https://github.com/bwp91/homebridge-deebot/wiki/Installation-(Homebridge))
 * [Installation (HOOBS)](https://github.com/bwp91/homebridge-deebot/wiki/Installation-(HOOBS))
 * [Configuration](https://github.com/bwp91/homebridge-deebot/wiki/Configuration)
+* [Country Codes](https://github.com/bwp91/homebridge-deebot/wiki/Country-Codes)
 
 ### Features
 * [Supported Devices](https://github.com/bwp91/homebridge-deebot/wiki/Supported-Devices)
