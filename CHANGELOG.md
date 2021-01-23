@@ -2,6 +2,12 @@
 
 All notable changes to this homebridge-deebot will be documented in this file.
 
+## 2.6.3 (2021-01-23)
+
+### Changes
+
+* Backend - better handling of errors
+
 ## 2.6.2 (2021-01-20)
 
 ### Changes
