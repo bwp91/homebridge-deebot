@@ -1,7 +1,7 @@
 {
   "name": "homebridge-deebot",
   "alias": "Deebot",
-  "version": "2.6.2",
+  "version": "2.6.3",
   "author": "bwp91",
   "contributors": [
     "nicoduj"
