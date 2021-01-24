@@ -60,7 +60,7 @@
         "type": "number",
         "placeholder": 30,
         "minimum": 1,
-        "description": "The length of time (in seconds) that the motion detector will be activated if your Deebot sends a message or needs help. The message is viewable in the log. Must be 1 or more."
+        "description": "The length of time (in seconds) that the motion detector will be activated if your Deebot sends a message, needs help or has low battery (if enabled below). The message is viewable in the log. Must be 1 or more."
       },
       "lowBattThreshold": {
         "title": "Low Battery Threshold",
@@ -68,6 +68,11 @@
         "placeholder": 15,
         "minimum": 1,
         "description": "The battery percentage at which the plugin should display a low battery status. Leave blank to match the Deebot default of 15%. Must be 1 or more."
+      },
+      "showMotionLowBatt": {
+        "title": "Low Battery Motion Sensor",
+        "type": "boolean",
+        "description": "If checked, the motion sensor will activate when the Deebot's battery reaches the low battery threshold."
       },
       "showBattHumidity": {
         "title": "Show (Humidity) Battery Sensor",
@@ -105,6 +110,7 @@
         "ignoredDevices",
         "motionDuration",
         "lowBattThreshold",
+        "showMotionLowBatt",
         "showBattHumidity"
       ]
     }
