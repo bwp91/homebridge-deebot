@@ -65,9 +65,9 @@
       "lowBattThreshold": {
         "title": "Low Battery Threshold",
         "type": "number",
-        "placeholder": 20,
+        "placeholder": 15,
         "minimum": 1,
-        "description": "The battery percentage at which the plugin should display a low battery status. Must be 1 or more."
+        "description": "The battery percentage at which the plugin should display a low battery status. Leave blank to match the Deebot default of 15%. Must be 1 or more."
       },
       "showBattHumidity": {
         "title": "Show (Humidity) Battery Sensor",

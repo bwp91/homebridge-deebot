@@ -2,6 +2,12 @@
 
 All notable changes to this homebridge-deebot will be documented in this file.
 
+## BETA
+
+### Changes
+
+* Default low battery status reduced from 20% to 15% to match Deebot's low battery alerts
+
 ## 2.6.3 (2021-01-23)
 
 ### Changes
