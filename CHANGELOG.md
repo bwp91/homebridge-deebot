@@ -4,6 +4,10 @@ All notable changes to this homebridge-deebot will be documented in this file.
 
 ## BETA
 
+### New
+
+* New configuration option `showMotionLowBatt` which when `true` the motion sensor will activate when the Deebot's battery reaches the low battery threshold
+
 ### Changes
 
 * Default low battery status reduced from 20% to 15% to match Deebot's low battery alerts
