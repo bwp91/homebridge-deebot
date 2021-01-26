@@ -2,11 +2,13 @@
 
 All notable changes to this homebridge-deebot will be documented in this file.
 
-## BETA
+## 2.7.0 (2021-01-26)
 
 ### New
 
-* New configuration option `showMotionLowBatt` which when `true` the motion sensor will activate when the Deebot's battery reaches the low battery threshold
+* New configuration option `showMotionLowBatt` which:
+  * when `true` the motion sensor will activate when the Deebot's battery reaches the low battery threshold
+  * the motion sensor will not activate again until the battery charged above the threshold and then fallen again
 
 ### Changes
 
