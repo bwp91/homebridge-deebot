@@ -2,6 +2,13 @@
 
 All notable changes to this homebridge-deebot will be documented in this file.
 
+## BETA
+
+### Changes
+
+* More consistent and clearer error logging
+* Minor code refactors
+
 ## 2.7.0 (2021-01-26)
 
 ### New
