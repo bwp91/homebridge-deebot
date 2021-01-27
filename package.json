@@ -3,9 +3,6 @@
   "alias": "Deebot",
   "version": "2.7.0",
   "author": "bwp91",
-  "contributors": [
-    "nicoduj"
-  ],
   "description": "Homebridge plugin to control ECOVACS Deebot devices.",
   "license": "MIT",
   "keywords": [
