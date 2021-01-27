@@ -101,22 +101,22 @@
         cachedAccessories.forEach(a => {
           const option = document.createElement('option')
           option.text = a.displayName
-          option.value = a.context.deviceId
+          option.value = a.context.ecoDeviceId
           deviceSelect.add(option)
         })
         showDeviceInfo = async deviceId => {
           homebridge.showSpinner()
-          const selectedAccessory = cachedAccessories.find(x => x.context.deviceId === deviceId)
+          const selectedAccessory = cachedAccessories.find(x => x.context.ecoDeviceId === deviceId)
           
           console.log(selectedAccessory)
           document.getElementById('displayName').innerHTML = selectedAccessory.displayName
-          document.getElementById('deviceId').innerHTML = selectedAccessory.context.deviceId
+          document.getElementById('deviceId').innerHTML = selectedAccessory.context.ecoDeviceId
           document.getElementById('deviceTable').style.display = 'inline-table'
           homebridge.hideSpinner()
         }
         deviceSelect.addEventListener('change', event => showDeviceInfo(event.target.value))
         if (cachedAccessories.length > 0) {
-          showDeviceInfo(cachedAccessories[0].context.deviceId)
+          showDeviceInfo(cachedAccessories[0].context.ecoDeviceId)
         } else {
           const option = document.createElement('option')
           option.text = 'No Devices'
