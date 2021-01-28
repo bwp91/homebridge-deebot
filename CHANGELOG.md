@@ -6,6 +6,7 @@ All notable changes to this homebridge-deebot will be documented in this file.
 
 ### Changes
 
+* Corrected the attempt to disconnect from devices on Homebridge shutdown
 * More consistent and clearer error logging
 * Minor code refactors
 
