@@ -9,6 +9,7 @@ All notable changes to this homebridge-deebot will be documented in this file.
 * Corrected the attempt to disconnect from devices on Homebridge shutdown
 * More consistent and clearer error logging
 * Minor code refactors
+* Updated plugin-ui-utils dep and use new method to get cached accessories
 
 ## 2.7.0 (2021-01-26)
 
