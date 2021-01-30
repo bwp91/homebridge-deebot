@@ -2,6 +2,13 @@
 
 All notable changes to this homebridge-deebot will be documented in this file.
 
+## BETA
+
+### Changes
+
+* Updated client dependency `ecovacs-deebot` to v0.5.5 which:
+  * Added OZMO T5 and some more T8 models
+
 ## 2.7.1 (2021-01-29)
 
 ### Changes
