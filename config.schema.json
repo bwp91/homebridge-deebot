@@ -50,11 +50,6 @@
         "type": "boolean",
         "description": "If checked, the plugin will remove all accessories and not load the plugin on restart."
       },
-      "ignoredDevices": {
-        "type": "string",
-        "title": "Ignored Devices",
-        "description": "A list of devices to ignore by device id. For example E2000000000000000000 or multiple separated by a comma."
-      },
       "motionDuration": {
         "title": "Alert Notification Time",
         "type": "number",
@@ -78,6 +73,15 @@
         "title": "Show (Humidity) Battery Sensor",
         "type": "boolean",
         "description": "If checked, a humidity sensor showing the battery percentage will be shown."
+      },
+      "ignoredDevices": {
+        "title": "Ignored Devices",
+        "type": "array",
+        "items": {
+          "type": "string",
+          "title": "Device ID",
+          "description": "Device ID of the device you wish to ignore, e.g. E2000000000000000000."
+        }
       }
     }
   },
@@ -107,12 +111,24 @@
       "title": "Device Settings",
       "expandable": true,
       "items": [
-        "ignoredDevices",
         "motionDuration",
         "lowBattThreshold",
         "showMotionLowBatt",
         "showBattHumidity"
       ]
+    },
+    {
+      "key": "ignoredDevices",
+      "expandable": true,
+      "title": "Ignored Devices",
+      "add": "Add Another Device",
+      "type": "array",
+      "items": [{
+        "type": "fieldset",
+        "items": [
+          "ignoredDevices[]"
+        ]
+      }]
     }
   ]
 }
