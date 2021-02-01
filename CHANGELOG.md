@@ -4,9 +4,15 @@ All notable changes to this homebridge-deebot will be documented in this file.
 
 ## BETA
 
+### Added
+
+* Configuration checks to highlight any unnecessary settings you have
+
 ### Changes
 
-* `ignoredDevices` configuration option is now an array not a string
+* ⚠️ **Potentially Breaking** `ignoredDevices` configuration option is now an array not a string
+* Error messages refactored to show the most useful information
+* [Backend] Major code refactoring
 
 ## 2.7.2 (2021-01-30)
 
