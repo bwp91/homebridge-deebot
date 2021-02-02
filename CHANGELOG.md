@@ -10,7 +10,8 @@ All notable changes to this homebridge-deebot will be documented in this file.
 
 ### Changes
 
-* ⚠️ **Potentially Breaking** `ignoredDevices` configuration option is now an array not a string
+* ⚠️ `ignoredDevices` configuration option is now an array not a string
+* Devices are now configured only after the plugin has initialised
 * Error messages refactored to show the most useful information
 * [Backend] Major code refactoring
 
