@@ -1,7 +1,7 @@
 {
   "name": "homebridge-deebot",
   "alias": "Deebot",
-  "version": "2.8.0-0",
+  "version": "2.8.0-1",
   "author": "bwp91",
   "description": "Homebridge plugin to control ECOVACS Deebot devices.",
   "license": "MIT",
