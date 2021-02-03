@@ -7,6 +7,7 @@ All notable changes to this homebridge-deebot will be documented in this file.
 ### Added
 
 * Configuration checks to highlight any unnecessary settings you have
+* Link to 'Configuration' wiki page in the plugin-ui
 
 ### Changes
 
