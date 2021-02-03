@@ -14,6 +14,7 @@ All notable changes to this homebridge-deebot will be documented in this file.
 * Devices are now configured only after the plugin has initialised
 * Error messages refactored to show the most useful information
 * [Backend] Major code refactoring
+* [Backend] Code comments
 
 ## 2.7.2 (2021-01-30)
 
