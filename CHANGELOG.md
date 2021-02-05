@@ -6,12 +6,14 @@ All notable changes to this homebridge-deebot will be documented in this file.
 
 ### Added
 
+* New setting `hideMotionSensor` if you want to completely hide the motion sensor
 * Configuration checks to highlight any unnecessary settings you have
 * Link to 'Configuration' wiki page in the plugin-ui
 
 ### Changes
 
 * ⚠️ `ignoredDevices` configuration option is now an array not a string
+* Motion sensor settings will hide from the Homebridge UI if the sensor is hidden
 * Devices are now configured only after the plugin has initialised
 * Error messages refactored to show the most useful information
 * [Backend] Major code refactoring
