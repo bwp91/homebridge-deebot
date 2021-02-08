@@ -2,6 +2,12 @@
 
 All notable changes to this homebridge-deebot will be documented in this file.
 
+## BETA
+
+### Changes
+
+* * Hide the `Config entry [plugin_map] is unused and can be removed` notice for HOOBS users
+
 ## 2.8.2 (2021-02-08)
 
 ### Changes
