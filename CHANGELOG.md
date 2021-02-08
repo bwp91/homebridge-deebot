@@ -2,6 +2,12 @@
 
 All notable changes to this homebridge-deebot will be documented in this file.
 
+## BETA
+
+### Changes
+
+* Error stack will be hidden when the disabled plugin message appears in the log
+
 ## 2.8.0 (2021-02-06)
 
 ### Added
