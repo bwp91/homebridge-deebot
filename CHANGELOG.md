@@ -2,6 +2,12 @@
 
 All notable changes to this homebridge-deebot will be documented in this file.
 
+## 2.8.2 (2021-02-08)
+
+### Changes
+
+* Fixes a bug when adding a device to Homebridge
+
 ## 2.8.1 (2021-02-08)
 
 ### Changes
