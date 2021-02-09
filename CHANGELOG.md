@@ -2,6 +2,12 @@
 
 All notable changes to this homebridge-deebot will be documented in this file.
 
+## 2.8.4 (2021-02-09)
+
+### Changes
+
+* Updated client dependency `ecovacs-deebot` to v0.5.6
+
 ## 2.8.3 (2021-02-08)
 
 ### Changes
