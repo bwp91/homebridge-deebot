@@ -2,6 +2,12 @@
 
 All notable changes to this homebridge-deebot will be documented in this file.
 
+## BETA
+
+### Changes
+
+* Updated minimum node to v14.15.5
+
 ## 2.8.4 (2021-02-09)
 
 ### Changes
