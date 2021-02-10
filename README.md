@@ -39,6 +39,7 @@ Homebridge plugin to control ECOVACS Deebot devices
 ### How-to Guides
 * [How to remove an accessory from the cache](https://github.com/bwp91/homebridge-deebot/wiki/How-to-remove-an-accessory-from-the-cache)
 * [How to update node](https://github.com/bwp91/homebridge-deebot/wiki/How-to-update-node)
+* [How to uninstall correctly](https://github.com/bwp91/homebridge-deebot/wiki/How-to-uninstall-correctly)
 
 ### About
 * [About Me](https://github.com/sponsors/bwp91)
