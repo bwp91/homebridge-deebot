@@ -7,7 +7,8 @@ All notable changes to this homebridge-deebot will be documented in this file.
 ### Changes
 
 * Link 'Uninstall' wiki page in the plugin-ui
-* Updated minimum node to v14.15.5
+* Updated minimum Homebridge to v1.1.7
+* Updated minimum Node to v14.15.5
 
 ## 2.8.4 (2021-02-09)
 
