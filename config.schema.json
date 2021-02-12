@@ -38,22 +38,22 @@
       "disableDeviceLogging": {
         "type": "boolean",
         "title": "Disable Device Logging",
-        "description": "If checked, device updates will not be added to the log."
+        "description": "If true, updates for all devices will not be added to the log when they are controlled."
       },
       "debug": {
         "title": "Debug Logging",
         "type": "boolean",
-        "description": "If checked, more information will be added to the log."
+        "description": "If true, more information will be added to the log."
       },
       "disablePlugin": {
         "title": "Disable Plugin",
         "type": "boolean",
-        "description": "If checked, the plugin will remove all accessories and not load the plugin on restart."
+        "description": "If true, the plugin will remove all accessories and not load the plugin on restart."
       },
       "hideMotionSensor": {
         "title": "Hide Motion Sensor",
         "type": "boolean",
-        "description": "If checked, the motion sensor for device alerts will be hidden."
+        "description": "If true, the motion sensor for device alerts will be hidden."
       },
       "motionDuration": {
         "title": "Alert Notification Time",
@@ -75,7 +75,7 @@
       "showMotionLowBatt": {
         "title": "Low Battery Motion Sensor",
         "type": "boolean",
-        "description": "If checked, the motion sensor will activate when the Deebot's battery reaches the low battery threshold.",
+        "description": "If true, the motion sensor will activate when the Deebot's battery reaches the low battery threshold.",
         "condition": {
           "functionBody": "return !model.hideMotionSensor;"
         }
@@ -83,7 +83,7 @@
       "showBattHumidity": {
         "title": "Show (Humidity) Battery Sensor",
         "type": "boolean",
-        "description": "If checked, a humidity sensor showing the battery percentage will be shown."
+        "description": "If true, a humidity sensor showing the battery percentage will be shown."
       },
       "ignoredDevices": {
         "title": "Ignored Devices",
