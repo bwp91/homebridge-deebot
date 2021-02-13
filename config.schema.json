@@ -21,7 +21,8 @@
       "username": {
         "title": "ECOVACS Username",
         "required": true,
-        "type": "string"
+        "type": "string",
+        "description": "If your account is based in China you should use your ECOVACS ID."
       },
       "password": {
         "title": "ECOVACS Password",
