@@ -2,6 +2,13 @@
 
 All notable changes to this homebridge-deebot will be documented in this file.
 
+## BETA
+
+### Added
+
+* Via `ecovacs-deebot` client update:
+  * Support for Chinese server login
+
 ## v2.8.5 (2021-02-11)
 
 ### Changes
@@ -20,7 +27,7 @@ All notable changes to this homebridge-deebot will be documented in this file.
 
 ### Changes
 
-* * Hide the `Config entry [plugin_map] is unused and can be removed` notice for HOOBS users
+* Hide the `Config entry [plugin_map] is unused and can be removed` notice for HOOBS users
 
 ## 2.8.2 (2021-02-08)
 
