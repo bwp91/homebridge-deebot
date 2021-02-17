@@ -8,6 +8,12 @@ All notable changes to this homebridge-deebot will be documented in this file.
 
 * Via `ecovacs-deebot` client update:
   * Support for Chinese server login
+* More viewable information in the Homebridge plugin-ui:
+  * Device model, company and an image of your device in case you didn't know what it looked like
+
+### Changes
+
+* Fixes an issue where the device name would not show in the logs if a device fails to initialise
 
 ## v2.8.5 (2021-02-11)
 
