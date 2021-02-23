@@ -14,6 +14,7 @@ All notable changes to this homebridge-deebot will be documented in this file.
 ### Changes
 
 * Fixes an issue where the device name would not show in the logs if a device fails to initialise
+* Updated minimum Node to v14.16.0
 
 ## v2.8.5 (2021-02-11)
 
