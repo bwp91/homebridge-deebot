@@ -49,7 +49,7 @@
   ],
   "dependencies": {
     "@homebridge/plugin-ui-utils": "^0.0.18",
-    "ecovacs-deebot": "^0.6.0-alpha.4",
+    "ecovacs-deebot": "^0.6.0-alpha.6",
     "node-machine-id": "^1.1.12"
   }
 }
