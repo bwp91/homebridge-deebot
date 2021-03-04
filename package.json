@@ -10,6 +10,7 @@
     "homebridge-plugin",
     "homebridge-deebot",
     "hoobs",
+    "hoobs-plugin",
     "homekit",
     "siri",
     "ecovacs",
