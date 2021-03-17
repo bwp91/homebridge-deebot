@@ -9,6 +9,7 @@
     "type": "object",
     "properties": {
       "name": {
+        "title": "Plugin Name",
         "type": "string",
         "default": "Deebot"
       },
