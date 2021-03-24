@@ -9,6 +9,7 @@ All notable changes to this homebridge-deebot will be documented in this file.
 * Via `ecovacs-deebot` client update:
   * Support for Chinese server login
   * Initial support for some more models (e.g. N3, N7 and N8 series)
+* Enter your ECOVACS password as a base64 encoded string and use the option `encodedPassword` to let the plugin know
 * More viewable information in the Homebridge plugin-ui:
   * Device model, company and an image of your device in case you didn't know what it looked like
 
