@@ -30,6 +30,11 @@
         "required": true,
         "type": "string"
       },
+      "encodedPassword": {
+        "title": "Encoded Password",
+        "type": "boolean",
+        "description": "If true, the plugin will decode your entered password from a base64 encoded string to plain text and use this to log into ECOVACS."
+      },
       "refreshTime": {
         "title": "Refresh Timer",
         "type": "number",
@@ -112,6 +117,7 @@
       "title": "Optional Settings",
       "expandable": true,
       "items": [
+        "encodedPassword",
         "refreshTime",
         "disableDeviceLogging",
         "debug",
