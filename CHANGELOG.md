@@ -4,6 +4,14 @@ All notable changes to this homebridge-deebot will be documented in this file.
 
 ## BETA
 
+### Requirements
+
+* **Homebridge Users**
+  * This plugin has a minimum requirement of Homebridge v1.3.3
+
+* **HOOBS Users**
+  * This plugin has a minimum requirement of HOOBS v3.3.4
+
 ### Added
 
 * Via `ecovacs-deebot` client update:
@@ -15,6 +23,7 @@ All notable changes to this homebridge-deebot will be documented in this file.
 
 ### Changes
 
+* Use the new `.onSet` methods available in Homebridge v1.3
 * Modified config schema to show titles/descriptions for non Homebridge UI users
 * Fixes an issue where the device name would not show in the logs if a device fails to initialise
 * More welcome messages
