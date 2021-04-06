@@ -29,6 +29,7 @@ All notable changes to this homebridge-deebot will be documented in this file.
 * More welcome messages
 * Updated `plugin-ui-utils` dependency
 * Updated minimum Node to v14.16.0
+* Updated README to reflect minimum supported Homebridge/HOOBS and Node versions
 
 ## v2.8.5 (2021-02-11)
 
