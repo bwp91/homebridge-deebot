@@ -57,40 +57,59 @@
         "type": "boolean",
         "description": "If true, the plugin will remove all accessories and not load the plugin on restart."
       },
-      "hideMotionSensor": {
-        "title": "Hide Motion Sensor",
-        "type": "boolean",
-        "description": "If true, the motion sensor for device alerts will be hidden."
-      },
-      "motionDuration": {
-        "title": "Alert Notification Time",
-        "type": "number",
-        "placeholder": 30,
-        "minimum": 1,
-        "description": "The length of time (in seconds) that the motion detector will be activated if your Deebot sends a message, needs help or has low battery (if enabled below). The message is viewable in the log. Must be 1 or more.",
-        "condition": {
-          "functionBody": "return !model.hideMotionSensor;"
+      "devices": {
+        "title": "Device Settings",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "deviceId": {
+              "title": "Device ID",
+              "type": "string",
+              "description": "ECOVACS Device ID of the device these settings apply to, e.g. E2000000000000000000."
+            },
+            "label": {
+              "title": "Label",
+              "type": "string",
+              "description": "This setting has no effect except to be a helpful label for identifying which device this is when editing the configuration."
+            },
+            "hideMotionSensor": {
+              "title": "Hide Motion Sensor",
+              "type": "boolean",
+              "description": "If true, the motion sensor for device alerts will be hidden."
+            },
+            "motionDuration": {
+              "title": "Alert Notification Time",
+              "type": "number",
+              "placeholder": 30,
+              "minimum": 1,
+              "description": "The length of time (in seconds) that the motion detector will be activated if your Deebot sends a message, needs help or has low battery (if enabled below). The message is viewable in the log. Must be 1 or more.",
+              "condition": {
+                "functionBody": "return (model.devices[arrayIndices] && !model.devices[arrayIndices].hideMotionSensor);"
+              }
+            },
+            "lowBattThreshold": {
+              "title": "Low Battery Threshold",
+              "type": "number",
+              "placeholder": 15,
+              "minimum": 1,
+              "description": "The battery percentage at which the plugin should display a low battery status. Leave blank to match the Deebot default of 15%. Must be 1 or more."
+            },
+            "showMotionLowBatt": {
+              "title": "Low Battery Motion Sensor",
+              "type": "boolean",
+              "description": "If true, the motion sensor will activate when the Deebot's battery reaches the low battery threshold.",
+              "condition": {
+                "functionBody": "return (model.devices[arrayIndices] && !model.devices[arrayIndices].hideMotionSensor);"
+              }
+            },
+            "showBattHumidity": {
+              "title": "Show (Humidity) Battery Sensor",
+              "type": "boolean",
+              "description": "If true, a humidity sensor showing the battery percentage will be shown."
+            }
+          }
         }
-      },
-      "lowBattThreshold": {
-        "title": "Low Battery Threshold",
-        "type": "number",
-        "placeholder": 15,
-        "minimum": 1,
-        "description": "The battery percentage at which the plugin should display a low battery status. Leave blank to match the Deebot default of 15%. Must be 1 or more."
-      },
-      "showMotionLowBatt": {
-        "title": "Low Battery Motion Sensor",
-        "type": "boolean",
-        "description": "If true, the motion sensor will activate when the Deebot's battery reaches the low battery threshold.",
-        "condition": {
-          "functionBody": "return !model.hideMotionSensor;"
-        }
-      },
-      "showBattHumidity": {
-        "title": "Show (Humidity) Battery Sensor",
-        "type": "boolean",
-        "description": "If true, a humidity sensor showing the battery percentage will be shown."
       },
       "ignoredDevices": {
         "title": "Ignored Devices",
@@ -125,16 +144,23 @@
       ]
     },
     {
-      "type": "fieldset",
+      "key": "devices",
       "title": "Device Settings",
       "expandable": true,
-      "items": [
-        "hideMotionSensor",
-        "motionDuration",
-        "lowBattThreshold",
-        "showMotionLowBatt",
-        "showBattHumidity"
-      ]
+      "add": "Add Another Device",
+      "type": "array",
+      "items": [{
+        "type": "fieldset",
+        "items": [
+          "devices[].deviceId",
+          "devices[].label",
+          "devices[].hideMotionSensor",
+          "devices[].motionDuration",
+          "devices[].lowBattThreshold",
+          "devices[].showMotionLowBatt",
+          "devices[].showBattHumidity"
+        ]
+      }]
     },
     {
       "key": "ignoredDevices",
