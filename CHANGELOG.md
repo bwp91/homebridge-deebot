@@ -14,6 +14,7 @@ All notable changes to this homebridge-deebot will be documented in this file.
 
 ### Added
 
+* Configuration settings per Deebot device
 * Via `ecovacs-deebot` client update:
   * Support for Chinese server login
   * Initial support for some more models (e.g. N3, N7 and N8 series)
