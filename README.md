@@ -42,10 +42,11 @@ Homebridge plugin to control ECOVACS Deebot devices
 * [How to update node](https://github.com/bwp91/homebridge-deebot/wiki/How-to-update-node)
 * [How to uninstall correctly](https://github.com/bwp91/homebridge-deebot/wiki/How-to-uninstall-correctly)
 
-### About
-* [About Me](https://github.com/sponsors/bwp91)
-* [Changelog](https://github.com/bwp91/homebridge-deebot/releases)
+### Help/About
+* [Common Errors](https://github.com/bwp91/homebridge-deebot/wiki/Common-Errors)
 * [Support Request](https://github.com/bwp91/homebridge-deebot/issues/new/choose)
+* [Changelog](https://github.com/bwp91/homebridge-deebot/blob/latest/CHANGELOG.md)
+* [About Me](https://github.com/sponsors/bwp91)
 
 ### Credits
 * To the owner of [ecovacs-deebot.js](https://github.com/mrbungle64/ecovacs-deebot.js) client: [@mrbungle64](https://github.com/mrbungle64).
