@@ -27,6 +27,7 @@ All notable changes to this homebridge-deebot will be documented in this file.
 * Use the new `.onSet` methods available in Homebridge v1.3
 * Modified config schema to show titles/descriptions for non Homebridge UI users
 * Fixes an issue where the device name would not show in the logs if a device fails to initialise
+* Updated plugin-ui 'Support' page links to match GitHub readme file
 * More welcome messages
 * Updated `plugin-ui-utils` dependency
 * Updated recommended Node to v14.16.1
