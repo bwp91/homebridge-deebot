@@ -29,6 +29,7 @@ All notable changes to this homebridge-deebot will be documented in this file.
 * Fixes an issue where the device name would not show in the logs if a device fails to initialise
 * Updated plugin-ui 'Support' page links to match GitHub readme file
 * More welcome messages
+* Recover accessories from the cache using the UUID
 * Updated `plugin-ui-utils` dependency
 * Updated recommended Node to v14.16.1
 * Updated README to reflect minimum supported Homebridge/HOOBS and Node versions
