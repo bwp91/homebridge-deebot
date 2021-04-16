@@ -28,19 +28,14 @@ Homebridge plugin to control ECOVACS Deebot devices
 * It is recommended to use the current LTS version of Node, currently v14, however Node v10 and v12 are also supported.
 
 ### Setup
-* [Installation (Homebridge)](https://github.com/bwp91/homebridge-deebot/wiki/Installation-(Homebridge))
-* [Installation (HOOBS)](https://github.com/bwp91/homebridge-deebot/wiki/Installation-(HOOBS))
-* [Country Codes](https://github.com/bwp91/homebridge-deebot/wiki/Country-Codes)
+* [Installation](https://github.com/bwp91/homebridge-deebot/wiki/Installation)
+* [Configuration](https://github.com/bwp91/homebridge-deebot/wiki/Configuration)
+* [Beta Version](https://github.com/bwp91/homebridge-deebot/wiki/Beta-Version)
+* [Node Version](https://github.com/bwp91/homebridge-deebot/wiki/Node-Version)
+* [Uninstallation](https://github.com/bwp91/homebridge-deebot/wiki/Uninstallation)
 
 ### Features
-* [Configuration](https://github.com/bwp91/homebridge-deebot/wiki/Configuration)
 * [Supported Devices](https://github.com/bwp91/homebridge-deebot/wiki/Supported-Devices)
-* [Beta Version](https://github.com/bwp91/homebridge-deebot/wiki/Beta-Version)
-
-### How-to Guides
-* [How to remove an accessory from the cache](https://github.com/bwp91/homebridge-deebot/wiki/How-to-remove-an-accessory-from-the-cache)
-* [How to update node](https://github.com/bwp91/homebridge-deebot/wiki/How-to-update-node)
-* [How to uninstall correctly](https://github.com/bwp91/homebridge-deebot/wiki/How-to-uninstall-correctly)
 
 ### Help/About
 * [Common Errors](https://github.com/bwp91/homebridge-deebot/wiki/Common-Errors)
