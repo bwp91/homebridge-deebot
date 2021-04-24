@@ -2,7 +2,7 @@
 
 All notable changes to this homebridge-deebot will be documented in this file.
 
-## BETA
+## 3.0.0 (2021-04-24)
 
 ### Requirements
 
@@ -39,7 +39,7 @@ All notable changes to this homebridge-deebot will be documented in this file.
 * Updated recommended Node to v14.16.1
 * Updated README to reflect minimum supported Homebridge/HOOBS and Node versions
 
-## v2.8.5 (2021-02-11)
+## 2.8.5 (2021-02-11)
 
 ### Changes
 
