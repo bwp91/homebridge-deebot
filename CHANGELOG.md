@@ -12,12 +12,16 @@ All notable changes to this homebridge-deebot will be documented in this file.
 * **HOOBS Users**
   * This plugin has a minimum requirement of HOOBS v3.3.4
 
+### ⚠️ Breaking Change
+
+* The plugin now uses a **per-device** configuration
+  * Current device-specific configurations will cease to work until you update your settings
+  * Refer to [the wiki](https://github.com/bwp91/homebridge-deebot/wiki/Configuration) for details regarding the new configuration
+
 ### Added
 
 * Configuration settings per Deebot device
-* Via `ecovacs-deebot` client update:
-  * Support for Chinese server login
-  * Initial support for some more models (e.g. N3, N7 and N8 series)
+* Support for Chinese server login
 * Enter your ECOVACS password as a base64 encoded string and use the option `encodedPassword` to let the plugin know
 * More viewable information in the Homebridge plugin-ui:
   * Device model, company and an image of your device in case you didn't know what it looked like
@@ -30,6 +34,7 @@ All notable changes to this homebridge-deebot will be documented in this file.
 * Update wiki links in the Homebridge plugin-ui
 * More welcome messages
 * Recover accessories from the cache using the UUID
+* Updated `ecovacs-deebot` depencendy to 0.6.0 ([changelog](https://github.com/mrbungle64/ecovacs-deebot.js/releases/tag/0.6.0))
 * Updated `plugin-ui-utils` dependency
 * Updated recommended Node to v14.16.1
 * Updated README to reflect minimum supported Homebridge/HOOBS and Node versions
