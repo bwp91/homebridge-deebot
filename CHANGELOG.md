@@ -2,6 +2,12 @@
 
 All notable changes to this homebridge-deebot will be documented in this file.
 
+## BETA
+
+### Changes
+
+* Some code refactoring
+
 ## 3.0.1 (2021-04-24)
 
 ### Requirements
