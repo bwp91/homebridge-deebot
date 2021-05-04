@@ -6,7 +6,8 @@ All notable changes to this homebridge-deebot will be documented in this file.
 
 ### Changes
 
-* Some code refactoring
+* Accessory 'identify' function will now add an entry to the log
+* Backend refactoring, function and variable name changes
 
 ## 3.0.1 (2021-04-24)
 
