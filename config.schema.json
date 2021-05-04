@@ -30,6 +30,17 @@
         "required": true,
         "type": "string"
       },
+      "language": {
+        "type": "string",
+        "title": "Language",
+        "description": "If you wish to see the plugin logging in your language and can help translate then let me know!",
+        "default": "en",
+        "oneOf": [{
+            "title": "English",
+            "enum": ["en"]
+          }
+        ]
+      },
       "encodedPassword": {
         "title": "Encoded Password",
         "type": "boolean",
@@ -136,6 +147,7 @@
       "title": "Optional Settings",
       "expandable": true,
       "items": [
+        "language",
         "encodedPassword",
         "refreshTime",
         "disableDeviceLogging",
