@@ -2,6 +2,12 @@
 
 All notable changes to this homebridge-deebot will be documented in this file.
 
+## 3.0.3 (2021-05-05)
+
+### Changes
+
+* Fixes an issue where commands didn't send to the device properly
+
 ## 3.0.2 (2021-05-04)
 
 ### Changes
