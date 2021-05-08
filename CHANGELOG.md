@@ -4,6 +4,11 @@ All notable changes to this homebridge-deebot will be documented in this file.
 
 ## BETA
 
+### Added
+
+* HomeKit 'No Response' messages when controlling a device fails for any reason
+  * This 'No Response' status will be reverted after two seconds
+
 ### Changes
 
 * Ensure user is using at least Homebridge v1.3.0
