@@ -2,6 +2,12 @@
 
 All notable changes to this homebridge-deebot will be documented in this file.
 
+## BETA
+
+### Changes
+
+* Ensure user is using at least Homebridge v1.3.0
+
 ## 3.0.3 (2021-05-05)
 
 ### Changes
