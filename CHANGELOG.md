@@ -10,6 +10,7 @@ All notable changes to this homebridge-deebot will be documented in this file.
   * This 'No Response' status will be reverted after two seconds
 
 ### Changes
+
 * Removed `encodedPassword` config option
   * The plugin will now initially try the supplied password and if incorrect will attempt another login with a base64 decoded version
 * Ensure user is using at least Homebridge v1.3.0
