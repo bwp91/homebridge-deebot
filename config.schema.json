@@ -23,31 +23,16 @@
         "title": "ECOVACS Username",
         "required": true,
         "type": "string",
-        "description": "If your account is based in China you should use your ECOVACS ID."
+        "description": "Your ECOVACS username, if your account is based in China you should use your ECOVACS ID."
       },
       "password": {
         "title": "ECOVACS Password",
         "required": true,
-        "type": "string"
-      },
-      "language": {
         "type": "string",
-        "title": "Language",
-        "description": "If you wish to see the plugin logging in your language and can help translate then let me know!",
-        "default": "en",
-        "oneOf": [{
-            "title": "English",
-            "enum": ["en"]
-          }
-        ]
-      },
-      "encodedPassword": {
-        "title": "Encoded Password",
-        "type": "boolean",
-        "description": "If true, the plugin will decode your entered password from a base64 encoded string to plain text and use this to log into ECOVACS."
+        "description": "Your ECOVACS password, can also be a base64 encoded version of your password."
       },
       "refreshTime": {
-        "title": "Refresh Timer",
+        "title": "Refresh Interval",
         "type": "number",
         "placeholder": 120,
         "minimum": 30,
@@ -147,8 +132,6 @@
       "title": "Optional Settings",
       "expandable": true,
       "items": [
-        "language",
-        "encodedPassword",
         "refreshTime",
         "disableDeviceLogging",
         "debug",
