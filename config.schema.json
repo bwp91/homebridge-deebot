@@ -118,25 +118,17 @@
       }
     }
   },
-  "layout": [{
+  "layout": [
+    {
       "type": "fieldset",
       "title": "Required Settings",
-      "items": [
-        "countryCode",
-        "username",
-        "password"
-      ]
+      "items": ["countryCode", "username", "password"]
     },
     {
       "type": "fieldset",
       "title": "Optional Settings",
       "expandable": true,
-      "items": [
-        "refreshTime",
-        "disableDeviceLogging",
-        "debug",
-        "disablePlugin"
-      ]
+      "items": ["refreshTime", "disableDeviceLogging", "debug", "disablePlugin"]
     },
     {
       "key": "devices",
@@ -144,18 +136,20 @@
       "expandable": true,
       "add": "Add Another Device",
       "type": "array",
-      "items": [{
-        "type": "fieldset",
-        "items": [
-          "devices[].deviceId",
-          "devices[].label",
-          "devices[].hideMotionSensor",
-          "devices[].motionDuration",
-          "devices[].lowBattThreshold",
-          "devices[].showMotionLowBatt",
-          "devices[].showBattHumidity"
-        ]
-      }]
+      "items": [
+        {
+          "type": "fieldset",
+          "items": [
+            "devices[].deviceId",
+            "devices[].label",
+            "devices[].hideMotionSensor",
+            "devices[].motionDuration",
+            "devices[].lowBattThreshold",
+            "devices[].showMotionLowBatt",
+            "devices[].showBattHumidity"
+          ]
+        }
+      ]
     },
     {
       "key": "ignoredDevices",
@@ -163,12 +157,12 @@
       "title": "Ignored Devices",
       "add": "Add Another Device",
       "type": "array",
-      "items": [{
-        "type": "fieldset",
-        "items": [
-          "ignoredDevices[]"
-        ]
-      }]
+      "items": [
+        {
+          "type": "fieldset",
+          "items": ["ignoredDevices[]"]
+        }
+      ]
     }
   ]
 }
