@@ -52,5 +52,8 @@
     "@homebridge/plugin-ui-utils": "^0.0.19",
     "ecovacs-deebot": "^0.6.0",
     "node-machine-id": "^1.1.12"
+  },
+  "prettier": {
+    "printWidth": 100
   }
 }
