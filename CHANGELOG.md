@@ -6,6 +6,8 @@ All notable changes to this homebridge-deebot will be documented in this file.
 
 ### Changes
 
+- Additional device info in the plugin-ui
+- Update `ecovacs-deebot` library
 - Use `standard-prettier` code formatting
 - Recommended node version bump to v14.17.0
 
