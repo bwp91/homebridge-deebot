@@ -58,6 +58,10 @@
           <td id="deviceCompany"></td>
         </tr>
         <tr>
+          <th scope="row">Class/Resource</th>
+          <td id="deviceClassResource"></td>
+        </tr>
+        <tr>
           <td colspan="2" style="text-align: center" id="imgIcon"></td>
         </tr>
       </tbody>
@@ -211,6 +215,10 @@
           document.getElementById('deviceId').innerHTML = selectedAccessory.context.ecoDeviceId
           document.getElementById('deviceModel').innerHTML = selectedAccessory.context.ecoModel
           document.getElementById('deviceCompany').innerHTML = selectedAccessory.context.ecoCompany
+          document.getElementById('deviceClassResource').innerHTML = selectedAccessory.context
+            .ecoClass
+            ? selectedAccessory.context.ecoClass + ' / ' + selectedAccessory.context.ecoResource
+            : ''
           document.getElementById('imgIcon').innerHTML = selectedAccessory.context.ecoImage
             ? '<img src="' + selectedAccessory.context.ecoImage + '" style="width: 150px;">'
             : ''
