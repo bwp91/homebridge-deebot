@@ -4,9 +4,14 @@ All notable changes to this homebridge-deebot will be documented in this file.
 
 ## BETA
 
+### Added
+
+- Additional device info in the plugin-ui including IP and MAC address if available
+- Clean speed characteristic to choose between 'standard' and 'max'
+  - This option is only available in the Eve app
+
 ### Changes
 
-- Additional device info in the plugin-ui
 - Update `ecovacs-deebot` library
 - Use `standard-prettier` code formatting
 - Recommended node version bump to v14.17.0
