@@ -62,6 +62,14 @@
           <td id="deviceClassResource"></td>
         </tr>
         <tr>
+          <th scope="row">IP Address</th>
+          <td id="deviceIP"></td>
+        </tr>
+        <tr>
+          <th scope="row">MAC Address</th>
+          <td id="deviceMac"></td>
+        </tr>
+        <tr>
           <td colspan="2" style="text-align: center" id="imgIcon"></td>
         </tr>
       </tbody>
@@ -219,6 +227,11 @@
             .ecoClass
             ? selectedAccessory.context.ecoClass + ' / ' + selectedAccessory.context.ecoResource
             : ''
+
+          document.getElementById('deviceIP').innerHTML =
+            selectedAccessory.context.ipAddress || 'N/A'
+          document.getElementById('deviceMac').innerHTML =
+            selectedAccessory.context.macAddress || 'N/A'
           document.getElementById('imgIcon').innerHTML = selectedAccessory.context.ecoImage
             ? '<img src="' + selectedAccessory.context.ecoImage + '" style="width: 150px;">'
             : ''
