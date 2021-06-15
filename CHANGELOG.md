@@ -14,7 +14,7 @@ All notable changes to this homebridge-deebot will be documented in this file.
 
 - Update `ecovacs-deebot` library
 - Use `standard-prettier` code formatting
-- Recommended node version bump to v14.17.0
+- Recommended node version bump to v14.17.1
 
 ## 3.1.0 (2021-05-10)
 
