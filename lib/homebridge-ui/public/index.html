@@ -58,7 +58,7 @@
           <td id="deviceCompany"></td>
         </tr>
         <tr>
-          <th scope="row">Class/Resource</th>
+          <th scope="row">Class (Resource)</th>
           <td id="deviceClassResource"></td>
         </tr>
         <tr>
@@ -216,24 +216,19 @@
         })
         showDeviceInfo = async deviceId => {
           homebridge.showSpinner()
-          const selectedAccessory = cachedAccessories.find(x => x.context.ecoDeviceId === deviceId)
+          const thisAcc = cachedAccessories.find(x => x.context.ecoDeviceId === deviceId)
+          const context = thisAcc.context
+          document.getElementById('displayName').innerHTML = thisAcc.displayName
+          document.getElementById('deviceId').innerHTML = context.ecoDeviceId || 'N/A'
+          document.getElementById('deviceModel').innerHTML = context.ecoModel || 'N/A'
+          document.getElementById('deviceCompany').innerHTML = context.ecoCompany || 'N/A'
+          document.getElementById('deviceClassResource').innerHTML =
+            (context.ecoClass || 'N/A') + ' (' + (context.ecoResource || 'N/A') + ')'
 
-          console.log(selectedAccessory)
-          document.getElementById('displayName').innerHTML = selectedAccessory.displayName
-          document.getElementById('deviceId').innerHTML = selectedAccessory.context.ecoDeviceId
-          document.getElementById('deviceModel').innerHTML = selectedAccessory.context.ecoModel
-          document.getElementById('deviceCompany').innerHTML = selectedAccessory.context.ecoCompany
-          document.getElementById('deviceClassResource').innerHTML = selectedAccessory.context
-            .ecoClass
-            ? selectedAccessory.context.ecoClass + ' / ' + selectedAccessory.context.ecoResource
-            : ''
-
-          document.getElementById('deviceIP').innerHTML =
-            selectedAccessory.context.ipAddress || 'N/A'
-          document.getElementById('deviceMac').innerHTML =
-            selectedAccessory.context.macAddress || 'N/A'
-          document.getElementById('imgIcon').innerHTML = selectedAccessory.context.ecoImage
-            ? '<img src="' + selectedAccessory.context.ecoImage + '" style="width: 150px;">'
+          document.getElementById('deviceIP').innerHTML = context.ipAddress || 'N/A'
+          document.getElementById('deviceMac').innerHTML = context.macAddress || 'N/A'
+          document.getElementById('imgIcon').innerHTML = context.ecoImage
+            ? '<img src="' + context.ecoImage + '" style="width: 150px;">'
             : ''
           document.getElementById('deviceTable').style.display = 'inline-table'
           homebridge.hideSpinner()
