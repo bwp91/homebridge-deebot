@@ -5,10 +5,14 @@ All notable changes to this homebridge-deebot will be documented in this file.
 ## BETA
 
 ### Added
-
-- Additional device info in the plugin-ui including IP and MAC address if available
+- Introduced a new setting `overrideLogging` which can be configured per Deebot device. `overrideLogging` can be set to (and will override the global device logging and debug logging settings):
+  - `"default"` to follow the global device update and debug logging setting for this accessory (default if setting not set)
+  - `"standard"` to enable device update logging but disable debug logging for this accessory
+  - `"debug"` to enable device update and debug logging for this accessory
+  - `"disable"` to disable device update and debug logging for this accessory
 - Clean speed characteristic to choose between 'standard' and 'max'
   - This option is only available in the Eve app
+- Additional device info in the plugin-ui including IP and MAC address if available
 
 ### Changes
 
