@@ -41,12 +41,12 @@
       "disableDeviceLogging": {
         "type": "boolean",
         "title": "Disable Device Logging",
-        "description": "If true, updates for all devices will not be added to the log when they are controlled."
+        "description": "Global logging setting for accessory status changes. If true then accessory status changes will not be logged. This can also be set per accessory later in the config."
       },
       "debug": {
         "title": "Debug Logging",
         "type": "boolean",
-        "description": "If true, more information will be added to the log."
+        "description": "Global logging setting for the plugin. If true then debug information will be added to the log. This can also be set per accessory later in the config."
       },
       "disablePlugin": {
         "title": "Disable Plugin",
@@ -103,6 +103,29 @@
               "title": "Show (Humidity) Battery Sensor",
               "type": "boolean",
               "description": "If true, a humidity sensor showing the battery percentage will be shown."
+            },
+            "overrideLogging": {
+              "type": "string",
+              "title": "Override Logging Setting",
+              "description": "Override global logging setting for this device.",
+              "oneOf": [
+                {
+                  "title": "Default (Use Global Setting)",
+                  "enum": ["default"]
+                },
+                {
+                  "title": "Enable Standard Logging",
+                  "enum": ["standard"]
+                },
+                {
+                  "title": "Enable Debug Logging",
+                  "enum": ["debug"]
+                },
+                {
+                  "title": "Disable All Logging",
+                  "enum": ["disable"]
+                }
+              ]
             }
           }
         }
@@ -146,7 +169,8 @@
             "devices[].motionDuration",
             "devices[].lowBattThreshold",
             "devices[].showMotionLowBatt",
-            "devices[].showBattHumidity"
+            "devices[].showBattHumidity",
+            "devices[].overrideLogging"
           ]
         }
       ]
