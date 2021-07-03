@@ -67,12 +67,18 @@
             "label": {
               "title": "Label",
               "type": "string",
-              "description": "This setting has no effect except to be a helpful label for identifying which device this is when editing the configuration."
+              "description": "This setting has no effect except to be a helpful label for identifying which device this is when editing the configuration.",
+              "condition": {
+                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0);"
+              }
             },
             "hideMotionSensor": {
               "title": "Hide Motion Sensor",
               "type": "boolean",
-              "description": "If true, the motion sensor for device alerts will be hidden."
+              "description": "If true, the motion sensor for device alerts will be hidden.",
+              "condition": {
+                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0);"
+              }
             },
             "motionDuration": {
               "title": "Alert Notification Time",
@@ -81,7 +87,7 @@
               "minimum": 1,
               "description": "The length of time (in seconds) that the motion detector will be activated if your Deebot sends a message, needs help or has low battery (if enabled below). The message is viewable in the log. Must be 1 or more.",
               "condition": {
-                "functionBody": "return (model.devices[arrayIndices] && !model.devices[arrayIndices].hideMotionSensor);"
+                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].hideMotionSensor);"
               }
             },
             "lowBattThreshold": {
@@ -89,20 +95,26 @@
               "type": "number",
               "placeholder": 15,
               "minimum": 1,
-              "description": "The battery percentage at which the plugin should display a low battery status. Leave blank to match the Deebot default of 15%. Must be 1 or more."
+              "description": "The battery percentage at which the plugin should display a low battery status. Leave blank to match the Deebot default of 15%. Must be 1 or more.",
+              "condition": {
+                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0);"
+              }
             },
             "showMotionLowBatt": {
               "title": "Low Battery Motion Sensor",
               "type": "boolean",
               "description": "If true, the motion sensor will activate when the Deebot's battery reaches the low battery threshold.",
               "condition": {
-                "functionBody": "return (model.devices[arrayIndices] && !model.devices[arrayIndices].hideMotionSensor);"
+                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].hideMotionSensor);"
               }
             },
             "showBattHumidity": {
               "title": "Show (Humidity) Battery Sensor",
               "type": "boolean",
-              "description": "If true, a humidity sensor showing the battery percentage will be shown."
+              "description": "If true, a humidity sensor showing the battery percentage will be shown.",
+              "condition": {
+                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0);"
+              }
             },
             "overrideLogging": {
               "type": "string",
@@ -125,7 +137,10 @@
                   "title": "Disable All Logging",
                   "enum": ["disable"]
                 }
-              ]
+              ],
+              "condition": {
+                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0);"
+              }
             }
           }
         }
