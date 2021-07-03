@@ -19,6 +19,7 @@ All notable changes to this homebridge-deebot will be documented in this file.
 
 ### Changed
 
+- More interactive Homebridge UI - device configuration will expand once device ID entered
 - Small changes to the startup logging
 - Update `ecovacs-deebot` library
 - Use `standard-prettier` code formatting
