@@ -33,7 +33,7 @@
       },
       "refreshTime": {
         "title": "Refresh Interval",
-        "type": "number",
+        "type": "integer",
         "placeholder": 120,
         "minimum": 30,
         "description": "An interval (in seconds) in which your devices will refresh with ECOVACS. Must be 30 or more."
@@ -82,7 +82,7 @@
             },
             "motionDuration": {
               "title": "Alert Notification Time",
-              "type": "number",
+              "type": "integer",
               "placeholder": 30,
               "minimum": 1,
               "description": "The length of time (in seconds) that the motion detector will be activated if your Deebot sends a message, needs help or has low battery (if enabled below). The message is viewable in the log. Must be 1 or more.",
@@ -92,7 +92,7 @@
             },
             "lowBattThreshold": {
               "title": "Low Battery Threshold",
-              "type": "number",
+              "type": "integer",
               "placeholder": 15,
               "minimum": 1,
               "description": "The battery percentage at which the plugin should display a low battery status. Leave blank to match the Deebot default of 15%. Must be 1 or more.",
