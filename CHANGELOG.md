@@ -21,6 +21,7 @@ All notable changes to this homebridge-deebot will be documented in this file.
 
 - More interactive Homebridge UI - device configuration will expand once device ID entered
 - Small changes to the startup logging
+- Limit device error logging to once per refresh time (avoids log spamming)
 - Update `ecovacs-deebot` library
 - Use `standard-prettier` code formatting
 - Recommended node version bump to v14.17.3
