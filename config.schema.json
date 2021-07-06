@@ -67,7 +67,7 @@
             "label": {
               "title": "Label",
               "type": "string",
-              "description": "This setting has no effect except to be a helpful label for identifying which device this is when editing the configuration.",
+              "description": "This setting has no effect except to help identify this device.",
               "condition": {
                 "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0);"
               }
