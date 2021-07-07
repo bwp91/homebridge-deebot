@@ -50,6 +50,10 @@
           <td id="deviceId"></td>
         </tr>
         <tr>
+          <th scope="row">Cloud Status</th>
+          <td id="deviceOnline"></td>
+        </tr>
+        <tr>
           <th scope="row">Model</th>
           <td id="deviceModel"></td>
         </tr>
@@ -220,6 +224,9 @@
           const context = thisAcc.context
           document.getElementById('displayName').innerHTML = thisAcc.displayName
           document.getElementById('deviceId').innerHTML = context.ecoDeviceId || 'N/A'
+          document.getElementById('deviceOnline').innerHTML = context.isOnline
+            ? '<i class="fas fa-circle mr-1 green-text"></i> Online'
+            : '<i class="fas fa-circle mr-1 red-text"></i> Offline'
           document.getElementById('deviceModel').innerHTML = context.ecoModel || 'N/A'
           document.getElementById('deviceCompany').innerHTML = context.ecoCompany || 'N/A'
           document.getElementById('deviceClassResource').innerHTML =
