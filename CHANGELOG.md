@@ -12,16 +12,17 @@ All notable changes to this homebridge-deebot will be documented in this file.
     - `"standard"` to enable device update logging but disable debug logging for this accessory
     - `"debug"` to enable device update and debug logging for this accessory
     - `"disable"` to disable device update and debug logging for this accessory
+  - Device online and offline notifications will now be shown in the logs
 - **Clean Speed**
   - Clean speed characteristic to choose between 'standard' and 'max' (this option is only available in the Eve app)
 - **Plugin-UI**
-  - Additional device info in the plugin-ui including IP and MAC address if available
+  - Additional device info in the plugin-ui including online status, IP and MAC address if available
 
 ### Changed
 
 - More interactive Homebridge UI - device configuration will expand once device ID entered
 - Small changes to the startup logging
-- Limit device error logging to once per refresh time (avoids log spamming)
+- Avoid repeated logging of the same device error message
 - Update `ecovacs-deebot` library
 - Use `standard-prettier` code formatting
 - Recommended node version bump to v14.17.3
