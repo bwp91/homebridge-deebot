@@ -2,6 +2,12 @@
 
 All notable changes to this homebridge-deebot will be documented in this file.
 
+## 3.2.1 (2021-07-07)
+
+### Changed
+
+- Startup logging 'housekeeping'
+
 ## 3.2.0 (2021-07-07)
 
 ### Added
