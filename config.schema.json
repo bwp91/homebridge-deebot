@@ -59,15 +59,20 @@
         "items": {
           "type": "object",
           "properties": {
+            "label": {
+              "title": "Label",
+              "type": "string",
+              "description": "This setting has no effect except to help identify this device."
+            },
             "deviceId": {
               "title": "Device ID",
               "type": "string",
               "description": "ECOVACS Device ID of the device these settings apply to, e.g. E2000000000000000000."
             },
-            "label": {
-              "title": "Label",
-              "type": "string",
-              "description": "This setting has no effect except to help identify this device.",
+            "ignoreDevice": {
+              "type": "boolean",
+              "title": "Hide From HomeKit",
+              "description": "If true, this accessory will be removed and ignored from HomeKit.",
               "condition": {
                 "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0);"
               }
@@ -77,7 +82,7 @@
               "type": "boolean",
               "description": "If true, the motion sensor for device alerts will be hidden.",
               "condition": {
-                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0);"
+                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice);"
               }
             },
             "motionDuration": {
@@ -87,7 +92,7 @@
               "minimum": 1,
               "description": "The length of time (in seconds) that the motion detector will be activated if your Deebot sends a message, needs help or has low battery (if enabled below). The message is viewable in the log. Must be 1 or more.",
               "condition": {
-                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].hideMotionSensor);"
+                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].hideMotionSensor && !model.devices[arrayIndices].ignoreDevice);"
               }
             },
             "lowBattThreshold": {
@@ -97,7 +102,7 @@
               "minimum": 1,
               "description": "The battery percentage at which the plugin should display a low battery status. Leave blank to match the Deebot default of 15%. Must be 1 or more.",
               "condition": {
-                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0);"
+                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice);"
               }
             },
             "showMotionLowBatt": {
@@ -105,7 +110,7 @@
               "type": "boolean",
               "description": "If true, the motion sensor will activate when the Deebot's battery reaches the low battery threshold.",
               "condition": {
-                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].hideMotionSensor);"
+                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].hideMotionSensor && !model.devices[arrayIndices].ignoreDevice);"
               }
             },
             "showBattHumidity": {
@@ -113,7 +118,7 @@
               "type": "boolean",
               "description": "If true, a humidity sensor showing the battery percentage will be shown.",
               "condition": {
-                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0);"
+                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice);"
               }
             },
             "overrideLogging": {
@@ -139,7 +144,7 @@
                 }
               ],
               "condition": {
-                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0);"
+                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice);"
               }
             }
           }
@@ -178,8 +183,9 @@
         {
           "type": "fieldset",
           "items": [
-            "devices[].deviceId",
             "devices[].label",
+            "devices[].deviceId",
+            "devices[].ignoreDevice",
             "devices[].hideMotionSensor",
             "devices[].motionDuration",
             "devices[].lowBattThreshold",
