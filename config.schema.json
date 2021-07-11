@@ -149,15 +149,6 @@
             }
           }
         }
-      },
-      "ignoredDevices": {
-        "title": "Ignored Devices",
-        "type": "array",
-        "items": {
-          "type": "string",
-          "title": "Device ID",
-          "description": "Device ID of the device you wish to ignore, e.g. E2000000000000000000."
-        }
       }
     }
   },
@@ -193,19 +184,6 @@
             "devices[].showBattHumidity",
             "devices[].overrideLogging"
           ]
-        }
-      ]
-    },
-    {
-      "key": "ignoredDevices",
-      "expandable": true,
-      "title": "Ignored Devices",
-      "add": "Add Another Device",
-      "type": "array",
-      "items": [
-        {
-          "type": "fieldset",
-          "items": ["ignoredDevices[]"]
         }
       ]
     }
