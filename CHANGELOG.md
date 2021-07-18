@@ -2,6 +2,12 @@
 
 All notable changes to this homebridge-deebot will be documented in this file.
 
+## 3.3.1 (2021-07-18)
+
+### Fixed
+
+- Don't refresh accessory if it hasn't initialised properly
+
 ## 3.3.0 (2021-07-18)
 
 ### Changed
