@@ -2,7 +2,7 @@
 
 All notable changes to this homebridge-deebot will be documented in this file.
 
-## BETA
+## 3.3.0 (2021-07-18)
 
 ### Changed
 
@@ -10,6 +10,10 @@ All notable changes to this homebridge-deebot will be documented in this file.
   - `label` field now appears first in the device configuration sections
   - A device can now be ignored/removed from Homebridge by the `ignoreDevice` setting in the device configuration sections
 - Plugin will now use HomeKit `Battery` service type instead of `BatteryService`
+
+### Fixed
+
+- Attempt to fix an accessory duplication issue ([#37](https://github.com/bwp91/homebridge-deebot/issues/37))
 
 ### Removed
 
