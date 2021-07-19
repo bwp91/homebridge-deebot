@@ -121,6 +121,86 @@
                 "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice);"
               }
             },
+            "command1": {
+              "title": "Custom Command 1",
+              "type": "string",
+              "description": "",
+              "condition": {
+                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice);"
+              }
+            },
+            "command2": {
+              "title": "Custom Command 2",
+              "type": "string",
+              "description": "",
+              "condition": {
+                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command1 && model.devices[arrayIndices].command1.length > 0);"
+              }
+            },
+            "command3": {
+              "title": "Custom Command 3",
+              "type": "string",
+              "description": "",
+              "condition": {
+                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command2 && model.devices[arrayIndices].command2.length > 0);"
+              }
+            },
+            "command4": {
+              "title": "Custom Command 4",
+              "type": "string",
+              "description": "",
+              "condition": {
+                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command3 && model.devices[arrayIndices].command3.length > 0);"
+              }
+            },
+            "command5": {
+              "title": "Custom Command 5",
+              "type": "string",
+              "description": "",
+              "condition": {
+                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command4 && model.devices[arrayIndices].command4.length > 0);"
+              }
+            },
+            "command6": {
+              "title": "Custom Command 6",
+              "type": "string",
+              "description": "",
+              "condition": {
+                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command5 && model.devices[arrayIndices].command5.length > 0);"
+              }
+            },
+            "command7": {
+              "title": "Custom Command 7",
+              "type": "string",
+              "description": "",
+              "condition": {
+                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command6 && model.devices[arrayIndices].command6.length > 0);"
+              }
+            },
+            "command8": {
+              "title": "Custom Command 8",
+              "type": "string",
+              "description": "",
+              "condition": {
+                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command7 && model.devices[arrayIndices].command7.length > 0);"
+              }
+            },
+            "command9": {
+              "title": "Custom Command 9",
+              "type": "string",
+              "description": "",
+              "condition": {
+                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command8 && model.devices[arrayIndices].command8.length > 0);"
+              }
+            },
+            "command10": {
+              "title": "Custom Command 10",
+              "type": "string",
+              "description": "",
+              "condition": {
+                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command9 && model.devices[arrayIndices].command9.length > 0);"
+              }
+            },
             "overrideLogging": {
               "type": "string",
               "title": "Override Logging Setting",
@@ -182,6 +262,24 @@
             "devices[].lowBattThreshold",
             "devices[].showMotionLowBatt",
             "devices[].showBattHumidity",
+            {
+              "expandable": true,
+              "title": "Custom Commands",
+              "type": "fieldset",
+              "description": "Create switches for custom commands. <a href=\"\" target=\"\">Read more →</a>",
+              "items": [
+                "devices[].command1",
+                "devices[].command2",
+                "devices[].command3",
+                "devices[].command4",
+                "devices[].command5",
+                "devices[].command6",
+                "devices[].command7",
+                "devices[].command8",
+                "devices[].command9",
+                "devices[].command10"
+              ]
+            },
             "devices[].overrideLogging"
           ]
         }
