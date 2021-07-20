@@ -264,9 +264,9 @@
             "devices[].showBattHumidity",
             {
               "expandable": true,
-              "title": "Custom Commands",
+              "title": "Custom Areas",
               "type": "fieldset",
-              "description": "Create Eve app buttons for custom commands. <a href=\"https://github.com/bwp91/homebridge-deebot/wiki/Custom-Areas\" target=\"_blank\">Read more →</a>",
+              "description": "Create Eve app buttons for cleaning custom 'Spot Areas'. <a href=\"https://github.com/bwp91/homebridge-deebot/wiki/Custom-Areas\" target=\"_blank\">Read more →</a>",
               "items": [
                 "devices[].command1",
                 "devices[].command2",
