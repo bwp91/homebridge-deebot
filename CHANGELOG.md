@@ -2,6 +2,12 @@
 
 All notable changes to this homebridge-deebot will be documented in this file.
 
+## BETA
+
+### Added
+
+- Support for cleaning 'Spot Areas' 
+
 ## 3.3.1 (2021-07-18)
 
 ### Fixed
