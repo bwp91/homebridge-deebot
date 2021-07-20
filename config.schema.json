@@ -122,71 +122,81 @@
               }
             },
             "command1": {
-              "title": "Custom Command 1",
+              "title": "Custom Area 1",
               "type": "string",
+              "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
               "condition": {
                 "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice);"
               }
             },
             "command2": {
-              "title": "Custom Command 2",
+              "title": "Custom Area 2",
               "type": "string",
+              "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
               "condition": {
                 "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command1 && model.devices[arrayIndices].command1.length > 0);"
               }
             },
             "command3": {
-              "title": "Custom Command 3",
+              "title": "Custom Area 3",
               "type": "string",
+              "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
               "condition": {
                 "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command2 && model.devices[arrayIndices].command2.length > 0);"
               }
             },
             "command4": {
-              "title": "Custom Command 4",
+              "title": "Custom Area 4",
               "type": "string",
+              "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
               "condition": {
                 "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command3 && model.devices[arrayIndices].command3.length > 0);"
               }
             },
             "command5": {
-              "title": "Custom Command 5",
+              "title": "Custom Area 5",
               "type": "string",
+              "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
               "condition": {
                 "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command4 && model.devices[arrayIndices].command4.length > 0);"
               }
             },
             "command6": {
-              "title": "Custom Command 6",
+              "title": "Custom Area 6",
               "type": "string",
+              "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
               "condition": {
                 "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command5 && model.devices[arrayIndices].command5.length > 0);"
               }
             },
             "command7": {
-              "title": "Custom Command 7",
+              "title": "Custom Area 7",
               "type": "string",
+              "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
               "condition": {
                 "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command6 && model.devices[arrayIndices].command6.length > 0);"
               }
             },
             "command8": {
-              "title": "Custom Command 8",
+              "title": "Custom Area 8",
               "type": "string",
+              "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
               "condition": {
                 "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command7 && model.devices[arrayIndices].command7.length > 0);"
               }
             },
             "command9": {
-              "title": "Custom Command 9",
+              "title": "Custom Area 9",
               "type": "string",
+              "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
               "condition": {
                 "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command8 && model.devices[arrayIndices].command8.length > 0);"
               }
             },
             "command10": {
-              "title": "Custom Command 10",
+              "title": "Custom Area 10",
               "type": "string",
+              "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
               "condition": {
                 "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command9 && model.devices[arrayIndices].command9.length > 0);"
               }
