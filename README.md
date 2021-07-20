@@ -40,8 +40,8 @@ Homebridge plugin to control ECOVACS Deebot devices
 ### Features
 
 - [Supported Devices](https://github.com/bwp91/homebridge-deebot/wiki/Supported-Devices)
-- [Supported Devices](https://github.com/bwp91/homebridge-deebot/wiki/Speed-Control)
-- [Supported Devices](https://github.com/bwp91/homebridge-deebot/wiki/Custom-Areas)
+- [Speed Control](https://github.com/bwp91/homebridge-deebot/wiki/Speed-Control)
+- [Custom Areas](https://github.com/bwp91/homebridge-deebot/wiki/Custom-Areas)
 
 ### Help/About
 
