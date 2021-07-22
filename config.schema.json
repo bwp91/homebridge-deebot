@@ -55,6 +55,7 @@
       },
       "devices": {
         "title": "Device Settings",
+        "description": "Optional settings for your devices.",
         "type": "array",
         "items": {
           "type": "object",
@@ -247,6 +248,7 @@
     {
       "key": "devices",
       "title": "Device Settings",
+      "description": "Optional settings for your devices.",
       "expandable": true,
       "add": "Add Another Device",
       "type": "array",
