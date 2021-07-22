@@ -2,11 +2,11 @@
 
 All notable changes to this homebridge-deebot will be documented in this file.
 
-## BETA
+## 3.2.0 (2021-07-22)
 
 ### Added
 
-- Support for cleaning 'Spot Areas'
+- Support for cleaning 'Spot Areas' customised in the ECOVACS app
 
 ## 3.3.1 (2021-07-18)
 
