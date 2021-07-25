@@ -1,6 +1,6 @@
 # Change Log
 
-All notable changes to this homebridge-deebot will be documented in this file.
+All notable changes to homebridge-deebot will be documented in this file.
 
 ## 3.4.0 (2021-07-22)
 
