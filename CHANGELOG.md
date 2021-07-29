@@ -2,6 +2,21 @@
 
 All notable changes to homebridge-deebot will be documented in this file.
 
+## 4.0.0 (2021-07-29)
+
+### Added
+
+- **Configuration**
+
+  - Plugin will now check for duplicate device ID entries in the config and ignore them
+
+### Changed
+
+- ⚠️ **Platform Versions**
+
+  - Recommended node version bumped to v14.17.4
+  - Recommended homebridge version bumped to v1.3.4
+
 ## 3.4.0 (2021-07-22)
 
 ### Added
