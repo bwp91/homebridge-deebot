@@ -2,11 +2,11 @@
 
 All notable changes to homebridge-deebot will be documented in this file.
 
-## BETA
+## 4.0.1 (2021-08-06)
 
 ### Changed
 
-- Updated `ecovacs-deebot` library (beta)
+- Updated `ecovacs-deebot` library to v0.6.1
 
 ## 4.0.0 (2021-07-29)
 
