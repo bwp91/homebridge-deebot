@@ -9,6 +9,10 @@ All notable changes to homebridge-deebot will be documented in this file.
 - **Platform Versions**
   - Recommended node version bumped to v14.17.5
 
+### Fixed
+
+- Attempt to fix a situation when `node-machine-id` fails to obtain the machine uuid
+
 ## 4.0.1 (2021-08-06)
 
 ### Changed
