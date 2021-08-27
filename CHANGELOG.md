@@ -6,7 +6,8 @@ All notable changes to homebridge-deebot will be documented in this file.
 
 ### Changed
 
-- Updated `ecovacs-deebot` library to v0.6.2-alpha
+- Ignore `Robot is operational` error in log
+- Updated `ecovacs-deebot` library to v0.6.2-beta
 
 ## 4.0.2 (2021-08-12)
 
