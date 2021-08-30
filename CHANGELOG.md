@@ -2,12 +2,13 @@
 
 All notable changes to homebridge-deebot will be documented in this file.
 
-## BETA
+## 4.1.0 (2021-08-30)
 
 ### Changed
 
 - Ignore `Robot is operational` error in log
-- Updated `ecovacs-deebot` library to v0.6.2-beta
+- Updated `ecovacs-deebot` library to v0.6.2
+- Remove `node-machine-id` in favour of generating a client id based on ECOVACS username
 
 ## 4.0.2 (2021-08-12)
 
