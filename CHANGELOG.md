@@ -2,6 +2,13 @@
 
 All notable changes to homebridge-deebot will be documented in this file.
 
+## 4.2.1 (2021-09-02)
+
+### Changed
+
+- Updated `ecovacs-deebot` library to v0.6.5
+- Recommended node version bumped to v14.17.6
+
 ## 4.2.0 (2021-08-30)
 
 ### Changed
