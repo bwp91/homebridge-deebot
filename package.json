@@ -50,7 +50,7 @@
   ],
   "dependencies": {
     "@homebridge/plugin-ui-utils": "^0.0.19",
-    "ecovacs-deebot": "^0.6.4"
+    "ecovacs-deebot": "^0.6.5"
   },
   "prettier": {
     "printWidth": 100
