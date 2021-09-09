@@ -2,6 +2,12 @@
 
 All notable changes to homebridge-deebot will be documented in this file.
 
+## 4.2.3 (2021-09-09)
+
+### Changed
+
+- `configureAccessory` function simplified to reduce chance of accessory cache retrieval failing
+
 ## 4.2.2 (2021-09-05)
 
 ### Changed
