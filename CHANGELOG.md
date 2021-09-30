@@ -2,7 +2,7 @@
 
 All notable changes to homebridge-deebot will be documented in this file.
 
-## 4.2.6
+## 4.2.6 (2021-09-30)
 
 ### Changed
 
