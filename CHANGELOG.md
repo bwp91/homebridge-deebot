@@ -6,6 +6,7 @@ All notable changes to homebridge-deebot will be documented in this file.
 
 ### Changed
 
+- Recommended node versions bumped to v14.18.0 or v16.11.0
 - Recommended Homebridge bumped to v1.3.5
 
 ## 4.2.7 (2021-10-03)
