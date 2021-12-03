@@ -12,8 +12,8 @@ All notable changes to homebridge-deebot will be documented in this file.
 
 - More device info and device count logged on plugin initialisation
 - Bump `ecovacs-deebot` to v7.0.0-alpha
-- Bump `node` recommended versions to v14.18.1 or v16.13.0
 - Bump `homebridge` recommended version to v1.3.8
+- Bump `node` recommended versions to v14.18.2 or v16.13.1
 
 ## 4.2.7 (2021-10-03)
 
