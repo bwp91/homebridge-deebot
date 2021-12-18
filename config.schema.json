@@ -31,18 +31,6 @@
         "type": "string",
         "description": "Your ECOVACS password, can also be a base64 encoded version of your password."
       },
-      "refreshTime": {
-        "title": "Refresh Interval",
-        "type": "integer",
-        "placeholder": 120,
-        "minimum": 30,
-        "description": "An interval (in seconds) in which your devices will refresh with ECOVACS. Must be 30 or more."
-      },
-      "disableDeviceLogging": {
-        "type": "boolean",
-        "title": "Disable Device Logging",
-        "description": "Global logging setting for accessory status changes. If true then accessory status changes will not be logged. This can also be set per accessory later in the config."
-      },
       "debug": {
         "title": "Debug Logging",
         "type": "boolean",
@@ -52,6 +40,18 @@
         "title": "Disable Plugin",
         "type": "boolean",
         "description": "If true, the plugin will remove all accessories and not load the plugin on restart."
+      },
+      "disableDeviceLogging": {
+        "type": "boolean",
+        "title": "Disable Device Logging",
+        "description": "Global logging setting for accessory status changes. If true then accessory status changes will not be logged. This can also be set per accessory later in the config."
+      },
+      "refreshTime": {
+        "title": "Refresh Interval",
+        "type": "integer",
+        "placeholder": 120,
+        "minimum": 30,
+        "description": "An interval (in seconds) in which your devices will refresh with ECOVACS. Must be 30 or more."
       },
       "devices": {
         "title": "Device Settings",
@@ -237,14 +237,14 @@
     {
       "type": "fieldset",
       "title": "Required Settings",
-      "items": ["countryCode", "username", "password"]
+      "items": ["countryCode", "username", "password", "debug", "disablePlugin"]
     },
     {
       "type": "fieldset",
-      "title": "Optional Settings",
-      "description": "Optional settings for the plugin, including refreshing and global logging settings.",
+      "title": "Advanced Settings",
+      "description": "Advanced settings for the plugin, including refresh interval options.",
       "expandable": true,
-      "items": ["refreshTime", "disableDeviceLogging", "debug", "disablePlugin"]
+      "items": ["disableDeviceLogging", "refreshTime"]
     },
     {
       "key": "devices",

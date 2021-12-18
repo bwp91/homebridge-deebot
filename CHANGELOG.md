@@ -10,6 +10,7 @@ All notable changes to homebridge-deebot will be documented in this file.
 
 ### Changed
 
+- Some config options rearranged for easier access
 - More device info and device count logged on plugin initialisation
 - Bump `ecovacs-deebot` to v7.0.0-alpha
 - Bump `homebridge` recommended version to v1.3.8
