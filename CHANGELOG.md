@@ -2,6 +2,12 @@
 
 All notable changes to homebridge-deebot will be documented in this file.
 
+## 4.3.2 (2021-12-26)
+
+### Changed
+
+- Updated dependencies
+
 ## 4.3.1 (2021-12-18)
 
 ### Added
