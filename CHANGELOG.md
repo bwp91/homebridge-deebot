@@ -6,6 +6,7 @@ All notable changes to homebridge-deebot will be documented in this file.
 
 ### Changed
 
+- Plugin will log HAPNodeJS version on startup
 - Bump `homebridge` recommended version to v1.3.9
 - Updated dependencies
 
