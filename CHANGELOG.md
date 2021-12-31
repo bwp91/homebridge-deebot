@@ -4,6 +4,10 @@ All notable changes to homebridge-deebot will be documented in this file.
 
 ## BETA
 
+### Added
+
+- A further five custom areas bringing the total to fifteen
+
 ### Changed
 
 - Plugin will log HAPNodeJS version on startup

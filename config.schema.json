@@ -200,6 +200,46 @@
                 "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command9 && model.devices[arrayIndices].command9.length > 0);"
               }
             },
+            "command11": {
+              "title": "Custom Area 11",
+              "type": "string",
+              "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
+              "condition": {
+                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command10 && model.devices[arrayIndices].command10.length > 0);"
+              }
+            },
+            "command12": {
+              "title": "Custom Area 12",
+              "type": "string",
+              "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
+              "condition": {
+                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command11 && model.devices[arrayIndices].command11.length > 0);"
+              }
+            },
+            "command13": {
+              "title": "Custom Area 13",
+              "type": "string",
+              "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
+              "condition": {
+                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command12 && model.devices[arrayIndices].command12.length > 0);"
+              }
+            },
+            "command14": {
+              "title": "Custom Area 14",
+              "type": "string",
+              "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
+              "condition": {
+                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command13 && model.devices[arrayIndices].command13.length > 0);"
+              }
+            },
+            "command15": {
+              "title": "Custom Area 15",
+              "type": "string",
+              "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
+              "condition": {
+                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command14 && model.devices[arrayIndices].command14.length > 0);"
+              }
+            },
             "overrideLogging": {
               "type": "string",
               "title": "Override Logging Setting",
@@ -278,7 +318,12 @@
                 "devices[].command7",
                 "devices[].command8",
                 "devices[].command9",
-                "devices[].command10"
+                "devices[].command10",
+                "devices[].command11",
+                "devices[].command12",
+                "devices[].command13",
+                "devices[].command14",
+                "devices[].command15"
               ]
             },
             "devices[].overrideLogging"
