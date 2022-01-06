@@ -2,6 +2,12 @@
 
 All notable changes to homebridge-deebot will be documented in this file.
 
+## BETA
+
+### Fixed
+
+- Plugin crash for older versions of Homebridge
+
 ## 4.4.0 (2022-01-05)
 
 ### Added
