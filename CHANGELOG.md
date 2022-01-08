@@ -4,6 +4,10 @@ All notable changes to homebridge-deebot will be documented in this file.
 
 ## BETA
 
+### Changed
+
+- Bump `ecovacs-deebot` to v0.7.1 (pre-release)
+
 ### Fixed
 
 - Plugin crash for older versions of Homebridge
