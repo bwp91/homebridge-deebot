@@ -2,11 +2,11 @@
 
 All notable changes to homebridge-deebot will be documented in this file.
 
-## BETA
+## 4.4.1 (2022-01-15)
 
 ### Changed
 
-- Bump `ecovacs-deebot` to v0.7.1 (pre-release)
+- Bump `ecovacs-deebot` to v0.7.1
 - Bump `node` recommended versions to v14.18.3 or v16.13.2
 
 ### Fixed
