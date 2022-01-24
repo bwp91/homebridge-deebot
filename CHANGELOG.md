@@ -6,6 +6,7 @@ All notable changes to homebridge-deebot will be documented in this file.
 
 ### Changed
 
+- Bump `homebridge` recommended version to v1.4.0
 - Bump `ecovacs-deebot` to v0.7.2 (prerelease)
 
 ## 4.4.1 (2022-01-15)
