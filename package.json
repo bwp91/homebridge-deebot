@@ -24,7 +24,7 @@
   "main": "lib/index.js",
   "engines": {
     "homebridge": "^1.4.0",
-    "node": "^14.18.3 || ^16.13.2"
+    "node": "^14.19.0 || ^16.14.0"
   },
   "repository": {
     "type": "git",
@@ -53,7 +53,7 @@
   ],
   "dependencies": {
     "@homebridge/plugin-ui-utils": "^0.0.19",
-    "ecovacs-deebot": "^0.7.2-alpha.8"
+    "ecovacs-deebot": "^0.7.2-alpha.14"
   },
   "prettier": {
     "printWidth": 100
