@@ -60,8 +60,9 @@
     "ecovacs-deebot": "^0.8.0-alpha.5"
   },
   "devDependencies": {
-    "eslint": "^8.13.0",
     "eslint-config-airbnb": "^19.0.4",
-    "eslint-plugin-import": "^2.26.0"
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-sort-exports": "^0.6.0",
+    "eslint": "^8.13.0"
   }
 }

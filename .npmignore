@@ -1,4 +1,5 @@
 .github
+.eslintrc.cjs
 .idea
 .nova
 .npm
