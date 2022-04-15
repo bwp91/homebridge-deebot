@@ -24,7 +24,8 @@
     "hoover"
   ],
   "scripts": {
-    "lint": "eslint . --fix"
+    "lint": "eslint . --fix",
+    "rebuild": "rm -rf package-lock.json && rm -rf node_modules && npm install"
   },
   "engines": {
     "homebridge": "^1.4.0",
