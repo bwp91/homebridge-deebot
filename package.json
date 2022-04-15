@@ -6,6 +6,8 @@
     "name": "bwp91",
     "email": "bwp91@icloud.com"
   },
+  "type": "module",
+  "main": "lib/index.js",
   "description": "Homebridge plugin to integrate ECOVACS Deebot devices into HomeKit.",
   "license": "MIT",
   "keywords": [
@@ -21,7 +23,9 @@
     "vacuum",
     "hoover"
   ],
-  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint . --fix"
+  },
   "engines": {
     "homebridge": "^1.4.0",
     "node": "^14.19.1 || ^16.14.2"
@@ -53,9 +57,11 @@
   ],
   "dependencies": {
     "@homebridge/plugin-ui-utils": "^0.0.19",
-    "ecovacs-deebot": "^0.8.0-alpha.2"
+    "ecovacs-deebot": "^0.8.0-alpha.5"
   },
-  "prettier": {
-    "printWidth": 100
+  "devDependencies": {
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.26.0"
   }
 }
