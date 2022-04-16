@@ -58,7 +58,7 @@
   ],
   "dependencies": {
     "@homebridge/plugin-ui-utils": "^0.0.19",
-    "ecovacs-deebot": "^0.8.0-alpha.5"
+    "ecovacs-deebot": "^0.8.0-alpha.6"
   },
   "devDependencies": {
     "eslint-config-airbnb": "^19.0.4",
