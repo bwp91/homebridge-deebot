@@ -2,7 +2,7 @@
 
 All notable changes to homebridge-deebot will be documented in this file.
 
-## BETA
+## 5.0.0 (2022-05-07)
 
 ### Potentially Breaking Changes
 
@@ -13,7 +13,7 @@ All notable changes to homebridge-deebot will be documented in this file.
 
 - Changed to ESM package
 - Bump `node` recommended versions to v14.19.1 or v16.14.2
-- Bump `ecovacs-deebot` to v0.8.0 (prerelease)
+- Bump `ecovacs-deebot` to v0.8.0
 
 ## 4.4.2 (2022-02-27)
 
