@@ -73,7 +73,7 @@
               "title": "Hide From HomeKit",
               "description": "If true, this accessory will be removed and ignored from HomeKit.",
               "condition": {
-                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0);"
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0);"
               }
             },
             "hideMotionSensor": {
@@ -81,7 +81,7 @@
               "type": "boolean",
               "description": "If true, the motion sensor for device alerts will be hidden.",
               "condition": {
-                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice);"
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice);"
               }
             },
             "motionDuration": {
@@ -91,7 +91,7 @@
               "minimum": 1,
               "description": "The length of time (in seconds) that the motion detector will be activated if your Deebot sends a message, needs help or has low battery (if enabled below). The message is viewable in the log. Must be 1 or more.",
               "condition": {
-                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].hideMotionSensor && !model.devices[arrayIndices].ignoreDevice);"
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.hideMotionSensor && !model?.devices?.[arrayIndices]?.ignoreDevice);"
               }
             },
             "lowBattThreshold": {
@@ -101,7 +101,7 @@
               "minimum": 1,
               "description": "The battery percentage at which the plugin should display a low battery status. Leave blank to match the Deebot default of 15%. Must be 1 or more.",
               "condition": {
-                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice);"
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice);"
               }
             },
             "showMotionLowBatt": {
@@ -109,7 +109,7 @@
               "type": "boolean",
               "description": "If true, the motion sensor will activate when the Deebot's battery reaches the low battery threshold.",
               "condition": {
-                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].hideMotionSensor && !model.devices[arrayIndices].ignoreDevice);"
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.hideMotionSensor && !model?.devices?.[arrayIndices]?.ignoreDevice);"
               }
             },
             "showBattHumidity": {
@@ -117,7 +117,7 @@
               "type": "boolean",
               "description": "If true, a humidity sensor showing the battery percentage will be shown.",
               "condition": {
-                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice);"
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice);"
               }
             },
             "command1": {
@@ -125,7 +125,7 @@
               "type": "string",
               "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
               "condition": {
-                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice);"
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice);"
               }
             },
             "command2": {
@@ -133,7 +133,7 @@
               "type": "string",
               "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
               "condition": {
-                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command1 && model.devices[arrayIndices].command1.length > 0);"
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command1?.length > 0);"
               }
             },
             "command3": {
@@ -141,7 +141,7 @@
               "type": "string",
               "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
               "condition": {
-                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command2 && model.devices[arrayIndices].command2.length > 0);"
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command2?.length > 0);"
               }
             },
             "command4": {
@@ -149,7 +149,7 @@
               "type": "string",
               "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
               "condition": {
-                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command3 && model.devices[arrayIndices].command3.length > 0);"
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command3?.length > 0);"
               }
             },
             "command5": {
@@ -157,7 +157,7 @@
               "type": "string",
               "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
               "condition": {
-                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command4 && model.devices[arrayIndices].command4.length > 0);"
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command4?.length > 0);"
               }
             },
             "command6": {
@@ -165,7 +165,7 @@
               "type": "string",
               "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
               "condition": {
-                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command5 && model.devices[arrayIndices].command5.length > 0);"
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command5?.length > 0);"
               }
             },
             "command7": {
@@ -173,7 +173,7 @@
               "type": "string",
               "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
               "condition": {
-                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command6 && model.devices[arrayIndices].command6.length > 0);"
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command6?.length > 0);"
               }
             },
             "command8": {
@@ -181,7 +181,7 @@
               "type": "string",
               "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
               "condition": {
-                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command7 && model.devices[arrayIndices].command7.length > 0);"
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command7?.length > 0);"
               }
             },
             "command9": {
@@ -189,7 +189,7 @@
               "type": "string",
               "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
               "condition": {
-                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command8 && model.devices[arrayIndices].command8.length > 0);"
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command8?.length > 0);"
               }
             },
             "command10": {
@@ -197,7 +197,7 @@
               "type": "string",
               "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
               "condition": {
-                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command9 && model.devices[arrayIndices].command9.length > 0);"
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command9?.length > 0);"
               }
             },
             "command11": {
@@ -205,7 +205,7 @@
               "type": "string",
               "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
               "condition": {
-                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command10 && model.devices[arrayIndices].command10.length > 0);"
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command10?.length > 0);"
               }
             },
             "command12": {
@@ -213,7 +213,7 @@
               "type": "string",
               "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
               "condition": {
-                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command11 && model.devices[arrayIndices].command11.length > 0);"
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command11?.length > 0);"
               }
             },
             "command13": {
@@ -221,7 +221,7 @@
               "type": "string",
               "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
               "condition": {
-                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command12 && model.devices[arrayIndices].command12.length > 0);"
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command12?.length > 0);"
               }
             },
             "command14": {
@@ -229,7 +229,7 @@
               "type": "string",
               "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
               "condition": {
-                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command13 && model.devices[arrayIndices].command13.length > 0);"
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command13?.length > 0);"
               }
             },
             "command15": {
@@ -237,7 +237,7 @@
               "type": "string",
               "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
               "condition": {
-                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice && model.devices[arrayIndices].command14 && model.devices[arrayIndices].command14.length > 0);"
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command14?.length > 0);"
               }
             },
             "overrideLogging": {
@@ -263,7 +263,7 @@
                 }
               ],
               "condition": {
-                "functionBody": "return (model.devices && model.devices[arrayIndices] && model.devices[arrayIndices].deviceId && model.devices[arrayIndices].deviceId.length > 0 && !model.devices[arrayIndices].ignoreDevice);"
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice);"
               }
             }
           }
