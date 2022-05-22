@@ -29,7 +29,7 @@
   },
   "engines": {
     "homebridge": "^1.4.0",
-    "node": "^14.19.1 || ^16.14.2"
+    "node": "^14.19.3 || ^16.15.0"
   },
   "repository": {
     "type": "git",
@@ -58,12 +58,12 @@
   ],
   "dependencies": {
     "@homebridge/plugin-ui-utils": "^0.0.19",
-    "ecovacs-deebot": "^0.8.0"
+    "ecovacs-deebot": "^0.8.1"
   },
   "devDependencies": {
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-sort-exports": "^0.6.0",
-    "eslint": "^8.14.0"
+    "eslint": "^8.15.0"
   }
 }
