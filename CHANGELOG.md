@@ -2,6 +2,12 @@
 
 All notable changes to homebridge-deebot will be documented in this file.
 
+## 5.0.3 (2022-05-28)
+
+### Changed
+
+- Bump `ecovacs-deebot` to v0.8.2
+
 ## 5.0.2 (2022-05-22)
 
 ### Changed
