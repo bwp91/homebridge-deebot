@@ -2,6 +2,12 @@
 
 All notable changes to homebridge-deebot will be documented in this file.
 
+## 5.0.4 (2022-05-28)
+
+### Changed
+
+- More fixes and refactoring
+
 ## 5.0.3 (2022-05-28)
 
 ### Changed
