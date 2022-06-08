@@ -2,6 +2,16 @@
 
 All notable changes to homebridge-deebot will be documented in this file.
 
+## 5.0.5 (2022-06-08)
+
+### Changed
+
+- Bump `node` recommended versions to v14.19.3 or v16.15.1
+
+### Fixed
+
+- A potential issue showing errors in the logs
+
 ## 5.0.4 (2022-05-28)
 
 ### Changed
