@@ -3,9 +3,9 @@ module.exports = {
     es2022: true,
     node: true,
   },
-  extends: ['airbnb'],
+  extends: ['airbnb-base'],
   parserOptions: {
-    ecmaVersion: 'latest',
+    ecmaVersion: 13,
     sourceType: 'module',
   },
   plugins: ['import', 'sort-exports'],
