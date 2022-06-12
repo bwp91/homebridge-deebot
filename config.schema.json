@@ -13,6 +13,11 @@
         "type": "string",
         "default": "Deebot"
       },
+      "useYeedi": {
+        "title": "Use Yeedi Login",
+        "type": "boolean",
+        "description": "EXPERIMENTAL! Enable this for Yeedi login instead of ECOVACS."
+      },
       "countryCode": {
         "title": "Country Code",
         "description": "Two-letter country code which you can find <a href=\"https://github.com/bwp91/homebridge-deebot/wiki/Country-Codes\" target=\"_blank\">here</a>.",
@@ -20,16 +25,16 @@
         "required": true
       },
       "username": {
-        "title": "ECOVACS Username",
+        "title": "ECOVACS/Yeedi Username",
         "required": true,
         "type": "string",
-        "description": "Your ECOVACS username, if your account is based in China you should use your ECOVACS ID."
+        "description": "Your username, if your account is based in China you should use your ECOVACS ID."
       },
       "password": {
-        "title": "ECOVACS Password",
+        "title": "ECOVACS/Yeedi Password",
         "required": true,
         "type": "string",
-        "description": "Your ECOVACS password, can also be a base64 encoded version of your password."
+        "description": "Your password, can also be a base64 encoded version of your password."
       },
       "debug": {
         "title": "Debug Logging",
@@ -275,7 +280,7 @@
     {
       "type": "fieldset",
       "title": "Required Settings",
-      "items": ["countryCode", "username", "password", "debug", "disablePlugin"]
+      "items": ["useYeedi", "countryCode", "username", "password", "debug", "disablePlugin"]
     },
     {
       "type": "fieldset",
