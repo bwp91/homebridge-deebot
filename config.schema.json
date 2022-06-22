@@ -16,7 +16,7 @@
       "useYeedi": {
         "title": "Use Yeedi Login",
         "type": "boolean",
-        "description": "EXPERIMENTAL! Enable this for Yeedi login instead of ECOVACS."
+        "description": "Enable this for Yeedi login instead of ECOVACS."
       },
       "countryCode": {
         "title": "Country Code",
