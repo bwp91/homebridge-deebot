@@ -4,6 +4,10 @@ All notable changes to homebridge-deebot will be documented in this file.
 
 ## BETA
 
+### Added
+
+- Support for Yeedi device range
+
 ### Changed
 
 - Bump `ecovacs-deebot` to v0.8.3-(pre-release version)
