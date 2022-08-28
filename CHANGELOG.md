@@ -2,16 +2,22 @@
 
 All notable changes to homebridge-deebot will be documented in this file.
 
-## BETA
+## 5.1.0 (2022-08-28)
 
 ### Added
 
-- Support for Yeedi device range
+- Updated `ecovacs-deebot` library to v0.8.3, notable changes:
+  - Added initial support for yeedi login and also for a few models
+    - yeedi k650
+    - yeedi 2 hybrid
+    - yeedi vac hybrid
+    - yeedi mop station
+    - Bumped canvas to 2.9.3
 
 ### Changed
 
-- Bump `node` recommended versions to v14.20.0 or v16.16.0
-- Bump `ecovacs-deebot` to v0.8.3-(pre-release version)
+- Bump `node` recommended versions to v14.20.0 or v16.17.0
+- Bump `homebridge` recommended version to v1.5.0
 
 ## 5.0.5 (2022-06-08)
 
