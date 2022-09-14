@@ -125,124 +125,544 @@
                 "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice);"
               }
             },
-            "command1": {
-              "title": "Custom Area 1",
+            "commandType1": {
+              "title": "Type",
               "type": "string",
+              "oneOf": [
+                { "title": "Spot Area", "enum": ["spotArea"] },
+                { "title": "Custom Area", "enum": ["custom_area"] }
+              ]
+            },
+            "spotAreaCommand1": {
+              "title": "Command",
+              "type": "string",
+              "required": true,
               "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
+              "pattern": "^([0-9]|[1-9][0-9]+|(([0-9],|[1-9][0-9]+,)+([0-9]|[1-9][0-9]+)))$",
               "condition": {
-                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice);"
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType1 == 'spotArea' );"
               }
             },
-            "command2": {
-              "title": "Custom Area 2",
+            "customAreaCommand1": {
+              "title": "Command",
               "type": "string",
-              "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
+              "required": true,
+              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (without decimals and the inverted comma).",
+              "pattern": "^((-?[0-9],|-?[1-9][0-9]+,){3}(-?[0-9]|-?[1-9][0-9]+))$",
               "condition": {
-                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command1?.length > 0);"
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType1 == 'custom_area' );"
               }
             },
-            "command3": {
-              "title": "Custom Area 3",
+            "commandNote1": {
+              "title": "Note",
               "type": "string",
-              "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
+              "description": "Enter a note for this predefined area.",
               "condition": {
-                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command2?.length > 0);"
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType1);"
               }
             },
-            "command4": {
-              "title": "Custom Area 4",
+            "commandType2": {
+              "title": "Type",
               "type": "string",
+              "oneOf": [
+                { "title": "Spot Area", "enum": ["spotArea"] },
+                { "title": "Custom Area", "enum": ["custom_area"] }
+              ]
+            },
+            "spotAreaCommand2": {
+              "title": "Command",
+              "type": "string",
+              "required": true,
               "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
+              "pattern": "^([0-9]|[1-9][0-9]+|(([0-9],|[1-9][0-9]+,)+([0-9]|[1-9][0-9]+)))$",
               "condition": {
-                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command3?.length > 0);"
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType2 == 'spotArea' );"
               }
             },
-            "command5": {
-              "title": "Custom Area 5",
+            "customAreaCommand2": {
+              "title": "Command",
               "type": "string",
-              "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
+              "required": true,
+              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (without decimals and the inverted comma).",
+              "pattern": "^((-?[0-9],|-?[1-9][0-9]+,){3}(-?[0-9]|-?[1-9][0-9]+))$",
               "condition": {
-                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command4?.length > 0);"
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType2 == 'custom_area' );"
               }
             },
-            "command6": {
-              "title": "Custom Area 6",
+            "commandNote2": {
+              "title": "Note",
               "type": "string",
-              "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
+              "description": "Enter a note for this predefined area.",
               "condition": {
-                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command5?.length > 0);"
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType2);"
               }
             },
-            "command7": {
-              "title": "Custom Area 7",
+            "commandType3": {
+              "title": "Type",
               "type": "string",
+              "oneOf": [
+                { "title": "Spot Area", "enum": ["spotArea"] },
+                { "title": "Custom Area", "enum": ["customArea"] }
+              ]
+            },
+            "spotAreaCommand3": {
+              "title": "Command",
+              "type": "string",
+              "required": true,
               "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
+              "pattern": "^([0-9]|[1-9][0-9]+|(([0-9],|[1-9][0-9]+,)+([0-9]|[1-9][0-9]+)))$",
               "condition": {
-                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command6?.length > 0);"
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType3 == 'spotArea' );"
               }
             },
-            "command8": {
-              "title": "Custom Area 8",
+            "customAreaCommand3": {
+              "title": "Command",
               "type": "string",
-              "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
+              "required": true,
+              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (without decimals and the inverted comma).",
+              "pattern": "^((-?[0-9],|-?[1-9][0-9]+,){3}(-?[0-9]|-?[1-9][0-9]+))$",
               "condition": {
-                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command7?.length > 0);"
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType3 == 'custom_area' );"
               }
             },
-            "command9": {
-              "title": "Custom Area 9",
+            "commandNote3": {
+              "title": "Note",
               "type": "string",
-              "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
+              "description": "Enter a note for this predefined area.",
               "condition": {
-                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command8?.length > 0);"
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType3);"
               }
             },
-            "command10": {
-              "title": "Custom Area 10",
+            "commandType4": {
+              "title": "Type",
               "type": "string",
+              "oneOf": [
+                { "title": "Spot Area", "enum": ["spotArea"] },
+                { "title": "Custom Area", "enum": ["custom_area"] }
+              ]
+            },
+            "spotAreaCommand4": {
+              "title": "Command",
+              "type": "string",
+              "required": true,
               "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
+              "pattern": "^([0-9]|[1-9][0-9]+|(([0-9],|[1-9][0-9]+,)+([0-9]|[1-9][0-9]+)))$",
               "condition": {
-                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command9?.length > 0);"
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType4 == 'spotArea' );"
               }
             },
-            "command11": {
-              "title": "Custom Area 11",
+            "customAreaCommand4": {
+              "title": "Command",
               "type": "string",
-              "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
+              "required": true,
+              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (without decimals and the inverted comma).",
+              "pattern": "^((-?[0-9],|-?[1-9][0-9]+,){3}(-?[0-9]|-?[1-9][0-9]+))$",
               "condition": {
-                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command10?.length > 0);"
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType4 == 'custom_area' );"
               }
             },
-            "command12": {
-              "title": "Custom Area 12",
+            "commandNote4": {
+              "title": "Note",
               "type": "string",
-              "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
+              "description": "Enter a note for this predefined area.",
               "condition": {
-                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command11?.length > 0);"
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType4);"
               }
             },
-            "command13": {
-              "title": "Custom Area 13",
+            "commandType5": {
+              "title": "Type",
               "type": "string",
+              "oneOf": [
+                { "title": "Spot Area", "enum": ["spotArea"] },
+                { "title": "Custom Area", "enum": ["custom_area"] }
+              ]
+            },
+            "spotAreaCommand5": {
+              "title": "Command",
+              "type": "string",
+              "required": true,
               "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
+              "pattern": "^([0-9]|[1-9][0-9]+|(([0-9],|[1-9][0-9]+,)+([0-9]|[1-9][0-9]+)))$",
               "condition": {
-                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command12?.length > 0);"
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType5 == 'spotArea' );"
               }
             },
-            "command14": {
-              "title": "Custom Area 14",
+            "customAreaCommand5": {
+              "title": "Command",
               "type": "string",
-              "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
+              "required": true,
+              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (without decimals and the inverted comma).",
+              "pattern": "^((-?[0-9],|-?[1-9][0-9]+,){3}(-?[0-9]|-?[1-9][0-9]+))$",
               "condition": {
-                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command13?.length > 0);"
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType5 == 'custom_area' );"
               }
             },
-            "command15": {
-              "title": "Custom Area 15",
+            "commandNote5": {
+              "title": "Note",
               "type": "string",
-              "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
+              "description": "Enter a note for this predefined area.",
               "condition": {
-                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command14?.length > 0);"
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType5);"
+              }
+            },
+            "commandType6": {
+              "title": "Type",
+              "type": "string",
+              "oneOf": [
+                { "title": "Spot Area", "enum": ["spotArea"] },
+                { "title": "Custom Area", "enum": ["custom_area"] }
+              ]
+            },
+            "spotAreaCommand6": {
+              "title": "Command",
+              "type": "string",
+              "required": true,
+              "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
+              "pattern": "^([0-9]|[1-9][0-9]+|(([0-9],|[1-9][0-9]+,)+([0-9]|[1-9][0-9]+)))$",
+              "condition": {
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType6 == 'spotArea' );"
+              }
+            },
+            "customAreaCommand6": {
+              "title": "Command",
+              "type": "string",
+              "required": true,
+              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (without decimals and the inverted comma).",
+              "pattern": "^((-?[0-9],|-?[1-9][0-9]+,){3}(-?[0-9]|-?[1-9][0-9]+))$",
+              "condition": {
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType6 == 'custom_area' );"
+              }
+            },
+            "commandNote6": {
+              "title": "Note",
+              "type": "string",
+              "description": "Enter a note for this predefined area.",
+              "condition": {
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType6);"
+              }
+            },
+            "commandType7": {
+              "title": "Type",
+              "type": "string",
+              "oneOf": [
+                { "title": "Spot Area", "enum": ["spotArea"] },
+                { "title": "Custom Area", "enum": ["custom_area"] }
+              ]
+            },
+            "spotAreaCommand7": {
+              "title": "Command",
+              "type": "string",
+              "required": true,
+              "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
+              "pattern": "^([0-9]|[1-9][0-9]+|(([0-9],|[1-9][0-9]+,)+([0-9]|[1-9][0-9]+)))$",
+              "condition": {
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType7 == 'spotArea' );"
+              }
+            },
+            "customAreaCommand7": {
+              "title": "Command",
+              "type": "string",
+              "required": true,
+              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (without decimals and the inverted comma).",
+              "pattern": "^((-?[0-9],|-?[1-9][0-9]+,){3}(-?[0-9]|-?[1-9][0-9]+))$",
+              "condition": {
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType7 == 'custom_area' );"
+              }
+            },
+            "commandNote7": {
+              "title": "Note",
+              "type": "string",
+              "description": "Enter a note for this predefined area.",
+              "condition": {
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType7);"
+              }
+            },
+            "commandType8": {
+              "title": "Type",
+              "type": "string",
+              "oneOf": [
+                { "title": "Spot Area", "enum": ["spotArea"] },
+                { "title": "Custom Area", "enum": ["custom_area"] }
+              ]
+            },
+            "spotAreaCommand8": {
+              "title": "Command",
+              "type": "string",
+              "required": true,
+              "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
+              "pattern": "^([0-9]|[1-9][0-9]+|(([0-9],|[1-9][0-9]+,)+([0-9]|[1-9][0-9]+)))$",
+              "condition": {
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType8 == 'spotArea' );"
+              }
+            },
+            "customAreaCommand8": {
+              "title": "Command",
+              "type": "string",
+              "required": true,
+              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (without decimals and the inverted comma).",
+              "pattern": "^((-?[0-9],|-?[1-9][0-9]+,){3}(-?[0-9]|-?[1-9][0-9]+))$",
+              "condition": {
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType8 == 'custom_area' );"
+              }
+            },
+            "commandNote8": {
+              "title": "Note",
+              "type": "string",
+              "description": "Enter a note for this predefined area.",
+              "condition": {
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType8);"
+              }
+            },
+            "commandType9": {
+              "title": "Type",
+              "type": "string",
+              "oneOf": [
+                { "title": "Spot Area", "enum": ["spotArea"] },
+                { "title": "Custom Area", "enum": ["custom_area"] }
+              ]
+            },
+            "spotAreaCommand9": {
+              "title": "Command",
+              "type": "string",
+              "required": true,
+              "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
+              "pattern": "^([0-9]|[1-9][0-9]+|(([0-9],|[1-9][0-9]+,)+([0-9]|[1-9][0-9]+)))$",
+              "condition": {
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType9 == 'spotArea' );"
+              }
+            },
+            "customAreaCommand9": {
+              "title": "Command",
+              "type": "string",
+              "required": true,
+              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (without decimals and the inverted comma).",
+              "pattern": "^((-?[0-9],|-?[1-9][0-9]+,){3}(-?[0-9]|-?[1-9][0-9]+))$",
+              "condition": {
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType9 == 'custom_area' );"
+              }
+            },
+            "commandNote9": {
+              "title": "Note",
+              "type": "string",
+              "description": "Enter a note for this predefined area.",
+              "condition": {
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType9);"
+              }
+            },
+            "commandType10": {
+              "title": "Type",
+              "type": "string",
+              "oneOf": [
+                { "title": "Spot Area", "enum": ["spotArea"] },
+                { "title": "Custom Area", "enum": ["custom_area"] }
+              ]
+            },
+            "spotAreaCommand10": {
+              "title": "Command",
+              "type": "string",
+              "required": true,
+              "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
+              "pattern": "^([0-9]|[1-9][0-9]+|(([0-9],|[1-9][0-9]+,)+([0-9]|[1-9][0-9]+)))$",
+              "condition": {
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType10 == 'spotArea' );"
+              }
+            },
+            "customAreaCommand10": {
+              "title": "Command",
+              "type": "string",
+              "required": true,
+              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (without decimals and the inverted comma).",
+              "pattern": "^((-?[0-9],|-?[1-9][0-9]+,){3}(-?[0-9]|-?[1-9][0-9]+))$",
+              "condition": {
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType10 == 'custom_area' );"
+              }
+            },
+            "commandNote10": {
+              "title": "Note",
+              "type": "string",
+              "description": "Enter a note for this predefined area.",
+              "condition": {
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType10);"
+              }
+            },
+            "commandType11": {
+              "title": "Type",
+              "type": "string",
+              "oneOf": [
+                { "title": "Spot Area", "enum": ["spotArea"] },
+                { "title": "Custom Area", "enum": ["custom_area"] }
+              ]
+            },
+            "spotAreaCommand11": {
+              "title": "Command",
+              "type": "string",
+              "required": true,
+              "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
+              "pattern": "^([0-9]|[1-9][0-9]+|(([0-9],|[1-9][0-9]+,)+([0-9]|[1-9][0-9]+)))$",
+              "condition": {
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType11 == 'spotArea' );"
+              }
+            },
+            "customAreaCommand11": {
+              "title": "Command",
+              "type": "string",
+              "required": true,
+              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (without decimals and the inverted comma).",
+              "pattern": "^((-?[0-9],|-?[1-9][0-9]+,){3}(-?[0-9]|-?[1-9][0-9]+))$",
+              "condition": {
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType11 == 'custom_area' );"
+              }
+            },
+            "commandNote11": {
+              "title": "Note",
+              "type": "string",
+              "description": "Enter a note for this predefined area.",
+              "condition": {
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType11);"
+              }
+            },
+            "commandType12": {
+              "title": "Type",
+              "type": "string",
+              "oneOf": [
+                { "title": "Spot Area", "enum": ["spotArea"] },
+                { "title": "Custom Area", "enum": ["custom_area"] }
+              ]
+            },
+            "spotAreaCommand12": {
+              "title": "Command",
+              "type": "string",
+              "required": true,
+              "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
+              "pattern": "^([0-9]|[1-9][0-9]+|(([0-9],|[1-9][0-9]+,)+([0-9]|[1-9][0-9]+)))$",
+              "condition": {
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType12 == 'spotArea' );"
+              }
+            },
+            "customAreaCommand12": {
+              "title": "Command",
+              "type": "string",
+              "required": true,
+              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (without decimals and the inverted comma).",
+              "pattern": "^((-?[0-9],|-?[1-9][0-9]+,){3}(-?[0-9]|-?[1-9][0-9]+))$",
+              "condition": {
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType12 == 'custom_area' );"
+              }
+            },
+            "commandNote12": {
+              "title": "Note",
+              "type": "string",
+              "description": "Enter a note for this predefined area.",
+              "condition": {
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType12);"
+              }
+            },
+            "commandType13": {
+              "title": "Type",
+              "type": "string",
+              "oneOf": [
+                { "title": "Spot Area", "enum": ["spotArea"] },
+                { "title": "Custom Area", "enum": ["custom_area"] }
+              ]
+            },
+            "spotAreaCommand13": {
+              "title": "Command",
+              "type": "string",
+              "required": true,
+              "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
+              "pattern": "^([0-9]|[1-9][0-9]+|(([0-9],|[1-9][0-9]+,)+([0-9]|[1-9][0-9]+)))$",
+              "condition": {
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType13 == 'spotArea' );"
+              }
+            },
+            "customAreaCommand13": {
+              "title": "Command",
+              "type": "string",
+              "required": true,
+              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (without decimals and the inverted comma).",
+              "pattern": "^((-?[0-9],|-?[1-9][0-9]+,){3}(-?[0-9]|-?[1-9][0-9]+))$",
+              "condition": {
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType13 == 'custom_area' );"
+              }
+            },
+            "commandNote13": {
+              "title": "Note",
+              "type": "string",
+              "description": "Enter a note for this predefined area.",
+              "condition": {
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType13);"
+              }
+            },
+            "commandType14": {
+              "title": "Type",
+              "type": "string",
+              "oneOf": [
+                { "title": "Spot Area", "enum": ["spotArea"] },
+                { "title": "Custom Area", "enum": ["custom_area"] }
+              ]
+            },
+            "spotAreaCommand14": {
+              "title": "Command",
+              "type": "string",
+              "required": true,
+              "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
+              "pattern": "^([0-9]|[1-9][0-9]+|(([0-9],|[1-9][0-9]+,)+([0-9]|[1-9][0-9]+)))$",
+              "condition": {
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType14 == 'spotArea' );"
+              }
+            },
+            "customAreaCommand14": {
+              "title": "Command",
+              "type": "string",
+              "required": true,
+              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (without decimals and the inverted comma).",
+              "pattern": "^((-?[0-9],|-?[1-9][0-9]+,){3}(-?[0-9]|-?[1-9][0-9]+))$",
+              "condition": {
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType14 == 'custom_area' );"
+              }
+            },
+            "commandNote14": {
+              "title": "Note",
+              "type": "string",
+              "description": "Enter a note for this predefined area.",
+              "condition": {
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType14);"
+              }
+            },
+            "commandType15": {
+              "title": "Type",
+              "type": "string",
+              "oneOf": [
+                { "title": "Spot Area", "enum": ["spotArea"] },
+                { "title": "Custom Area", "enum": ["custom_area"] }
+              ]
+            },
+            "spotAreaCommand15": {
+              "title": "Command",
+              "type": "string",
+              "required": true,
+              "description": "Enter a 'Spot Area' number or multiple numbers separated by a comma.",
+              "pattern": "^([0-9]|[1-9][0-9]+|(([0-9],|[1-9][0-9]+,)+([0-9]|[1-9][0-9]+)))$",
+              "condition": {
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType15 == 'spotArea' );"
+              }
+            },
+            "customAreaCommand15": {
+              "title": "Command",
+              "type": "string",
+              "required": true,
+              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (without decimals and the inverted comma).",
+              "pattern": "^((-?[0-9],|-?[1-9][0-9]+,){3}(-?[0-9]|-?[1-9][0-9]+))$",
+              "condition": {
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType15 == 'custom_area' );"
+              }
+            },
+            "commandNote15": {
+              "title": "Note",
+              "type": "string",
+              "description": "Enter a note for this predefined area.",
+              "condition": {
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType15);"
               }
             },
             "overrideLogging": {
@@ -310,30 +730,229 @@
             "devices[].showBattHumidity",
             {
               "expandable": true,
-              "title": "Custom Areas",
+              "title": "Predefined Areas",
               "type": "fieldset",
-              "description": "Create Eve app buttons for cleaning custom 'Spot Areas'. <a href=\"https://github.com/bwp91/homebridge-deebot/wiki/Custom-Areas\" target=\"_blank\">Read more →</a>",
+              "condition": {
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice);"
+              },
+              "description": "Create Eve app buttons for cleaning predefined 'Spot Areas' or 'Custom Areas'. <a href=\"https://github.com/bwp91/homebridge-deebot/wiki/Custom-Areas\" target=\"_blank\">Read more →</a>",
               "items": [
-                "devices[].command1",
-                "devices[].command2",
-                "devices[].command3",
-                "devices[].command4",
-                "devices[].command5",
-                "devices[].command6",
-                "devices[].command7",
-                "devices[].command8",
-                "devices[].command9",
-                "devices[].command10",
-                "devices[].command11",
-                "devices[].command12",
-                "devices[].command13",
-                "devices[].command14",
-                "devices[].command15"
+                {
+                  "expandable": false,
+                  "title": "Area 1",
+                  "type": "fieldset",
+                  "condition": {
+                    "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice);"
+                  },
+                  "items": [
+                    "devices[].commandType1",
+                    "devices[].spotAreaCommand1",
+                    "devices[].customAreaCommand1",
+                    "devices[].commandNote1"
+                  ]
+                },
+                {
+                  "expandable": false,
+                  "title": "Area 2",
+                  "type": "fieldset",
+                  "condition": {
+                    "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType1);"
+                  },
+                  "items": [
+                    "devices[].commandType2",
+                    "devices[].spotAreaCommand2",
+                    "devices[].customAreaCommand2",
+                    "devices[].commandNote2"
+                  ]
+                },
+                {
+                  "expandable": false,
+                  "title": "Area 3",
+                  "type": "fieldset",
+                  "condition": {
+                    "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType2);"
+                  },
+                  "items": [
+                    "devices[].commandType3",
+                    "devices[].spotAreaCommand3",
+                    "devices[].customAreaCommand3",
+                    "devices[].commandNote3"
+                  ]
+                },
+                {
+                  "expandable": false,
+                  "title": "Area 4",
+                  "type": "fieldset",
+                  "condition": {
+                    "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType3);"
+                  },
+                  "items": [
+                    "devices[].commandType4",
+                    "devices[].spotAreaCommand4",
+                    "devices[].customAreaCommand4",
+                    "devices[].commandNote4"
+                  ]
+                },
+                {
+                  "expandable": false,
+                  "title": "Area 5",
+                  "type": "fieldset",
+                  "condition": {
+                    "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType4);"
+                  },
+                  "items": [
+                    "devices[].commandType5",
+                    "devices[].spotAreaCommand5",
+                    "devices[].customAreaCommand5",
+                    "devices[].commandNote5"
+                  ]
+                },
+                {
+                  "expandable": false,
+                  "title": "Area 6",
+                  "type": "fieldset",
+                  "condition": {
+                    "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType5);"
+                  },
+                  "items": [
+                    "devices[].commandType6",
+                    "devices[].spotAreaCommand6",
+                    "devices[].customAreaCommand6",
+                    "devices[].commandNote6"
+                  ]
+                },
+                {
+                  "expandable": false,
+                  "title": "Area 7",
+                  "type": "fieldset",
+                  "condition": {
+                    "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType6);"
+                  },
+                  "items": [
+                    "devices[].commandType7",
+                    "devices[].spotAreaCommand7",
+                    "devices[].customAreaCommand7",
+                    "devices[].commandNote7"
+                  ]
+                },
+                {
+                  "expandable": false,
+                  "title": "Area 8",
+                  "type": "fieldset",
+                  "condition": {
+                    "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType7);"
+                  },
+                  "items": [
+                    "devices[].commandType8",
+                    "devices[].spotAreaCommand8",
+                    "devices[].customAreaCommand8",
+                    "devices[].commandNote8"
+                  ]
+                },
+                {
+                  "expandable": false,
+                  "title": "Area 9",
+                  "type": "fieldset",
+                  "condition": {
+                    "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType8);"
+                  },
+                  "items": [
+                    "devices[].commandType9",
+                    "devices[].spotAreaCommand9",
+                    "devices[].customAreaCommand9",
+                    "devices[].commandNote9"
+                  ]
+                },
+                {
+                  "expandable": false,
+                  "title": "Area 10",
+                  "type": "fieldset",
+                  "condition": {
+                    "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType9);"
+                  },
+                  "items": [
+                    "devices[].commandType10",
+                    "devices[].spotAreaCommand10",
+                    "devices[].customAreaCommand10",
+                    "devices[].commandNote10"
+                  ]
+                },
+                {
+                  "expandable": false,
+                  "title": "Area 11",
+                  "type": "fieldset",
+                  "condition": {
+                    "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType10);"
+                  },
+                  "items": [
+                    "devices[].commandType11",
+                    "devices[].spotAreaCommand11",
+                    "devices[].customAreaCommand11",
+                    "devices[].commandNote11"
+                  ]
+                },
+                {
+                  "expandable": false,
+                  "title": "Area 12",
+                  "type": "fieldset",
+                  "condition": {
+                    "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType11);"
+                  },
+                  "items": [
+                    "devices[].commandType12",
+                    "devices[].spotAreaCommand12",
+                    "devices[].customAreaCommand12",
+                    "devices[].commandNote12"
+                  ]
+                },
+                {
+                  "expandable": false,
+                  "title": "Area 13",
+                  "type": "fieldset",
+                  "condition": {
+                    "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType12);"
+                  },
+                  "items": [
+                    "devices[].commandType13",
+                    "devices[].spotAreaCommand13",
+                    "devices[].customAreaCommand13",
+                    "devices[].commandNote13"
+                  ]
+                },
+                {
+                  "expandable": false,
+                  "title": "Area 14",
+                  "type": "fieldset",
+                  "condition": {
+                    "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType13);"
+                  },
+                  "items": [
+                    "devices[].commandType14",
+                    "devices[].spotAreaCommand14",
+                    "devices[].customAreaCommand14",
+                    "devices[].commandNote14"
+                  ]
+                },
+                {
+                  "expandable": false,
+                  "title": "Area 15",
+                  "type": "fieldset",
+                  "condition": {
+                    "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType14);"
+                  },
+                  "items": [
+                    "devices[].commandType15",
+                    "devices[].spotAreaCommand15",
+                    "devices[].customAreaCommand15",
+                    "devices[].commandNote15"
+                  ]
+                }
               ]
-            },
-            "devices[].overrideLogging"
+            }
+            
           ]
-        }
+        },
+            "devices[].overrideLogging"
       ]
     }
   ]
