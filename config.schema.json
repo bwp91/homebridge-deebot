@@ -267,8 +267,8 @@
               "title": "Command",
               "type": "string",
               "required": true,
-              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (without decimals and the inverted comma).",
-              "pattern": "^((-?[0-9],|-?[1-9][0-9]+,){3}(-?[0-9]|-?[1-9][0-9]+))$",
+              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (decimals separated by '.' and without the inverted comma).",
+              "pattern": "^((0|-?[1-9][0-9]*)(\\.[0-9]+)?,){3}(0|-?[1-9][0-9]*)(\\.[0-9]+)?$", 
               "condition": {
                 "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType1 == 'customArea' );"
               }
@@ -303,8 +303,8 @@
               "title": "Command",
               "type": "string",
               "required": true,
-              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (without decimals and the inverted comma).",
-              "pattern": "^((-?[0-9],|-?[1-9][0-9]+,){3}(-?[0-9]|-?[1-9][0-9]+))$",
+              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (decimals separated by '.' and without the inverted comma).",
+              "pattern": "^((0|-?[1-9][0-9]*)(\\.[0-9]+)?,){3}(0|-?[1-9][0-9]*)(\\.[0-9]+)?$",
               "condition": {
                 "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType2 == 'customArea' );"
               }
@@ -339,8 +339,8 @@
               "title": "Command",
               "type": "string",
               "required": true,
-              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (without decimals and the inverted comma).",
-              "pattern": "^((-?[0-9],|-?[1-9][0-9]+,){3}(-?[0-9]|-?[1-9][0-9]+))$",
+              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (decimals separated by '.' and without the inverted comma).",
+              "pattern": "^((0|-?[1-9][0-9]*)(\\.[0-9]+)?,){3}(0|-?[1-9][0-9]*)(\\.[0-9]+)?$",
               "condition": {
                 "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType3 == 'customArea' );"
               }
@@ -375,8 +375,8 @@
               "title": "Command",
               "type": "string",
               "required": true,
-              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (without decimals and the inverted comma).",
-              "pattern": "^((-?[0-9],|-?[1-9][0-9]+,){3}(-?[0-9]|-?[1-9][0-9]+))$",
+              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (decimals separated by '.' and without the inverted comma).",
+              "pattern": "^((0|-?[1-9][0-9]*)(\\.[0-9]+)?,){3}(0|-?[1-9][0-9]*)(\\.[0-9]+)?$",
               "condition": {
                 "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType4 == 'customArea' );"
               }
@@ -411,8 +411,8 @@
               "title": "Command",
               "type": "string",
               "required": true,
-              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (without decimals and the inverted comma).",
-              "pattern": "^((-?[0-9],|-?[1-9][0-9]+,){3}(-?[0-9]|-?[1-9][0-9]+))$",
+              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (decimals separated by '.' and without the inverted comma).",
+              "pattern": "^((0|-?[1-9][0-9]*)(\\.[0-9]+)?,){3}(0|-?[1-9][0-9]*)(\\.[0-9]+)?$",
               "condition": {
                 "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType5 == 'customArea' );"
               }
@@ -447,8 +447,8 @@
               "title": "Command",
               "type": "string",
               "required": true,
-              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (without decimals and the inverted comma).",
-              "pattern": "^((-?[0-9],|-?[1-9][0-9]+,){3}(-?[0-9]|-?[1-9][0-9]+))$",
+              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (decimals separated by '.' and without the inverted comma).",
+              "pattern": "^((0|-?[1-9][0-9]*)(\\.[0-9]+)?,){3}(0|-?[1-9][0-9]*)(\\.[0-9]+)?$",
               "condition": {
                 "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType6 == 'customArea' );"
               }
@@ -483,8 +483,8 @@
               "title": "Command",
               "type": "string",
               "required": true,
-              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (without decimals and the inverted comma).",
-              "pattern": "^((-?[0-9],|-?[1-9][0-9]+,){3}(-?[0-9]|-?[1-9][0-9]+))$",
+              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (decimals separated by '.' and without the inverted comma).",
+              "pattern": "^((0|-?[1-9][0-9]*)(\\.[0-9]+)?,){3}(0|-?[1-9][0-9]*)(\\.[0-9]+)?$",
               "condition": {
                 "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType7 == 'customArea' );"
               }
@@ -519,8 +519,8 @@
               "title": "Command",
               "type": "string",
               "required": true,
-              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (without decimals and the inverted comma).",
-              "pattern": "^((-?[0-9],|-?[1-9][0-9]+,){3}(-?[0-9]|-?[1-9][0-9]+))$",
+              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (decimals separated by '.' and without the inverted comma).",
+              "pattern": "^((0|-?[1-9][0-9]*)(\\.[0-9]+)?,){3}(0|-?[1-9][0-9]*)(\\.[0-9]+)?$",
               "condition": {
                 "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType8 == 'customArea' );"
               }
@@ -555,8 +555,8 @@
               "title": "Command",
               "type": "string",
               "required": true,
-              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (without decimals and the inverted comma).",
-              "pattern": "^((-?[0-9],|-?[1-9][0-9]+,){3}(-?[0-9]|-?[1-9][0-9]+))$",
+              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (decimals separated by '.' and without the inverted comma).",
+              "pattern": "^((0|-?[1-9][0-9]*)(\\.[0-9]+)?,){3}(0|-?[1-9][0-9]*)(\\.[0-9]+)?$",
               "condition": {
                 "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType9 == 'customArea' );"
               }
@@ -591,8 +591,8 @@
               "title": "Command",
               "type": "string",
               "required": true,
-              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (without decimals and the inverted comma).",
-              "pattern": "^((-?[0-9],|-?[1-9][0-9]+,){3}(-?[0-9]|-?[1-9][0-9]+))$",
+              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (decimals separated by '.' and without the inverted comma).",
+              "pattern": "^((0|-?[1-9][0-9]*)(\\.[0-9]+)?,){3}(0|-?[1-9][0-9]*)(\\.[0-9]+)?$",
               "condition": {
                 "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType10 == 'customArea' );"
               }
@@ -627,8 +627,8 @@
               "title": "Command",
               "type": "string",
               "required": true,
-              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (without decimals and the inverted comma).",
-              "pattern": "^((-?[0-9],|-?[1-9][0-9]+,){3}(-?[0-9]|-?[1-9][0-9]+))$",
+              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (decimals separated by '.' and without the inverted comma).",
+              "pattern": "^((0|-?[1-9][0-9]*)(\\.[0-9]+)?,){3}(0|-?[1-9][0-9]*)(\\.[0-9]+)?$",
               "condition": {
                 "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType11 == 'customArea' );"
               }
@@ -663,8 +663,8 @@
               "title": "Command",
               "type": "string",
               "required": true,
-              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (without decimals and the inverted comma).",
-              "pattern": "^((-?[0-9],|-?[1-9][0-9]+,){3}(-?[0-9]|-?[1-9][0-9]+))$",
+              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (decimals separated by '.' and without the inverted comma).",
+              "pattern": "^((0|-?[1-9][0-9]*)(\\.[0-9]+)?,){3}(0|-?[1-9][0-9]*)(\\.[0-9]+)?$",
               "condition": {
                 "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType12 == 'customArea' );"
               }
@@ -699,8 +699,8 @@
               "title": "Command",
               "type": "string",
               "required": true,
-              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (without decimals and the inverted comma).",
-              "pattern": "^((-?[0-9],|-?[1-9][0-9]+,){3}(-?[0-9]|-?[1-9][0-9]+))$",
+              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (decimals separated by '.' and without the inverted comma).",
+              "pattern": "^((0|-?[1-9][0-9]*)(\\.[0-9]+)?,){3}(0|-?[1-9][0-9]*)(\\.[0-9]+)?$",
               "condition": {
                 "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType13 == 'customArea' );"
               }
@@ -735,8 +735,8 @@
               "title": "Command",
               "type": "string",
               "required": true,
-              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (without decimals and the inverted comma).",
-              "pattern": "^((-?[0-9],|-?[1-9][0-9]+,){3}(-?[0-9]|-?[1-9][0-9]+))$",
+              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (decimals separated by '.' and without the inverted comma).",
+              "pattern": "^((0|-?[1-9][0-9]*)(\\.[0-9]+)?,){3}(0|-?[1-9][0-9]*)(\\.[0-9]+)?$",
               "condition": {
                 "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType14 == 'customArea' );"
               }
@@ -771,8 +771,8 @@
               "title": "Command",
               "type": "string",
               "required": true,
-              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (without decimals and the inverted comma).",
-              "pattern": "^((-?[0-9],|-?[1-9][0-9]+,){3}(-?[0-9]|-?[1-9][0-9]+))$",
+              "description": "Enter a 'Custom Area' by providing the coordinates in the format 'x1,y1,x2,y2' (decimals separated by '.' and without the inverted comma).",
+              "pattern": "^((0|-?[1-9][0-9]*)(\\.[0-9]+)?,){3}(0|-?[1-9][0-9]*)(\\.[0-9]+)?$",
               "condition": {
                 "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.commandType15 == 'customArea' );"
               }
