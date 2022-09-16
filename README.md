@@ -42,7 +42,7 @@ Homebridge plugin to integrate ECOVACS Deebot devices into HomeKit
 
 - [Supported Devices](https://github.com/bwp91/homebridge-deebot/wiki/Supported-Devices)
 - [Speed Control](https://github.com/bwp91/homebridge-deebot/wiki/Speed-Control)
-- [Custom Areas](https://github.com/bwp91/homebridge-deebot/wiki/Custom-Areas)
+- [Predefined Areas](https://github.com/bwp91/homebridge-deebot/wiki/Custom-Areas)
 
 ### Help/About
 
