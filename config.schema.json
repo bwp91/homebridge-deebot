@@ -855,7 +855,7 @@
               "condition": {
                 "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice);"
               },
-              "description": "Create Eve app buttons for cleaning predefined 'Spot Areas' or 'Custom Areas'. <a href=\"https://github.com/bwp91/homebridge-deebot/wiki/Custom-Areas\" target=\"_blank\">Read more →</a>",
+              "description": "Create Eve app buttons for cleaning predefined 'Spot Areas' or 'Custom Areas'. <a href=\"https://github.com/bwp91/homebridge-deebot/wiki/Predefined-Areas\" target=\"_blank\">Read more →</a>",
               "items": [
                 {
                   "expandable": false,
