@@ -859,7 +859,7 @@
               "items": [
                 {
                   "expandable": false,
-                  "title": "Old Custom Area Coordinatess (<= Release 5.1.0)",
+                  "title": "Old Custom Areas (<= Release 5.1.0)",
                   "type": "fieldset",
                   "description": "Please move those entries to separate areas of type 'Spot Area' below to make use of the new note or custom area feature. IMPORTANT: You need to empty the old commands as they have priority for backwards compatibility reasons.",
                   "condition": {
