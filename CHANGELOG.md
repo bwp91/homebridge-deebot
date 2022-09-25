@@ -2,6 +2,18 @@
 
 All notable changes to homebridge-deebot will be documented in this file.
 
+## BETA
+
+### Added
+
+- Support for cleaning coordinate areas (thanks [@apfelnutzer](https://github.com/apfelnutzer)!)
+
+### Changed
+
+- Existing custom areas have been renamed to Predefined Areas
+- Bump `node` recommended versions to v14.20.1 or v16.17.1
+- Updated dev dependencies
+
 ## 5.1.0 (2022-08-28)
 
 ### Added
