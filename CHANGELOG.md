@@ -2,6 +2,17 @@
 
 All notable changes to homebridge-deebot will be documented in this file.
 
+## BETA
+
+### Added
+
+- Support for air drying (thanks [@apfelnutzer](https://github.com/apfelnutzer)!)
+  - Switch can be hidden via the config if unwanted
+
+### Changed
+
+- Bump `node` recommended versions to v14.20.1 or v16.18.0 or v18.11.0
+
 ## 5.2.0 (2022-09-25)
 
 ### Added

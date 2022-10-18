@@ -129,12 +129,22 @@
               "title": "Show Air Drying Switch",
               "type": "string",
               "oneOf": [
-                { "title": "Presetting", "enum": ["presetting"] },
-                { "title": "Yes", "enum": ["yes"] },
-                { "title": "No", "enum": ["no"] }
+                {
+                  "title": "Presetting",
+                  "enum": ["presetting"]
+                },
+                {
+                  "title": "Yes",
+                  "enum": ["yes"]
+                },
+                {
+                  "title": "No",
+                  "enum": ["no"]
+                }
               ],
-              "default": "presetting",
-              "required": true 
+              "condition": {
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice);"
+              }
             },
             "command1": {
               "title": "Spot Area 1",
@@ -279,7 +289,7 @@
               "type": "string",
               "required": true,
               "description": "Enter custom area coordinates in the format 'x1,y1,x2,y2' (decimals separated by '.' and without the inverted comma).",
-              "pattern": "^((0|-?[1-9][0-9]*)(\\.[0-9]+)?,){3}(0|-?[1-9][0-9]*)(\\.[0-9]+)?$", 
+              "pattern": "^((0|-?[1-9][0-9]*)(\\.[0-9]+)?,){3}(0|-?[1-9][0-9]*)(\\.[0-9]+)?$",
               "condition": {
                 "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.areaType1 == 'customArea' );"
               }
@@ -892,7 +902,7 @@
                     "devices[].command12",
                     "devices[].command13",
                     "devices[].command14",
-                    "devices[].command15"                    
+                    "devices[].command15"
                   ]
                 },
                 {
@@ -1107,7 +1117,7 @@
                 }
               ]
             }
-            
+
           ]
         },
             "devices[].overrideLogging"
