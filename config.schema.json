@@ -125,6 +125,17 @@
                 "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice);"
               }
             },
+            "showAirDryingSwitch": {
+              "title": "Show Air Drying Switch",
+              "type": "string",
+              "oneOf": [
+                { "title": "Presetting", "enum": ["presetting"] },
+                { "title": "Yes", "enum": ["yes"] },
+                { "title": "No", "enum": ["no"] }
+              ],
+              "default": "presetting",
+              "required": true 
+            },
             "command1": {
               "title": "Spot Area 1",
               "type": "string",
@@ -848,6 +859,7 @@
             "devices[].lowBattThreshold",
             "devices[].showMotionLowBatt",
             "devices[].showBattHumidity",
+            "devices[].showAirDryingSwitch",
             {
               "expandable": true,
               "title": "Predefined Areas",
