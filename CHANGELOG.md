@@ -2,6 +2,12 @@
 
 All notable changes to homebridge-deebot will be documented in this file.
 
+## 5.3.1 (2022-11-27)
+
+### Fixed
+
+- A potential configuration issue when using multiple devices
+
 ## 5.3.0 (2022-11-24)
 
 ### Added
