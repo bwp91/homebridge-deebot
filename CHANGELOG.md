@@ -8,6 +8,10 @@ All notable changes to homebridge-deebot will be documented in this file.
 
 - Bump `ecovavs-deebot` library to v0.9.1 (pre-release)
 
+### Fixed
+
+- Show correct service names for new accessories on new iOS version
+
 ## 5.3.1 (2022-11-27)
 
 ### Fixed
