@@ -2,6 +2,12 @@
 
 All notable changes to homebridge-deebot will be documented in this file.
 
+## BETA
+
+### Changed
+
+- Bump `ecovavs-deebot` library to v0.9.1 (pre-release)
+
 ## 5.3.1 (2022-11-27)
 
 ### Fixed
