@@ -2,6 +2,16 @@
 
 All notable changes to homebridge-deebot will be documented in this file.
 
+## BETA
+
+### Breaking
+
+- Remove official support for Node 14
+- Remove deprecated config options for old commands
+- Remove option to disable plugin - this is now available in the Homebridge UI
+- Remove option for debug logging - this will be enabled when using a beta version of the plugin
+- Remove individual accessory logging options to simplify the config
+
 ## 5.3.2 (2023-01-07)
 
 ### Changed

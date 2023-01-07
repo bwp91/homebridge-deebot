@@ -36,19 +36,6 @@
         "type": "string",
         "description": "Your password, can also be a base64 encoded version of your password."
       },
-      "debug": {
-        "title": "Debug Logging",
-        "type": "boolean"
-      },
-      "disablePlugin": {
-        "title": "Disable Plugin",
-        "type": "boolean"
-      },
-      "disableDeviceLogging": {
-        "type": "boolean",
-        "title": "Disable Device Logging",
-        "description": "Global logging setting for accessory status changes. If true then accessory status changes will not be logged. This can also be set per accessory later in the config."
-      },
       "refreshTime": {
         "title": "Refresh Interval",
         "type": "integer",
@@ -71,7 +58,7 @@
             "deviceId": {
               "title": "Device ID",
               "type": "string",
-              "description": "ECOVACS Device ID of the device these settings apply to, e.g. E2000000000000000000."
+              "description": "ECOVACS Device ID of the device these settings apply to, can be of format E2000000000000000000 or 11111111-aaaa-bbbb-2222-cccccccccccc."
             },
             "ignoreDevice": {
               "type": "boolean",
@@ -144,126 +131,6 @@
               ],
               "condition": {
                 "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice);"
-              }
-            },
-            "command1": {
-              "title": "Spot Area 1",
-              "type": "string",
-              "description": "Enter a spot area ID or multiple IDs separated by a comma.",
-              "condition": {
-                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice  && model?.devices?.[arrayIndices]?.command1);"
-              }
-            },
-            "command2": {
-              "title": "Spot Area 2",
-              "type": "string",
-              "description": "Enter a spot area ID or multiple IDs separated by a comma.",
-              "condition": {
-                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command2);"
-              }
-            },
-            "command3": {
-              "title": "Spot Area 3",
-              "type": "string",
-              "description": "Enter a spot area ID or multiple IDs separated by a comma.",
-              "condition": {
-                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command3);"
-              }
-            },
-            "command4": {
-              "title": "Spot Area 4",
-              "type": "string",
-              "description": "Enter a spot area ID or multiple IDs separated by a comma.",
-              "condition": {
-                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command4);"
-              }
-            },
-            "command5": {
-              "title": "Spot Area 5",
-              "type": "string",
-              "description": "Enter a spot area ID or multiple IDs separated by a comma.",
-              "condition": {
-                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command5);"
-              }
-            },
-            "command6": {
-              "title": "Spot Area 6",
-              "type": "string",
-              "description": "Enter a spot area ID or multiple IDs separated by a comma.",
-              "condition": {
-                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command6);"
-              }
-            },
-            "command7": {
-              "title": "Spot Area 7",
-              "type": "string",
-              "description": "Enter a spot area ID or multiple IDs separated by a comma.",
-              "condition": {
-                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command7);"
-              }
-            },
-            "command8": {
-              "title": "Spot Area 8",
-              "type": "string",
-              "description": "Enter a spot area ID or multiple IDs separated by a comma.",
-              "condition": {
-                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command8);"
-              }
-            },
-            "command9": {
-              "title": "Spot Area 9",
-              "type": "string",
-              "description": "Enter a spot area ID or multiple IDs separated by a comma.",
-              "condition": {
-                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command9);"
-              }
-            },
-            "command10": {
-              "title": "Spot Area 10",
-              "type": "string",
-              "description": "Enter a spot area ID or multiple IDs separated by a comma.",
-              "condition": {
-                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command10);"
-              }
-            },
-            "command11": {
-              "title": "Spot Area 11",
-              "type": "string",
-              "description": "Enter a spot area ID or multiple IDs separated by a comma.",
-              "condition": {
-                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command11);"
-              }
-            },
-            "command12": {
-              "title": "Spot Area 12",
-              "type": "string",
-              "description": "Enter a spot area ID or multiple IDs separated by a comma.",
-              "condition": {
-                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command12);"
-              }
-            },
-            "command13": {
-              "title": "Spot Area 13",
-              "type": "string",
-              "description": "Enter a spot area ID or multiple IDs separated by a comma.",
-              "condition": {
-                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command13);"
-              }
-            },
-            "command14": {
-              "title": "Spot Area 14",
-              "type": "string",
-              "description": "Enter a spot area ID or multiple IDs separated by a comma.",
-              "condition": {
-                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command14);"
-              }
-            },
-            "command15": {
-              "title": "Spot Area 15",
-              "type": "string",
-              "description": "Enter a spot area ID or multiple IDs separated by a comma.",
-              "condition": {
-                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.command15);"
               }
             },
             "areaType1": {
@@ -805,32 +672,6 @@
               "condition": {
                 "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && model?.devices?.[arrayIndices]?.areaType15);"
               }
-            },
-            "overrideLogging": {
-              "type": "string",
-              "title": "Override Logging Setting",
-              "description": "Override global logging setting for this device.",
-              "oneOf": [
-                {
-                  "title": "Default (Use Global Setting)",
-                  "enum": ["default"]
-                },
-                {
-                  "title": "Enable Standard Logging",
-                  "enum": ["standard"]
-                },
-                {
-                  "title": "Enable Debug Logging",
-                  "enum": ["debug"]
-                },
-                {
-                  "title": "Disable All Logging",
-                  "enum": ["disable"]
-                }
-              ],
-              "condition": {
-                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice);"
-              }
             }
           }
         }
@@ -841,14 +682,13 @@
     {
       "type": "fieldset",
       "title": "Required Settings",
-      "items": ["useYeedi", "countryCode", "username", "password", "debug", "disablePlugin"]
+      "items": ["useYeedi", "countryCode", "username", "password"]
     },
     {
       "type": "fieldset",
-      "title": "Advanced Settings",
-      "description": "Advanced settings for the plugin, including refresh interval options.",
+      "title": "Optional Settings",
       "expandable": true,
-      "items": ["disableDeviceLogging", "refreshTime"]
+      "items": ["refreshTime"]
     },
     {
       "key": "devices",
@@ -879,32 +719,6 @@
               },
               "description": "Create Eve app buttons for cleaning predefined 'Spot Areas' or 'Custom Areas'. <a href=\"https://github.com/bwp91/homebridge-deebot/wiki/Predefined-Areas\" target=\"_blank\">Read more →</a>",
               "items": [
-                {
-                  "expandable": false,
-                  "title": "Old Custom Areas (<= Release 5.1.0)",
-                  "type": "fieldset",
-                  "description": "Please move those entries to separate areas of type 'Spot Area' below to make use of the new note or custom area feature. IMPORTANT: You need to empty the old commands as they have priority for backwards compatibility reasons.",
-                  "condition": {
-                    "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice && (model?.devices?.[arrayIndices]?.command1 || model?.devices?.[arrayIndices]?.command2 || model?.devices?.[arrayIndices]?.command3 || model?.devices?.[arrayIndices]?.command4 || model?.devices?.[arrayIndices]?.command5 ||model?.devices?.[arrayIndices]?.command6 || model?.devices?.[arrayIndices]?.command7 || model?.devices?.[arrayIndices]?.command8 || model?.devices?.[arrayIndices]?.command9 ||model?.devices?.[arrayIndices]?.command10 || model?.devices?.[arrayIndices]?.command11 || model?.devices?.[arrayIndices]?.command12 || model?.devices?.[arrayIndices]?.command13 || model?.devices?.[arrayIndices]?.command14 || model?.devices?.[arrayIndices]?.command15));"
-                  },
-                  "items": [
-                    "devices[].command1",
-                    "devices[].command2",
-                    "devices[].command3",
-                    "devices[].command4",
-                    "devices[].command5",
-                    "devices[].command6",
-                    "devices[].command7",
-                    "devices[].command8",
-                    "devices[].command9",
-                    "devices[].command10",
-                    "devices[].command11",
-                    "devices[].command12",
-                    "devices[].command13",
-                    "devices[].command14",
-                    "devices[].command15"
-                  ]
-                },
                 {
                   "expandable": false,
                   "title": "Area 1",
@@ -1117,10 +931,8 @@
                 }
               ]
             }
-
           ]
-        },
-            "devices[].overrideLogging"
+        }
       ]
     }
   ]
