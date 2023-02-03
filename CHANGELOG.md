@@ -12,6 +12,11 @@ All notable changes to homebridge-deebot will be documented in this file.
 - Remove option for debug logging - this will be enabled when using a beta version of the plugin
 - Remove individual accessory logging options to simplify the config
 
+### Changed
+
+- Bump `ecovavs-deebot` library to v0.9.3 (pre-release)
+- Bump `node` recommended versions to v16.19.0 or v18.14.0
+
 ## 5.3.2 (2023-01-07)
 
 ### Changed
