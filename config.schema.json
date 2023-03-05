@@ -36,6 +36,11 @@
         "type": "string",
         "description": "Your password, can also be a base64 encoded version of your password."
       },
+      "disableDeviceLogging": {
+        "type": "boolean",
+        "title": "Disable Device Logging",
+        "description": "Global logging setting for accessory status changes. If true then accessory status changes will not be logged."
+      },
       "refreshTime": {
         "title": "Refresh Interval",
         "type": "integer",
@@ -688,7 +693,7 @@
       "type": "fieldset",
       "title": "Optional Settings",
       "expandable": true,
-      "items": ["refreshTime"]
+      "items": ["disableDeviceLogging", "refreshTime"]
     },
     {
       "key": "devices",
