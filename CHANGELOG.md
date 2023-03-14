@@ -2,6 +2,12 @@
 
 All notable changes to homebridge-deebot will be documented in this file.
 
+## 6.0.1 (2023-03-14)
+
+### Fixed
+
+- ` [GetNetInfo]` should be debug logging
+
 ## 6.0.0 (2023-03-11)
 
 ### Breaking
