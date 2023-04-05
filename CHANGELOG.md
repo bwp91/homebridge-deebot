@@ -2,6 +2,7 @@
 
 All notable changes to homebridge-deebot will be documented in this file.
 
+## 6.0.5 (2023-04-05)
 ## 6.0.4 (2023-04-05)
 ## 6.0.3 (2023-04-05)
 
