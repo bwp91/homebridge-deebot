@@ -138,6 +138,13 @@
                 "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice);"
               }
             },
+            "supportTrueDetect": {
+              "title": "Support TrueDetect",
+              "type": "boolean",
+              "condition": {
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice);"
+              }
+            },
             "areaType1": {
               "title": "Area Type",
               "type": "string",
@@ -715,6 +722,7 @@
             "devices[].showMotionLowBatt",
             "devices[].showBattHumidity",
             "devices[].showAirDryingSwitch",
+            "devices[].supportTrueDetect",
             {
               "expandable": true,
               "title": "Predefined Areas",
