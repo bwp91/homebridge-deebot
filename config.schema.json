@@ -145,6 +145,14 @@
                 "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice);"
               }
             },
+            "showAreaSwitches": {
+              "title": "Show Area Switches",
+              "type": "boolean",
+              "description": "If true, one switch will be created for each area defined in the map.",
+              "condition": {
+                "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0 && !model?.devices?.[arrayIndices]?.ignoreDevice);"
+              }
+            },
             "areaType1": {
               "title": "Area Type",
               "type": "string",
@@ -723,6 +731,7 @@
             "devices[].showBattHumidity",
             "devices[].showAirDryingSwitch",
             "devices[].supportTrueDetect",
+            "devices[].showAreaSwitches",
             {
               "expandable": true,
               "title": "Predefined Areas",
