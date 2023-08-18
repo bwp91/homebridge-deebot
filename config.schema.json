@@ -41,13 +41,6 @@
         "title": "Disable Device Logging",
         "description": "Global logging setting for accessory status changes. If true then accessory status changes will not be logged."
       },
-      "refreshTime": {
-        "title": "Refresh Interval",
-        "type": "integer",
-        "placeholder": 120,
-        "minimum": 30,
-        "description": "An interval (in seconds) in which your devices will refresh with ECOVACS. Must be 30 or more."
-      },
       "devices": {
         "title": "Device Settings",
         "description": "Optional settings for your devices.",
@@ -72,6 +65,12 @@
               "condition": {
                 "functionBody": "return (model?.devices?.[arrayIndices]?.deviceId?.length > 0);"
               }
+            },
+            "pollInterval": {
+              "title": "Polling Interval",
+              "type": "integer",
+              "placeholder": 120,
+              "description": "An interval (in seconds) in which this device will refresh with ECOVACS. Set to 0 to disable, otherwise must be 30 or more."
             },
             "hideMotionSensor": {
               "title": "Hide Motion Sensor",
@@ -716,6 +715,7 @@
             "devices[].label",
             "devices[].deviceId",
             "devices[].ignoreDevice",
+            "devices[].pollInterval",
             "devices[].hideMotionSensor",
             "devices[].motionDuration",
             "devices[].lowBattThreshold",

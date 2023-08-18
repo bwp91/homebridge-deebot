@@ -10,10 +10,14 @@ This project tries to adhere to [Semantic Versioning](http://semver.org/). In pr
 
 ## BETA
 
+### Added
+
+- Allow a polling interval to be set per accessory, or can be set to `0` to disable polling if the device supports push updates
+
 ### Changed
 
 - Bump `ecovavs-deebot` library to v0.9.6-prerelease (thanks @mrbungle64!)
-- Bump `node` recommended versions to v16.20.1 or v18.17.0 or v20.5.0
+- Bump `node` recommended versions to v16.20.2 or v18.17.1 or v20.5.1
 
 ## 6.0.5 (2023-04-05)
 ## 6.0.4 (2023-04-05)
