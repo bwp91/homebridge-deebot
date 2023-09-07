@@ -32,7 +32,7 @@ Homebridge plugin to integrate ECOVACS Deebot or Yeedi devices into HomeKit
 
 - [Installation](https://github.com/bwp91/homebridge-deebot/wiki/Installation)
 - [Configuration](https://github.com/bwp91/homebridge-deebot/wiki/Configuration)
-- [Beta Version](https://github.com/bwp91/homebridge-deebot/wiki/Beta-Version)
+- [Beta Version](https://github.com/homebridge/homebridge/wiki/How-to-Install-Alternate-Plugin-Versions)
 - [Node Version](https://github.com/bwp91/homebridge-deebot/wiki/Node-Version)
 
 ### Features
